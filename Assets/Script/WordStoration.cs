@@ -1,7 +1,7 @@
 using UnityEngine;
 
-public class WordStoration
+public class WordStoration : MonoBehaviour
 {
-    
+    string[] Word_list = {"cars","Java","python","Csharp"};
 
 }
