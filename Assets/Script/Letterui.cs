@@ -13,9 +13,22 @@ public class Letterui : MonoBehaviour
 
     public void setletter(char C)
     {
-        Value = C;
-        letterText.text = C.ToString();
+         Debug.Log(
+        "SetLetter called on " + gameObject.name +
+        " with " + C +
+        ", text ref = " + letterText
+    );
 
+         letterText.text = C.ToString();
+
+        /*Value = C;
+        letterText.text = C.ToString();*/
+
+    }
+
+     public char GetLetter()
+    {
+        return Value;
     }
 
     public void MarkCorrect()
