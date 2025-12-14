@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine.UI;
 using System;
 using Unity.VisualScripting;
+using System.Collections;
 
 public class Letterui : MonoBehaviour
 {
@@ -11,18 +12,29 @@ public class Letterui : MonoBehaviour
     public char Value { get; private set;}
     public bool Typed {get; private set;}
 
+
+    void Awake()
+    {
+          if (letterText == null)
+            letterText = GetComponentInChildren<TextMeshProUGUI>();
+
+        
+        letterText.text = "";
+    }
+
     public void setletter(char C)
     {
-         Debug.Log(
+        /* Debug.Log(
         "SetLetter called on " + gameObject.name +
         " with " + C +
         ", text ref = " + letterText
     );
 
-         letterText.text = C.ToString();
+         letterText.text = C.ToString();*/
 
-        /*Value = C;
-        letterText.text = C.ToString();*/
+        Value = C;
+        
+        /*letterText.text = C.ToString();*/
 
     }
 
@@ -33,15 +45,28 @@ public class Letterui : MonoBehaviour
 
     public void MarkCorrect()
     {
-        background.color = Color.green;
-        Typed = true;
+        letterText.text = Value.ToString();
+        Debug.Log(letterText.text);
+
+        
 
     
     }
 
-    public void MarkWrong()
+    public void FlashWrong()
+    {
+        StopAllCoroutines();
+        StartCoroutine(MarkWrong());
+
+    }
+
+    public IEnumerator MarkWrong()
     {
         background.color = Color.red;
+        
+        yield return new WaitForSeconds(1f);
+
+        background.color = Color.white;
 
 
     }

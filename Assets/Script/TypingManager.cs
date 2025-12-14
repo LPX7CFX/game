@@ -1,26 +1,79 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
+using TMPro;
 
 public class TypingManager : MonoBehaviour
 {
     [SerializeField] RectTransform wordContainer;
     [SerializeField] GameObject letterPrefab;
+    [SerializeField] private WordStore wordStore;
+     
+    [SerializeField] private TextMeshProUGUI thaiText;
 
     private List<Letterui> letters = new();
     private int currentIndex = 0;
 
     void Start()
     {
-        
-        /*CreateWord("UNITY");*/
-        StartCoroutine(CreateWord("UNITY"));
+        wordStore.ResetPool();
+
+        StartNextWord();
        
     }
 
     void Update()
     {
-        if (Input.anyKeyDown) return;
+
+
+        if (currentIndex >= letters.Count)
+        {
+            StartNextWord();
+
+        }
+            
+
+        if (!Input.anyKeyDown)
+            return;
+            
+            Debug.Log("Pass The Check");
+            
+
+        string input = Input.inputString;
+
+        if (string.IsNullOrEmpty(input))
+            return;
+
+        char typedChar = char.ToUpper(input[0]);
+
+        Letterui currentLetter = letters[currentIndex];
+
+        
+        
+
+        if (typedChar == currentLetter.Value)
+        {
+            Debug.Log("The Typed Char Worked");
+            currentLetter.MarkCorrect();
+            currentIndex++;
+        }
+        else
+        {
+            Debug.Log("Wrong Letter Check Work");
+            // Optional: show wrong letter
+            currentLetter.FlashWrong();
+        }
+        Debug.Log(currentIndex);
+        Debug.Log(currentLetter.Value);
+        /*if (currentIndex == letters.Count && letters[currentIndex] == letters[letters.Count])
+        {
+            StartNextWord();
+
+        }*/
+
+
+        
+        /*if (Input.anyKeyDown) return;
         Debug.Log("UpdateFirst");
 
         
@@ -31,7 +84,9 @@ public class TypingManager : MonoBehaviour
 
         char typed = char.ToUpper(input[0]);
         Debug.Log("UpdateFourth");
-        CheckLetter (typed);
+        CheckLetter (typed);*/
+        
+
 
         
     
@@ -83,6 +138,38 @@ public class TypingManager : MonoBehaviour
             Debug.Log("CheckLetterSeventh");
         }
     }
+
+
+     void StartNextWord()
+    {
+        ClearCurrentWord();
+
+        WordData wordData = wordStore.GetRandomWord();
+        thaiText.text = wordData.thai;
+        StartCoroutine(CreateWord(wordData.english));
+        Debug.Log("StartNextWordActivated");
+
+        currentIndex = 0;
+    }
+    void ClearCurrentWord()
+    {
+        foreach (Transform child in wordContainer)
+        {
+            Destroy(child.gameObject);
+        }
+
+        letters.Clear();
+    }
+    /*void CallCreate()
+    {
+        StartCoroutine(CreateWord(WordData,english));
+
+    }*/
+
+
+}
+
+
     /*void CheckInput(char typed)
 {
     if (currentIndex >= letters.Count)
@@ -100,4 +187,4 @@ public class TypingManager : MonoBehaviour
         letters[currentIndex].MarkWrong();
     }
 }*/
-}
+
