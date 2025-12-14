@@ -1,7 +1,6 @@
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using TensorFlowLite.MoveNet;
-using TextureSource;
 
 [RequireComponent(typeof(VirtualTextureSource))]
 public class MoveNetSinglePoseSample : MonoBehaviour
