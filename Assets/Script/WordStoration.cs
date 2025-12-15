@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class WordStore : MonoBehaviour
@@ -6,6 +7,7 @@ public class WordStore : MonoBehaviour
    [SerializeField] private List<WordData> allWords;
 
     public List<WordData> remainingWords;
+
 
     public void Awake()
     {

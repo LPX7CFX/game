@@ -2,6 +2,9 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
 using TMPro;
+using System.Linq;
+using System;
+using JetBrains.Annotations;
 
 public class TypingManager : MonoBehaviour
 {
@@ -13,6 +16,13 @@ public class TypingManager : MonoBehaviour
 
     private List<Letterui> letters = new();
     private int currentIndex = 0;
+
+    private int CountingSys = 1;
+    private int wordSys;
+    
+
+    
+
 
     void Start()
     {
@@ -33,13 +43,16 @@ public class TypingManager : MonoBehaviour
         }
             
 
-        if (!Input.anyKeyDown)
+        if (!Input.anyKeyDown && CountingSys == wordSys )
             return;
-            
+            Debug.Log(letters.Count);
+            Debug.Log("InputZone: " + currentIndex);
             Debug.Log("Pass The Check");
             
 
         string input = Input.inputString;
+        
+        
 
         if (string.IsNullOrEmpty(input))
             return;
@@ -51,13 +64,13 @@ public class TypingManager : MonoBehaviour
         
         
 
-        if (typedChar == currentLetter.Value)
+        if (typedChar == currentLetter.Value && CountingSys == wordSys)
         {
             Debug.Log("The Typed Char Worked");
             currentLetter.MarkCorrect();
             currentIndex++;
         }
-        else
+        else if(typedChar != currentLetter.Value && CountingSys == wordSys)
         {
             Debug.Log("Wrong Letter Check Work");
             // Optional: show wrong letter
@@ -96,6 +109,8 @@ public class TypingManager : MonoBehaviour
     {
 
         Debug.Log("Start");
+        
+
 
 
         foreach (char C in word)
@@ -111,9 +126,17 @@ public class TypingManager : MonoBehaviour
             var letter = go.GetComponent<Letterui>();
             letter.setletter(C);
             letters.Add(letter);
+            
+
+            CountingSys++;
+            Debug.Log(CountingSys);
+            Debug.Log(letters.Count);
+            Debug.Log(wordSys);
 
             yield  return new WaitForSeconds(2f);
         }
+
+
     }
 
     void CheckLetter(char typed)
@@ -140,19 +163,23 @@ public class TypingManager : MonoBehaviour
     }
 
 
-     void StartNextWord()
+    public void StartNextWord()
     {
         ClearCurrentWord();
 
         WordData wordData = wordStore.GetRandomWord();
+        wordSys = wordData.english.Length;
         thaiText.text = wordData.thai;
         StartCoroutine(CreateWord(wordData.english));
         Debug.Log("StartNextWordActivated");
 
         currentIndex = 0;
+        
+
     }
     void ClearCurrentWord()
     {
+        CountingSys = 0;
         foreach (Transform child in wordContainer)
         {
             Destroy(child.gameObject);

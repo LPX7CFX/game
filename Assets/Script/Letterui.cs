@@ -47,6 +47,7 @@ public class Letterui : MonoBehaviour
     {
         letterText.text = Value.ToString();
         Debug.Log(letterText.text);
+        background.color = Color.white;
 
         
 
