@@ -1,0 +1,11 @@
+Idle
+L
+X-Up
+X-Down
+Dab
+BackSlash
+Slash
+Onna
+UU
+walk
+69
