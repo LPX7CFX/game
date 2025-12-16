@@ -9,6 +9,9 @@ public class Letterui : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI letterText;
     [SerializeField] Image background;
+
+    [SerializeField] Sprite NewBackground;
+    [SerializeField] Sprite OldBackgorund;
     public char Value { get; private set;}
     public bool Typed {get; private set;}
 
@@ -47,7 +50,7 @@ public class Letterui : MonoBehaviour
     {
         letterText.text = Value.ToString();
         Debug.Log(letterText.text);
-        background.color = Color.white;
+        background.sprite = OldBackgorund;
 
         
 
@@ -63,11 +66,11 @@ public class Letterui : MonoBehaviour
 
     public IEnumerator MarkWrong()
     {
-        background.color = Color.red;
+        background.sprite = NewBackground;
         
         yield return new WaitForSeconds(1f);
 
-        background.color = Color.white;
+        background.sprite = OldBackgorund;
 
 
     }

@@ -133,7 +133,7 @@ public class TypingManager : MonoBehaviour
             Debug.Log(letters.Count);
             Debug.Log(wordSys);
 
-            yield  return new WaitForSeconds(2f);
+            yield  return new WaitForSeconds(0.5f);
         }
 
 
