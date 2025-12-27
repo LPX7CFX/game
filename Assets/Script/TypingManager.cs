@@ -5,6 +5,8 @@ using TMPro;
 using System.Linq;
 using System;
 using JetBrains.Annotations;
+using UnityEditor.Callbacks;
+using UnityEditor.PackageManager;
 
 public class TypingManager : MonoBehaviour
 {
@@ -13,6 +15,8 @@ public class TypingManager : MonoBehaviour
     [SerializeField] private WordStore wordStore;
      
     [SerializeField] private TextMeshProUGUI thaiText;
+
+    [SerializeField] GameObject StartUi;
 
     private List<Letterui> letters = new();
     private int currentIndex = 0;
@@ -26,9 +30,11 @@ public class TypingManager : MonoBehaviour
 
     void Start()
     {
+        
         wordStore.ResetPool();
 
         StartNextWord();
+
        
     }
 
