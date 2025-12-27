@@ -5,6 +5,11 @@ using UnityEngine;
 public class WordStore : MonoBehaviour
 {
    [SerializeField] private List<WordData> allWords;
+    public List<WordData> Hard;
+   
+    public List<WordData> Medium;
+    public List<WordData> Easy;
+
 
     public List<WordData> remainingWords;
 
@@ -12,12 +17,48 @@ public class WordStore : MonoBehaviour
     public void Awake()
     {
         ResetPool();
+
+        Setdifficulty();
     }
 
     public void ResetPool()
     {
         remainingWords = new List<WordData>(allWords);
     }
+
+    public void Setdifficulty()
+    {
+        int WordCount = allWords.Count;
+
+        int WordIndex = WordCount--;
+
+
+        
+
+        foreach(WordData word in allWords)
+        {
+            int LettersCount = word.english.Length;
+
+            if(LettersCount >= 0 && LettersCount <= 5)
+            {
+                Easy.Add(word);
+
+            }
+            else if(LettersCount >= 6 && LettersCount <= 8)
+            {
+                Medium.Add(word);
+
+            }
+            else
+            {
+                Hard.Add(word);
+            }
+
+        }
+
+    }
+
+
 
     public WordData GetRandomWord()
     {
