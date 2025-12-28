@@ -3,12 +3,13 @@ using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Unity.VisualScripting;
 
 public class WordStore : MonoBehaviour
 {
    [SerializeField] private List<WordData> allWords;
 
-   [SerializeField] private Button NextWord;
+   public Button NextWord;
     public List<WordData> Hard;
    
     public List<WordData> Medium;
@@ -19,8 +20,10 @@ public class WordStore : MonoBehaviour
 
     public List<WordData> remainingWords;
 
-    private TextMeshProUGUI EnglishText;
-    private TextMeshProUGUI ThaiText;
+    public TextMeshProUGUI EnglishText;
+    public TextMeshProUGUI ThaiText;
+
+    public int a = 0;
 
 
     public void Awake()
@@ -28,6 +31,13 @@ public class WordStore : MonoBehaviour
         ResetPool();
 
         Setdifficulty();
+
+        WordSetting();
+    }
+
+    public void Start()
+    {
+        NextWord.onClick.AddListener(OnmyButtonclick);
     }
 
     public void ResetPool()
@@ -133,18 +143,31 @@ public class WordStore : MonoBehaviour
     
     public void OnmyButtonclick()
     {
-        
-        if (NextWord.onClick.AddListener != null)
+        WordData word = WordSetData[a];
+        a++;
+        ThaiText.text = word.thai;
+        EnglishText.text = word.english;
+        if (a == WordSetData.Count)
         {
-            
+            a = 0;
 
         }
-    }
-    public void wordintroduction(List<WordData> wordDataset)
-    {
-        
 
+        
     }
+    /*public void wordintroduction(List<WordData> wordDataset)
+    {
+       
+        WordData word = wordDataset[a];
+        a++;
+        ThaiText.text = word.thai;
+        EnglishText.text = word.english;
+        if (a == wordDataset.Count)
+        {
+            a = 0;
+
+        }
+    }*/
 
     public WordData WordSetting()
     {
@@ -157,12 +180,15 @@ public class WordStore : MonoBehaviour
         {
             
             word = GetRandomWord();
-            i++;
+            i = i +1;
             WordSetData.Add(word);
 
-            return word;
+            Debug.Log(i);
+
+            
         }
-        wordintroduction(WordSetData);
+        //wordintroduction(WordSetData);
+        OnmyButtonclick();
 
         
 
