@@ -193,6 +193,9 @@ public class TypingManager : MonoBehaviour
 
         letters.Clear();
     }
+
+
+    
     /*void CallCreate()
     {
         StartCoroutine(CreateWord(WordData,english));

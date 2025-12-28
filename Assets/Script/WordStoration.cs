@@ -1,17 +1,26 @@
 using System.Collections.Generic;
 using JetBrains.Annotations;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class WordStore : MonoBehaviour
 {
    [SerializeField] private List<WordData> allWords;
+
+   [SerializeField] private Button NextWord;
     public List<WordData> Hard;
    
     public List<WordData> Medium;
     public List<WordData> Easy;
 
+    public List<WordData> WordSetData;
+
 
     public List<WordData> remainingWords;
+
+    private TextMeshProUGUI EnglishText;
+    private TextMeshProUGUI ThaiText;
 
 
     public void Awake()
@@ -100,6 +109,8 @@ public class WordStore : MonoBehaviour
             return word;
 
         }
+
+        
        
         //int index = Random.Range(0, remainingWords.Count);
         //word = remainingWords[index];
@@ -117,5 +128,44 @@ public class WordStore : MonoBehaviour
 
         
         
+    }
+
+    
+    public void OnmyButtonclick()
+    {
+        
+        if (NextWord.onClick.AddListener != null)
+        {
+            
+
+        }
+    }
+    public void wordintroduction(List<WordData> wordDataset)
+    {
+        
+
+    }
+
+    public WordData WordSetting()
+    {
+
+        WordData word;
+
+        int i = 0;
+
+        while (i < 5)
+        {
+            
+            word = GetRandomWord();
+            i++;
+            WordSetData.Add(word);
+
+            return word;
+        }
+        wordintroduction(WordSetData);
+
+        
+
+        return null;
     }
 }
