@@ -2188,7 +2188,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: asdasd
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a07aafab2d231584a989969e1464697c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a8da5e38a1354c0419e08393186a715c, type: 2}
   m_sharedMaterial: {fileID: 904041311899202472, guid: a07aafab2d231584a989969e1464697c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -5159,8 +5159,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u0E41\u0E1B\u0E25\u0E27\u0E48\u0E32 :"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a07aafab2d231584a989969e1464697c, type: 2}
-  m_sharedMaterial: {fileID: 904041311899202472, guid: a07aafab2d231584a989969e1464697c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a8da5e38a1354c0419e08393186a715c, type: 2}
+  m_sharedMaterial: {fileID: -2412588450158256490, guid: a8da5e38a1354c0419e08393186a715c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6637,8 +6637,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Absolute Cinema
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a07aafab2d231584a989969e1464697c, type: 2}
-  m_sharedMaterial: {fileID: 904041311899202472, guid: a07aafab2d231584a989969e1464697c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a8da5e38a1354c0419e08393186a715c, type: 2}
+  m_sharedMaterial: {fileID: -2412588450158256490, guid: a8da5e38a1354c0419e08393186a715c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
