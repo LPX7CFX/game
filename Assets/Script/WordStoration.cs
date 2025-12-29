@@ -24,6 +24,8 @@ public class WordStore : MonoBehaviour
     public TextMeshProUGUI ThaiText;
 
     public int a = 0;
+    public int countingsht = 0;
+    
 
 
     public void Awake()
@@ -154,6 +156,23 @@ public class WordStore : MonoBehaviour
         }
 
         
+        
+
+        
+    }
+
+    public WordData getrandomwordtraining()
+    {
+        WordData words;
+
+        
+        int IndexWordrandom = Random.Range(0, WordSetData.Count);
+        words = WordSetData[IndexWordrandom];
+        WordSetData.RemoveAt(IndexWordrandom);
+        
+
+
+        return words;
     }
     /*public void wordintroduction(List<WordData> wordDataset)
     {
@@ -174,7 +193,8 @@ public class WordStore : MonoBehaviour
 
         WordData word;
 
-        int i = 0;
+        int i;
+        i = 0;
 
         while (i < 5)
         {
@@ -182,14 +202,25 @@ public class WordStore : MonoBehaviour
             word = GetRandomWord();
             i = i +1;
             WordSetData.Add(word);
+            Debug.Log("word:"+i);
 
-            Debug.Log(i);
+            
 
             
         }
         //wordintroduction(WordSetData);
+        countingsht++;
+        
+    
         OnmyButtonclick();
 
+        if (countingsht > 2)
+        {
+            
+            countingsht = 2;
+        }
+
+        
         
 
         return null;

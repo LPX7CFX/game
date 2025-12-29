@@ -7,6 +7,7 @@ using System;
 using JetBrains.Annotations;
 using UnityEditor.Callbacks;
 using UnityEditor.PackageManager;
+using UnityEngine.UI;
 
 public class TypingManager : MonoBehaviour
 {
@@ -18,11 +19,22 @@ public class TypingManager : MonoBehaviour
 
     [SerializeField] GameObject StartUi;
 
+    [SerializeField] Button Training;
+
+    [SerializeField] Button Challenge;
+    [SerializeField] GameObject IntroScene;
+    [SerializeField] GameObject gamescene;
+
     private List<Letterui> letters = new();
     private int currentIndex = 0;
 
     private int CountingSys = 1;
+
+    private int startnextwordcontroller = 0;
     private int wordSys;
+    private int startnextwordcontrollertrain = 0;
+    private int indicator = 0;
+    private int indicator2 = -1;
     
 
     
@@ -33,7 +45,9 @@ public class TypingManager : MonoBehaviour
         
         wordStore.ResetPool();
 
-        StartNextWord();
+        Challenge.onClick.AddListener(StartNextWord);
+
+        Training.onClick.AddListener(training);
 
        
     }
@@ -42,10 +56,45 @@ public class TypingManager : MonoBehaviour
     {
 
 
-        if (currentIndex >= letters.Count)
+        if (currentIndex >= letters.Count&&startnextwordcontroller != 0)
         {
             StartNextWord();
 
+        }
+        else if (currentIndex >= letters.Count&&startnextwordcontrollertrain != 0&&IntroScene.activeSelf == false&&startnextwordcontrollertrain<5)
+        {
+            training();
+
+        }
+        if(currentIndex >= letters.Count && startnextwordcontrollertrain == 5)
+        {
+            
+            ClearCurrentWord();
+        }
+        if(indicator2 == 5&&indicator==0)
+        {
+            wordStore.WordSetting();
+            indicator++;
+            
+
+        }
+
+        if (indicator2 == 5&&wordStore.countingsht==2)
+        {
+            Debug.Log("Data:"+wordStore.WordSetData.Count);
+            gamescene.SetActive(false);
+            IntroScene.SetActive(true);
+            startnextwordcontrollertrain = 0;
+            indicator=0;
+            indicator2=-1;
+
+
+        }
+        else
+        {
+            Debug.Log("lose");
+            Debug.Log("Lose::"+startnextwordcontrollertrain);
+            Debug.Log("Indicator2:"+indicator2);
         }
             
 
@@ -138,6 +187,7 @@ public class TypingManager : MonoBehaviour
             Debug.Log(CountingSys);
             Debug.Log(letters.Count);
             Debug.Log(wordSys);
+            Debug.Log("DataWord:"+ wordStore.WordSetData.Count);
 
             yield  return new WaitForSeconds(0.5f);
         }
@@ -180,6 +230,8 @@ public class TypingManager : MonoBehaviour
         Debug.Log("StartNextWordActivated");
 
         currentIndex = 0;
+
+        startnextwordcontroller++;
         
 
     }
@@ -192,6 +244,47 @@ public class TypingManager : MonoBehaviour
         }
 
         letters.Clear();
+        startnextwordcontrollertrain++;
+        indicator2++;
+
+    }
+
+    void training()
+    {
+
+        ClearCurrentWord();
+        
+            
+
+        WordData wordDatas = wordStore.getrandomwordtraining();
+        wordSys = wordDatas.english.Length;
+        thaiText.text = wordDatas.thai;
+        StartCoroutine(CreateWord(wordDatas.english));
+        Debug.Log("StartNextWordActivated");
+        
+        
+
+        currentIndex = 0;
+        if (IntroScene.activeSelf == true)
+        {
+            IntroScene.SetActive(false);
+            gamescene.SetActive(true);
+
+        }
+        else if (IntroScene.activeSelf == false&&gamescene.activeSelf == false)
+        {
+            gamescene.SetActive(true);
+
+        }
+            
+
+        
+        
+        
+        
+        
+
+        
     }
 
 
