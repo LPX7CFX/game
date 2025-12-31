@@ -68,7 +68,7 @@ public class TypingManager : MonoBehaviour
             Debug.Log("clearcurrentword");
             }
             
-        if(wordStore.WordSetData.Count == 0&&currentIndex >= letters.Count&&wordStore.countingsht3==indicator2&&indicator4==wordStore.countingsht5/5&&wordStore.countingsht4==1)
+        if(wordStore.WordSetData.Count == 0&&currentIndex >= letters.Count&&wordStore.countingsht3-1==indicator2&&indicator4==wordStore.countingsht5/5&&wordStore.countingsht4==1&&indicator3==wordStore.countingsht5%5)
             {
                
                 modescene.SetActive(true);
@@ -112,24 +112,9 @@ public class TypingManager : MonoBehaviour
             StartNextWord();
 
             }
-            else if (startnextwordcontrollertrain != 0&&IntroScene.activeSelf == false&&startnextwordcontrollertrain<5)
-            {if(indicator3!=6&&indicator4!=wordStore.allWords.Count/5){
-                training();
-                Debug.Log("Training");
-            }
-            else if (indicator3 < 5 && indicator4 == wordStore.allWords.Count / 5)
+        if(currentIndex >= letters.Count&&indicator2!=-1&&modescene.activeSelf==false)
             {
-                int i = wordStore.countingsht5 - indicator4*5;
-                if (i != 0)
-                {
-                    training();
-                    i--;
-
-
-
-                }
-
-            }
+                training();
 
             }
             
@@ -241,7 +226,7 @@ public class TypingManager : MonoBehaviour
             Debug.Log(wordSys);
             Debug.Log("DataWord:"+ wordStore.WordSetData.Count);
 
-            yield  return new WaitForSeconds(0.5f);
+            yield  return new WaitForSeconds(0.1f);
         }
 
 
@@ -290,6 +275,7 @@ public class TypingManager : MonoBehaviour
     }
     void ClearCurrentWord()
     {
+        indicator2++;
         CountingSys = 0;
         Debug.Log("CLearCurrentWordIndi2::"+indicator2);
         Debug.Log("ClearCurrentWordStartNextWordController::" +startnextwordcontrollertrain);
@@ -300,7 +286,7 @@ public class TypingManager : MonoBehaviour
 
         letters.Clear();
         startnextwordcontrollertrain++;
-        indicator2++;
+        
         Debug.Log("ClearCurrentWord");
 
 
