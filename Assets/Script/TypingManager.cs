@@ -73,8 +73,18 @@ public class TypingManager : MonoBehaviour
                
                 modescene.SetActive(true);
                 gamescene.SetActive(false);
+                wordStore.Setdifficulty();
+                Debug.Log("Close");
             }
-        if(indicator2 == 5&&indicator==0&&modescene.activeSelf == false)
+        if(currentIndex >= letters.Count&&wordStore.remainingWords.Count==wordStore.countingsht5&&gamescene.activeSelf==true )
+        {
+            modescene.SetActive(true);
+            gamescene.SetActive(false);
+            wordStore.Setdifficulty();
+            Debug.Log("Close2");
+
+        }
+        if(indicator2 == 5&&indicator==0&&modescene.activeSelf == false&&startnextwordcontroller==0)
             {
                 
                
@@ -86,8 +96,9 @@ public class TypingManager : MonoBehaviour
 
             }
         
+        
 
-        if (indicator2 == 5&&wordStore.countingsht==2&&indicator!=0)
+        if (indicator2 == 5&&wordStore.countingsht==2&&indicator!=0&&startnextwordcontroller==0)
         {
             Debug.Log("Data:"+wordStore.WordSetData.Count);
             gamescene.SetActive(false);
@@ -107,7 +118,7 @@ public class TypingManager : MonoBehaviour
             Debug.Log("Indicator2:"+indicator2);
         }
         if(currentIndex >= letters.Count){
-            if (startnextwordcontroller != 0)
+            if (startnextwordcontroller != 0&&modescene.activeSelf==false)
             {
             StartNextWord();
 
@@ -264,6 +275,7 @@ public class TypingManager : MonoBehaviour
         WordData wordData = wordStore.GetRandomWord();
         wordSys = wordData.english.Length;
         thaiText.text = wordData.thai;
+        wordStore.remainingWords.Remove(wordData);
         StartCoroutine(CreateWord(wordData.english));
         Debug.Log("StartNextWordActivated");
 

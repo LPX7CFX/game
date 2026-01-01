@@ -10,6 +10,9 @@ public class WordStore : MonoBehaviour
    [SerializeField] public List<WordData> allWords;
 
    public Button NextWord;
+   public Button Training;
+   public Button Exit;
+   public Button ExitTraining;
     public List<WordData> Hard;
    
     public List<WordData> Medium;
@@ -19,6 +22,9 @@ public class WordStore : MonoBehaviour
 
 
     public List<WordData> remainingWords;
+    public List<WordData> EasyWord;
+    public List<WordData> MediumWord;
+    public List<WordData> HardWord;
 
     public TextMeshProUGUI EnglishText;
     public TextMeshProUGUI ThaiText;
@@ -29,6 +35,7 @@ public class WordStore : MonoBehaviour
     public int countingsht3 = 0;
     public int countingsht4 = 0;
     public int countingsht5 = 0;
+    public int countingsht6 = 0;
 
 
     public void Awake()
@@ -36,16 +43,21 @@ public class WordStore : MonoBehaviour
         ResetPool();
 
         Setdifficulty();
+        
 
         
     }
 
     public void Start()
     {
-        WordSetting();
+        ExitTraining.onClick.AddListener(ResetWordDiffTraining);
+        Exit.onClick.AddListener(ResetWordDiff);
+        Training.onClick.AddListener(training);
         NextWord.onClick.AddListener(OnmyButtonclick);
         countingsht5 = allWords.Count;
         Debug.Log("ClearlyAsday"+countingsht5);
+       
+       
 
     }
     public void Update()
@@ -80,19 +92,38 @@ public class WordStore : MonoBehaviour
             if(LettersCount >= 0 && LettersCount <= 5)
             {
                 Easy.Add(word);
+                EasyWord.Add(word);
 
             }
             else if(LettersCount >= 6 && LettersCount <= 8)
             {
                 Medium.Add(word);
+                MediumWord.Add(word);
 
             }
             else
             {
                 Hard.Add(word);
+                HardWord.Add(word);
             }
 
         }
+
+    }
+    public void ResetWordDiff()
+    {
+        Easy = new List<WordData>(EasyWord);
+        Medium = new List<WordData>(MediumWord);
+        Hard = new List<WordData>(HardWord);
+
+
+    }
+    public void ResetWordDiffTraining()
+    {   Easy = new List<WordData>(EasyWord);
+        Medium = new List<WordData>(MediumWord);
+        Hard = new List<WordData>(HardWord);
+        WordSetData.Clear();
+        
 
     }
 
@@ -106,6 +137,7 @@ public class WordStore : MonoBehaviour
             
             ResetPool();
             countingsht2++;
+            countingsht6++;
 
         
 
@@ -270,5 +302,10 @@ public class WordStore : MonoBehaviour
         
 
         return null;
+    }
+    public void training()
+    {
+        
+        WordSetting();
     }
 }

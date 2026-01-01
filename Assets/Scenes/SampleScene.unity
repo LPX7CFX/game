@@ -2401,7 +2401,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
-      - m_Target: {fileID: 163654240}
+      - m_Target: {fileID: 1657441009}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -2795,6 +2795,9 @@ MonoBehaviour:
   - english: CONNECTED
     thai: "\u0E40\u0E0A\u0E37\u0E48\u0E2D\u0E21\u0E15\u0E48\u0E2D\u0E41\u0E25\u0E49\u0E27"
   NextWord: {fileID: 1001430011}
+  Training: {fileID: 448626946}
+  Exit: {fileID: 672636814}
+  ExitTraining: {fileID: 916547111}
   Hard: []
   Medium: []
   Easy: []
@@ -2806,6 +2809,9 @@ MonoBehaviour:
     thai: 
   - english: 
     thai: 
+  EasyWord: []
+  MediumWord: []
+  HardWord: []
   EnglishText: {fileID: 561214270}
   ThaiText: {fileID: 1778869235}
   a: 0
@@ -2814,6 +2820,7 @@ MonoBehaviour:
   countingsht3: 0
   countingsht4: 0
   countingsht5: 0
+  countingsht6: 0
 --- !u!4 &769518422
 Transform:
   m_ObjectHideFlags: 0
@@ -3383,7 +3390,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 163654240}
+      - m_Target: {fileID: 1657441009}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -5100,7 +5107,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1523162537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5115,7 +5122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Timer
   text: {fileID: 1273602378}
   start: {fileID: 13106464}
-  stop: {fileID: 0}
+  stop: {fileID: 672636814}
 --- !u!4 &1523162538
 Transform:
   m_ObjectHideFlags: 0
@@ -5579,7 +5586,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1656041762
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5685,7 +5692,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1657441010
 MonoBehaviour:
   m_ObjectHideFlags: 0
