@@ -1,12 +1,16 @@
 using UnityEngine;
 
 public class ExitGameButton : MonoBehaviour
+
 {
+    [SerializeField] private SaveManager SaveManage;
     // ลากฟังก์ชันนี้ไปใส่ในปุ่ม
     public void QuitGame()
     {
         // 1. แจ้งเตือนใน Console ว่ากดแล้ว
         Debug.Log("กำลังออกจากเกม... (Quitting Game)");
+        
+
 
         // 2. สั่งปิดโปรแกรม (สำหรับตัวเกมจริง)
         Application.Quit();

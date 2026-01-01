@@ -1,51 +1,77 @@
 using UnityEngine;
 using System.IO;
+using System;
 
 public class SaveManager : MonoBehaviour
 {
     public static SaveManager Instance;
 
-    public Class currentData;
+    public GameData data;
+
+    private string path;
 
     void Awake()
     {
-        // Singleton (one save manager only)
         if (Instance == null)
-            Instance = this;
-        else
-            Destroy(gameObject);
-    }
-
-    string GetPath(string username)
-    {
-        return Application.persistentDataPath + "/" + username + ".json";
-    }
-
-    public bool HasSave(string username)
-    {
-        return File.Exists(GetPath(username));
-    }
-
-    public void CreateNew(string username)
-    {
-        currentData = new Class
         {
-            username = username,
-            time = "0"
-        };
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
 
-        Save(username);
+            path = Path.Combine(Application.persistentDataPath, "leaderboard.json");
+            LoadOrCreate();
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
-    public void Load(string username)
+    void LoadOrCreate()
     {
-        string json = File.ReadAllText(GetPath(username));
-        currentData = JsonUtility.FromJson<Class>(json);
+        if (File.Exists(path))
+        {
+            string json = File.ReadAllText(path);
+            data = JsonUtility.FromJson<GameData>(json);
+        }
+        else
+        {
+            data = new GameData();
+            Save();
+        }
     }
 
-    public void Save(string username)
+    public void SubmitScore(string username, int timeSeconds)
     {
-        string json = JsonUtility.ToJson(currentData, true);
-        File.WriteAllText(GetPath(username), json);
+        var entry = data.entries.Find(e => e.username == username);
+        Debug.Log("Savetest11");
+
+        if (entry == null)
+        {
+            Debug.Log("Savetest12");
+            data.entries.Add(new LeaderboardEntry
+            {
+                username = username,
+                bestTimeSeconds = timeSeconds
+            });
+            Debug.Log("Savetest13");
+        }
+        else if (timeSeconds < entry.bestTimeSeconds)
+        {
+            Debug.Log("Savetest14");
+            entry.bestTimeSeconds = timeSeconds;
+            Debug.Log("Savetest15");
+        }
+        Debug.Log("Savetest16");
+
+        Save();
+    }
+
+    public void Save()
+    {
+        Debug.Log("Savetest17");
+        string json = JsonUtility.ToJson(data, true);
+        Debug.Log("Savetest18");
+        File.WriteAllText(path, json);
+        Debug.Log("Savetest19");
     }
 }

@@ -14,7 +14,9 @@ public class TypingManager : MonoBehaviour
 {
     [SerializeField] RectTransform wordContainer;
     [SerializeField] GameObject letterPrefab;
+    [SerializeField] private LeaderboardManager Leaderboard;
     [SerializeField] private WordStore wordStore;
+    public Timer Timerfr;
      
     [SerializeField] private TextMeshProUGUI thaiText;
 
@@ -73,14 +75,22 @@ public class TypingManager : MonoBehaviour
                
                 modescene.SetActive(true);
                 gamescene.SetActive(false);
+                
                 wordStore.Setdifficulty();
                 Debug.Log("Close");
             }
         if(currentIndex >= letters.Count&&wordStore.remainingWords.Count==wordStore.countingsht5&&gamescene.activeSelf==true )
         {
             modescene.SetActive(true);
+            Debug.Log("SaveTest1");
             gamescene.SetActive(false);
+            Debug.Log("SaveTest2");
+            Timerfr.StopTimer();
+            Debug.Log("Savetest3");
+            Leaderboard.ShowLeaderboard();
+            Debug.Log("Savetest4");
             wordStore.Setdifficulty();
+            Debug.Log("Savetest5");
             Debug.Log("Close2");
 
         }
