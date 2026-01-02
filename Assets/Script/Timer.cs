@@ -1,56 +1,62 @@
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using System;
-using NUnit.Framework.Internal;
+using NUnit.Framework;
 
 public class Timer : MonoBehaviour
 {
-    public TextMeshProUGUI text;
-    float currenttime;
-    bool stopwatch = false;
-    public Button start;
-    public Button stop;
-    private LeaderBoardManager leaderBoard;
-    
+    public TextMeshProUGUI timerText;
+    public Button startButton;
+    public Button stopButton;
 
-    
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public float currentTime;
+    private bool running;
+    bool hasSaved = false;
+
     void Start()
     {
-        currenttime = 0;
-        start.onClick.AddListener(starttime);
+        currentTime = 0;
+        running = false;
 
-        stop.onClick.AddListener(stoptimemanual);
+        startButton.onClick.AddListener(StartTimer);
+        stopButton.onClick.AddListener(StopTimer);
     }
 
-    // Update is called once per frame
-    public void Update()
+    void Update()
     {
-        if (stopwatch == true)
-        {
-            currenttime = currenttime + Time.deltaTime;
+        if (!running) return;
 
-        }
-        TimeSpan time = TimeSpan.FromSeconds(currenttime);
-        text.text = time.Seconds.ToString();
-        
+        currentTime += Time.deltaTime;
+
+        int seconds = Mathf.FloorToInt(currentTime);
+        timerText.text = seconds.ToString();
     }
 
-    void starttime()
+    void StartTimer()
     {
-        stopwatch = true;
-
+        currentTime = 0;
+        running = true;
+        hasSaved = false;
     }
-    void stoptimemanual()
-    {
-        stopwatch = false;
 
-    }
-    void stoptimeauto()
-    {
-        stopwatch = false;
+    public void StopTimer()
+    {   
 
+        Debug.Log("Savetest6");
+         if (hasSaved) return;
+            hasSaved = true;
+            Debug.Log("Savetest7");
+        running = false;
+        Debug.Log("Savetest8");
+
+        int finalTime = Mathf.FloorToInt(currentTime);
+        Debug.Log("Savetest9");
+
+        SaveManager.Instance.SubmitScore(
+            LoginManager.CurrentUser,
+            finalTime
+        );
+        Debug.Log("Savetest10");
     }
 }

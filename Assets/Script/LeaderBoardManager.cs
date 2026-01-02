@@ -1,63 +1,47 @@
-using UnityEngine;
-using System.IO;
-using UnityEngine.SocialPlatforms.Impl;
 using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
+using TMPro;
 
-public class LeaderBoardManager : MonoBehaviour
+public class LeaderboardManager : MonoBehaviour
 {
-    string path;
-    public SaveTest saveTest = new();
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public Transform contentParent;   // Where rows will be spawned
+    public GameObject rowPrefab;      // One leaderboard row prefab
+    public int maxShown = 10;
 
-    void Awake()
+    void OnEnable()
     {
-         path = Application.persistentDataPath + "/leaderboard.json";
-         loadleaderboard();
+        ShowLeaderboard();
     }
 
-    public void saveleaderboard()
+    public void ShowLeaderboard()
     {
-        
-        string json = JsonUtility.ToJson(saveTest, true);
-        File.WriteAllText(path, json); 
-    }
+        if (SaveManager.Instance == null) return;
+        if (SaveManager.Instance.data == null) return;
 
-    public void loadleaderboard()
-    {
-        if (!File.Exists(path))
+        // Clear old rows
+        for (int i = contentParent.childCount - 1; i >= 0; i--)
         {
-            
-            saveTest = new SaveTest();
-          return;
+            Destroy(contentParent.GetChild(i).gameObject);
         }
-        string json = File.ReadAllText(path);
 
-        saveTest = JsonUtility.FromJson<SaveTest>(json);
+        // Sort by LOWEST time (best first)
+        List<LeaderboardEntry> sorted =
+            SaveManager.Instance.data.entries
+            .OrderBy(e => e.bestTimeSeconds)
+            .Take(maxShown)
+            .ToList();
 
-    }
-
-    public void addscore(string name, string time)
-    {
-        saveTest.SaveData.Add(new Class
+        // Spawn rows
+        for (int i = 0; i < sorted.Count; i++)
         {
-            username = name,
-            time = time
+            GameObject row = Instantiate(rowPrefab, contentParent);
 
+            TMP_Text[] texts = row.GetComponentsInChildren<TMP_Text>();
 
-        });
-
-
-    }
-
-
-    void Start()
-    {
-       
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+            texts[0].text = (i + 1).ToString();                 // Rank
+            texts[1].text = sorted[i].username;                // Name
+            texts[2].text = sorted[i].bestTimeSeconds + " s";  // Time
+        }
     }
 }

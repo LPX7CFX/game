@@ -1,31 +1,32 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
+using System;
 
 public class LoginManager : MonoBehaviour
 {
+    public static string CurrentUser;
+
     public TMP_InputField nameInput;
     public GameObject loginPanel;
+    public GameObject startScene;
+    public Button confirmButton;
 
-    public void ConfirmName()
+    void Start()
+    {
+        confirmButton.onClick.AddListener(ConfirmName);
+    }
+
+    void ConfirmName()
     {
         string username = nameInput.text.Trim();
 
         if (string.IsNullOrEmpty(username))
             return;
 
-        if (SaveManager.Instance.HasSave(username))
-        {
-            // Existing user
-            SaveManager.Instance.Load(username);
-            Debug.Log("Loaded user: " + username);
-        }
-        else
-        {
-            // New user
-            SaveManager.Instance.CreateNew(username);
-            Debug.Log("Created new user: " + username);
-        }
+        CurrentUser = username;
 
         loginPanel.SetActive(false);
+        startScene.SetActive(true);
     }
 }
