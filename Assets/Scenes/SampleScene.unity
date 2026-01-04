@@ -7412,6 +7412,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SaveManager
   data:
     entries: []
+  leaderboardManager: {fileID: 1113887358}
 --- !u!4 &1889182313
 Transform:
   m_ObjectHideFlags: 0

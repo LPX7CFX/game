@@ -20,7 +20,7 @@ public class Timer : MonoBehaviour
         running = false;
 
         startButton.onClick.AddListener(StartTimer);
-        stopButton.onClick.AddListener(StopTimer);
+        stopButton.onClick.AddListener(Stoptimermanual);
     }
 
     void Update()
@@ -38,6 +38,13 @@ public class Timer : MonoBehaviour
         currentTime = 0;
         running = true;
         hasSaved = false;
+    }
+
+    public void Stoptimermanual()
+    {
+        running = false;
+
+
     }
 
     public void StopTimer()

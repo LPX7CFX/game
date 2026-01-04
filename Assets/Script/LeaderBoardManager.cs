@@ -9,15 +9,18 @@ public class LeaderboardManager : MonoBehaviour
     public GameObject rowPrefab;      // One leaderboard row prefab
     public int maxShown = 10;
 
-    void OnEnable()
+    public void Awake()
     {
-        ShowLeaderboard();
+        
     }
 
     public void ShowLeaderboard()
     {
+        Debug.Log("ShowleaderboardStart");
         if (SaveManager.Instance == null) return;
+        Debug.Log("ShowleaderBoardReturn");
         if (SaveManager.Instance.data == null) return;
+        Debug.Log("ShowleaderBoardReturnData");
 
         // Clear old rows
         for (int i = contentParent.childCount - 1; i >= 0; i--)

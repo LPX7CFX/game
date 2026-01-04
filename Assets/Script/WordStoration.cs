@@ -92,19 +92,22 @@ public class WordStore : MonoBehaviour
             if(LettersCount >= 0 && LettersCount <= 5)
             {
                 Easy.Add(word);
-                EasyWord.Add(word);
+                if(!EasyWord.Contains(word))
+                    EasyWord.Add(word);
 
             }
             else if(LettersCount >= 6 && LettersCount <= 8)
             {
                 Medium.Add(word);
-                MediumWord.Add(word);
+                if(!MediumWord.Contains(word))
+                    MediumWord.Add(word);
 
             }
             else
             {
                 Hard.Add(word);
-                HardWord.Add(word);
+                if(!HardWord.Contains(word))
+                    HardWord.Add(word);
             }
 
         }
@@ -172,6 +175,7 @@ public class WordStore : MonoBehaviour
             return word;
 
         }
+        
 
         
        

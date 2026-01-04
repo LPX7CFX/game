@@ -75,6 +75,9 @@ public class TypingManager : MonoBehaviour
                
                 modescene.SetActive(true);
                 gamescene.SetActive(false);
+                wordStore.countingsht3=0;
+                indicator4 = 0;
+                indicator3 = 0;
                 
                 wordStore.Setdifficulty();
                 Debug.Log("Close");

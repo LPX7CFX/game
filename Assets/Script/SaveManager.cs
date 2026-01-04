@@ -9,6 +9,7 @@ public class SaveManager : MonoBehaviour
     public GameData data;
 
     private string path;
+    [SerializeField] private LeaderboardManager leaderboardManager;
 
     void Awake()
     {
@@ -24,6 +25,8 @@ public class SaveManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        leaderboardManager.ShowLeaderboard();
     }
 
     void LoadOrCreate()
