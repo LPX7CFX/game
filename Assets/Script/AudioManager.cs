@@ -25,6 +25,23 @@ public class AudioManager : MonoBehaviour
 
     public AudioClip buttonClick;
 
+    [Header("Typing SFX")]
+    public AudioClip typingSFX;
+    public AudioClip finishWordSFX;
+
+    public void PlayTyping()
+    {
+        if (sfxSource == null || typingSFX == null) return;
+        sfxSource.PlayOneShot(typingSFX);
+    }
+
+    public void PlayFinishWord()
+    {
+        if (sfxSource == null || finishWordSFX == null) return;
+        sfxSource.PlayOneShot(finishWordSFX);
+    }
+
+
     [Header("UI Sliders")]
     public Slider bgmSlider;
     public Slider sfxSlider;

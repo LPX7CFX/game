@@ -74,7 +74,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 8
+  m_PixelsPerUnitMultiplier: 17
 --- !u!1 &4687825060414442147
 GameObject:
   m_ObjectHideFlags: 0
@@ -109,7 +109,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -345, y: 0}
+  m_AnchoredPosition: {x: -399, y: 0.0000019073}
   m_SizeDelta: {x: 61.3213, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3414447084405236373
@@ -246,8 +246,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -24.976103, y: 0}
-  m_SizeDelta: {x: 555.1635, y: 50}
+  m_AnchoredPosition: {x: -24, y: 5.636}
+  m_SizeDelta: {x: 623.2944, y: 61.272}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4236287581173793804
 CanvasRenderer:
@@ -277,7 +277,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "test \u0E40\u0E17\u0E2A"
+  m_text: "test \u0E40\u0E17\u0E2A\u0E39\u0E36\u0E49"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a8da5e38a1354c0419e08393186a715c, type: 2}
   m_sharedMaterial: {fileID: 904041311899202472, guid: a8da5e38a1354c0419e08393186a715c, type: 2}
@@ -388,7 +388,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 790.3, y: 79.7534}
+  m_SizeDelta: {x: 898.4009, y: 59.1774}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8788249270147469211
 CanvasRenderer:
@@ -427,7 +427,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 8
+  m_PixelsPerUnitMultiplier: 17
 --- !u!1 &6303571801947084000
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,7 +462,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 321, y: 0}
+  m_AnchoredPosition: {x: 360, y: 0}
   m_SizeDelta: {x: 120.71, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7531448576981861367
@@ -493,7 +493,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 123s
+  m_text: 9999s
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8e84fc1f014c12146af54cce889a7538, type: 2}
   m_sharedMaterial: {fileID: -5241030044411697450, guid: 8e84fc1f014c12146af54cce889a7538, type: 2}

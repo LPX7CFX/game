@@ -47,7 +47,6 @@ public class TypingManager : MonoBehaviour
 
 
 
-
     void Start()
     {
 
@@ -155,6 +154,9 @@ public class TypingManager : MonoBehaviour
         string input = Input.inputString;
         if (string.IsNullOrEmpty(input))
             return;
+        if (AudioManager.Instance != null)
+            AudioManager.Instance.PlayTyping();
+
         Debug.Log(letters.Count);
         Debug.Log("InputZone: " + currentIndex);
         Debug.Log("Pass The Check");
@@ -301,6 +303,9 @@ public class TypingManager : MonoBehaviour
     }
     void ClearCurrentWord() // Add SFX
     {
+        if (AudioManager.Instance != null)
+            AudioManager.Instance.PlayFinishWord();
+
         indicator2++;
         CountingSys = 0;
         Debug.Log("CLearCurrentWordIndi2::" + indicator2);
