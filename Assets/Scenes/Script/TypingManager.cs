@@ -24,23 +24,28 @@ public class TypingManager : MonoBehaviour
 
     [SerializeField] Button Training;
 
+
     [SerializeField] Button Challenge;
     [SerializeField] GameObject IntroScene;
     [SerializeField] GameObject gamescene;
     [SerializeField] GameObject modescene;
+    [SerializeField] Button PlayAudio;
 
     private List<Letterui> letters = new();
     private int currentIndex = 0;
 
     private int CountingSys = 1;
 
+
     private int startnextwordcontroller = 0;
     private int wordSys;
     private int startnextwordcontrollertrain = 0;
+    public AudioClip Audio;
     public int indicator = 0;
     public int indicator2 = -1;
     public int indicator3 = 0;
     public int indicator4 = 0;
+    public AudioSource audioSource;
 
 
 
@@ -55,6 +60,9 @@ public class TypingManager : MonoBehaviour
         Challenge.onClick.AddListener(StartNextWord);
 
         Training.onClick.AddListener(training);
+        PlayAudio.onClick.AddListener(PlaySound);
+
+
 
 
     }
@@ -170,7 +178,7 @@ public class TypingManager : MonoBehaviour
         if (gamescene.activeSelf == false && string.IsNullOrEmpty(input))
             return;
 
-        char typedChar = char.ToUpper(input[0]);
+        char typedChar = input[0];
 
 
         Letterui currentLetter = letters[currentIndex];
@@ -193,6 +201,7 @@ public class TypingManager : MonoBehaviour
             Debug.Log("Wrong Letter Check Work");
             // Optional: show wrong letter
             currentLetter.FlashWrong();
+            Timerfr.currentTime += 2f; // Penalty for wrong letter
 
         }
         Debug.Log(currentIndex);
@@ -202,7 +211,6 @@ public class TypingManager : MonoBehaviour
             StartNextWord();
 
         }*/
-
 
 
         /*if (Input.anyKeyDown) return;
@@ -289,6 +297,8 @@ public class TypingManager : MonoBehaviour
         Debug.Log("ClearCurrentWordStartNextWord");
 
         WordData wordData = wordStore.GetRandomWord();
+        Audio = wordData.audio;
+
         wordSys = wordData.english.Length;
         thaiText.text = wordData.thai;
         wordStore.remainingWords.Remove(wordData);
@@ -321,6 +331,13 @@ public class TypingManager : MonoBehaviour
         Debug.Log("ClearCurrentWord");
 
 
+    }
+
+    void PlaySound()
+    {
+
+        if (Audio == null || audioSource == null) return;
+        audioSource.PlayOneShot(Audio);
     }
 
     void training()

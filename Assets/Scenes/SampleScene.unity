@@ -2873,7 +2873,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WordStore
   allWords:
   - english: SEVERAL
-    thai: "\u0E2B\u0E25\u0E32\u0E22"
+    thai: "\u0E2B\u0E25\u0E32\u0E01\u0E2B\u0E25\u0E32\u0E22"
   - english: PREVENT
     thai: "\u0E1B\u0E49\u0E2D\u0E07\u0E01\u0E31\u0E19\u0E44\u0E21\u0E48\u0E43\u0E2B\u0E49\u0E40\u0E01\u0E34\u0E14"
   - english: ACTUALLY
@@ -2919,7 +2919,7 @@ MonoBehaviour:
   - english: CONDITION
     thai: "\u0E40\u0E07\u0E37\u0E48\u0E2D\u0E19\u0E44\u0E02"
   - english: LACK
-    thai: "\u0E02\u0E32\u0E14"
+    thai: "\u0E02\u0E32\u0E14\u0E41\u0E04\u0E25\u0E19"
   - english: REQUIRE
     thai: "\u0E15\u0E49\u0E2D\u0E07\u0E01\u0E32\u0E23, \u0E08\u0E33\u0E40\u0E1B\u0E47\u0E19\u0E15\u0E49\u0E2D\u0E07\u0E43\u0E0A\u0E49"
   - english: DELIVER

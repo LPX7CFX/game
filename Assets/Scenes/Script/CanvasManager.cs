@@ -5,7 +5,6 @@ public class CanvasManager : MonoBehaviour
     public GameObject settingsCanvas;
     private GameObject lastCanvas;
 
-    // เรียกตอนกดปุ่ม Setting
     public void OpenSettings(GameObject currentCanvas)
     {
         lastCanvas = currentCanvas;
@@ -13,7 +12,6 @@ public class CanvasManager : MonoBehaviour
         settingsCanvas.SetActive(true);
     }
 
-    // เรียกตอนกดปุ่ม Close / Back
     public void CloseSettings()
     {
         settingsCanvas.SetActive(false);
