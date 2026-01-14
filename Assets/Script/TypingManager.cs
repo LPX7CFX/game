@@ -40,7 +40,7 @@ public class TypingManager : MonoBehaviour
     private int startnextwordcontroller = 0;
     private int wordSys;
     private int startnextwordcontrollertrain = 0;
-    public AudioClip Audio;
+
     public int indicator = 0;
     public int indicator2 = -1;
     public int indicator3 = 0;
@@ -297,7 +297,7 @@ public class TypingManager : MonoBehaviour
         Debug.Log("ClearCurrentWordStartNextWord");
 
         WordData wordData = wordStore.GetRandomWord();
-        Audio = wordData.audio;
+
 
         wordSys = wordData.english.Length;
         thaiText.text = wordData.thai;
@@ -335,6 +335,8 @@ public class TypingManager : MonoBehaviour
 
     void PlaySound()
     {
+        WordData wordData = wordStore.GetRandomWord();
+        AudioClip Audio = wordData.audio;
 
         if (Audio == null || audioSource == null) return;
         audioSource.PlayOneShot(Audio);
