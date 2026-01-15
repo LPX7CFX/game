@@ -7,6 +7,7 @@ public class WordData
 {
     public string english;
     public string thai;
+    public string type;
     public AudioClip audio;
 
 }
