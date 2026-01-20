@@ -7,18 +7,23 @@ using Unity.VisualScripting;
 
 public class WordStore : MonoBehaviour
 {
-   [SerializeField] public List<WordData> allWords;
+    [SerializeField] public List<WordData> allWords;
 
-   public Button NextWord;
-   public Button Training;
-   public Button Exit;
-   public Button ExitTraining;
+    public Button NextWord;
+    public Button Training;
+    public Button Exit;
+    public Button ExitTraining;
+    public Button ExitMainButton;
     public List<WordData> Hard;
-   
+    public TypingManager TM;
+
     public List<WordData> Medium;
     public List<WordData> Easy;
 
     public List<WordData> WordSetData;
+    public WordData aaa;
+    [SerializeField] public GameObject SceneBth;
+    [SerializeField] public GameObject SceneCth;
 
 
     public List<WordData> remainingWords;
@@ -43,26 +48,27 @@ public class WordStore : MonoBehaviour
         ResetPool();
 
         Setdifficulty();
-        
 
-        
+
+
     }
 
     public void Start()
     {
         ExitTraining.onClick.AddListener(ResetWordDiffTraining);
-        Exit.onClick.AddListener(ResetWordDiff);
+        Exit.onClick.AddListener(ExitMain);
         Training.onClick.AddListener(training);
         NextWord.onClick.AddListener(OnmyButtonclick);
+        ExitMainButton.onClick.AddListener(ExitMain);
         countingsht5 = allWords.Count;
-        Debug.Log("ClearlyAsday"+countingsht5);
-       
-       
+        Debug.Log("ClearlyAsday" + countingsht5);
+
+
 
     }
     public void Update()
     {
-         if(remainingWords.Count == 0)
+        if (remainingWords.Count == 0)
         {
             ResetPool();
 
@@ -83,30 +89,33 @@ public class WordStore : MonoBehaviour
         int WordIndex = WordCount--;
 
 
-        
 
-        foreach(WordData word in allWords)
+
+        foreach (WordData word in allWords)
         {
             int LettersCount = word.english.Length;
 
-            if(LettersCount >= 0 && LettersCount <= 5)
+            if (LettersCount >= 0 && LettersCount <= 5)
             {
-                Easy.Add(word);
-                if(!EasyWord.Contains(word))
+                if (!EasyWord.Contains(word))
+                    Easy.Add(word);
+                if (!EasyWord.Contains(word))
                     EasyWord.Add(word);
 
             }
-            else if(LettersCount >= 6 && LettersCount <= 8)
+            else if (LettersCount >= 6 && LettersCount <= 8)
             {
-                Medium.Add(word);
-                if(!MediumWord.Contains(word))
+                if (!MediumWord.Contains(word))
+                    Medium.Add(word);
+                if (!MediumWord.Contains(word))
                     MediumWord.Add(word);
 
             }
             else
             {
-                Hard.Add(word);
-                if(!HardWord.Contains(word))
+                if (!HardWord.Contains(word))
+                    Hard.Add(word);
+                if (!HardWord.Contains(word))
                     HardWord.Add(word);
             }
 
@@ -122,11 +131,12 @@ public class WordStore : MonoBehaviour
 
     }
     public void ResetWordDiffTraining()
-    {   Easy = new List<WordData>(EasyWord);
+    {
+        Easy = new List<WordData>(EasyWord);
         Medium = new List<WordData>(MediumWord);
         Hard = new List<WordData>(HardWord);
         WordSetData.Clear();
-        
+
 
     }
 
@@ -134,22 +144,22 @@ public class WordStore : MonoBehaviour
 
     public WordData GetRandomWord()
     {
-        
+
         WordData word;
         if (remainingWords.Count == 0)
-            
-            ResetPool();
-            countingsht2++;
-            countingsht6++;
 
-        
+            ResetPool();
+        countingsht2++;
+        countingsht6++;
+
+
 
         if (Easy.Count > 0)
         {
             int Index = Random.Range(0, Easy.Count);
             word = Easy[Index];
             Easy.RemoveAt(Index);
-            
+
 
             return word;
 
@@ -159,81 +169,82 @@ public class WordStore : MonoBehaviour
             int Index = Random.Range(0, Medium.Count);
             word = Medium[Index];
             Medium.RemoveAt(Index);
-            
+
 
             return word;
 
         }
         else if (Hard.Count > 0 && Medium.Count == 0 && Easy.Count == 0)
         {
-            
+
             int Index = Random.Range(0, Hard.Count);
             word = Hard[Index];
             Hard.RemoveAt(Index);
-            
+
 
             return word;
 
         }
-        
 
-        
-       
+
+
+
         //int index = Random.Range(0, remainingWords.Count);
         //word = remainingWords[index];
 
-        
+
         return null;
 
-    
+
         //Debug.Log("Get Random Word Activated");
 
         //remainingWords.RemoveAt(index);
         //return word;
 
-        
 
-        
-        
+
+
+
     }
 
-    
+
     public void OnmyButtonclick()
     {
 
         NextWord1();
-        
 
-        
-        
 
-        
+
+
+
+
     }
     public void NextWord1()
-{
-    if (WordSetData == null || WordSetData.Count == 0) return;
+    {
+        if (WordSetData == null || WordSetData.Count == 0) return;
 
-    if (a < 0 || a >= WordSetData.Count)
-        a = 0;
+        if (a < 0 || a >= WordSetData.Count)
+            a = 0;
 
-    WordData word = WordSetData[a];
+        WordData word = WordSetData[a];
+        aaa = word;
 
-    ThaiText.text = word.thai;
-    EnglishText.text = word.english;
+        ThaiText.text = word.thai;
+        EnglishText.text = word.english;
 
-    a++;
-}
+        a++;
+    }
 
     public WordData getrandomwordtraining()
     {
         WordData words;
 
-        
+
         int IndexWordrandom = Random.Range(0, WordSetData.Count);
         words = WordSetData[IndexWordrandom];
         WordSetData.RemoveAt(IndexWordrandom);
         remainingWords.Remove(words);
-        
+
 
 
         return words;
@@ -262,25 +273,25 @@ public class WordStore : MonoBehaviour
 
         while (i < 5)
         {
-            
+
             word = GetRandomWord();
-            i = i +1;
+            i = i + 1;
             if (word == null)
                 continue;
 
             if (string.IsNullOrEmpty(word.english))
                 continue;
             WordSetData.Add(word);
-            Debug.Log("word:"+i);
+            Debug.Log("word:" + i);
 
-            
 
-            
+
+
         }
         //wordintroduction(WordSetData);
         countingsht++;
         countingsht3 = WordSetData.Count;
-        
+
         if (countingsht3 < 5)
         {
             countingsht4++;
@@ -288,28 +299,48 @@ public class WordStore : MonoBehaviour
         }
         else
         {
-            countingsht4=0;
+            countingsht4 = 0;
         }
-        Debug.Log("ClearAsdayCount4"+countingsht4);
-    
+        Debug.Log("ClearAsdayCount4" + countingsht4);
+
         NextWord1();
 
         if (countingsht > 2)
         {
-            
-            countingsht = 2;
-            
-        }
-       
 
-        
-        
+            countingsht = 2;
+
+        }
+
+
+
+
 
         return null;
     }
     public void training()
     {
-        
+
         WordSetting();
+    }
+    public void ExitMain()
+    {
+        ResetWordDiff();
+        ResetWordDiffTraining();
+        ResetPool();
+        TM.indicator = 0;
+        TM.indicator2 = -1;
+        TM.indicator3 = 0;
+        TM.indicator4 = 0;
+        countingsht = 0;
+        countingsht2 = 0;
+        countingsht3 = 0;
+        countingsht4 = 0;
+        countingsht5 = 0;
+        countingsht6 = 0;
+        SceneBth.SetActive(true);
+        SceneCth.SetActive(false);
+
+
     }
 }

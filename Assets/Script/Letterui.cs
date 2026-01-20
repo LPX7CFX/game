@@ -12,16 +12,16 @@ public class Letterui : MonoBehaviour
 
     [SerializeField] Sprite NewBackground;
     [SerializeField] Sprite OldBackgorund;
-    public char Value { get; private set;}
-    public bool Typed {get; private set;}
+    public char Value { get; private set; }
+    public bool Typed { get; private set; }
 
 
     void Awake()
     {
-          if (letterText == null)
+        if (letterText == null)
             letterText = GetComponentInChildren<TextMeshProUGUI>();
 
-        
+
         letterText.text = "";
     }
 
@@ -36,12 +36,12 @@ public class Letterui : MonoBehaviour
          letterText.text = C.ToString();*/
 
         Value = C;
-        
+
         /*letterText.text = C.ToString();*/
 
     }
 
-     public char GetLetter()
+    public char GetLetter()
     {
         return Value;
     }
@@ -52,9 +52,9 @@ public class Letterui : MonoBehaviour
         Debug.Log(letterText.text);
         background.sprite = OldBackgorund;
 
-        
 
-    
+
+
     }
 
     public void FlashWrong()
@@ -67,7 +67,7 @@ public class Letterui : MonoBehaviour
     public IEnumerator MarkWrong()
     {
         background.sprite = NewBackground;
-        
+
         yield return new WaitForSeconds(1f);
 
         background.sprite = OldBackgorund;

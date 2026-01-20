@@ -10,12 +10,16 @@ using UnityEditor.PackageManager;
 using UnityEngine.UI;
 using Unity.VisualScripting;
 
+
+
+
 public class TypingManager : MonoBehaviour
 {
     [SerializeField] RectTransform wordContainer;
     [SerializeField] GameObject letterPrefab;
     [SerializeField] private LeaderboardManager Leaderboard;
     [SerializeField] private WordStore wordStore;
+    [SerializeField] private AudioManager AM;
     public Timer Timerfr;
 
     [SerializeField] private TextMeshProUGUI thaiText;
@@ -23,18 +27,28 @@ public class TypingManager : MonoBehaviour
     [SerializeField] GameObject StartUi;
 
     [SerializeField] Button Training;
+    [SerializeField] Button PlayVoice;
+    [SerializeField] Button PlayAudio;
+    [SerializeField] Button PlaySound;
+
+    [SerializeField] GameObject asd;
+    [SerializeField] GameObject fgh;
+
 
 
     [SerializeField] Button Challenge;
     [SerializeField] GameObject IntroScene;
     [SerializeField] GameObject gamescene;
     [SerializeField] GameObject modescene;
-    [SerializeField] Button PlayAudio;
+
 
     private List<Letterui> letters = new();
     private int currentIndex = 0;
 
     private int CountingSys = 1;
+    private WordData sss;
+    private WordData bbb;
+
 
 
     private int startnextwordcontroller = 0;
@@ -60,7 +74,9 @@ public class TypingManager : MonoBehaviour
         Challenge.onClick.AddListener(StartNextWord);
 
         Training.onClick.AddListener(training);
-        PlayAudio.onClick.AddListener(PlaySound);
+        PlayAudio.onClick.AddListener(PlaySoundTraining);
+        PlayVoice.onClick.AddListener(PlaySoundGame);
+        PlaySound.onClick.AddListener(PlaySoundTrainingGame);
 
 
 
@@ -89,7 +105,7 @@ public class TypingManager : MonoBehaviour
             wordStore.Setdifficulty();
             Debug.Log("Close");
         }
-        if (currentIndex >= letters.Count && wordStore.remainingWords.Count == wordStore.countingsht5 && gamescene.activeSelf == true)
+        if (currentIndex >= letters.Count && gamescene.activeSelf == true && wordStore.Hard.Count == 0)
         {
             modescene.SetActive(true);
             Debug.Log("SaveTest1");
@@ -100,6 +116,7 @@ public class TypingManager : MonoBehaviour
             Leaderboard.ShowLeaderboard();
             Debug.Log("Savetest4");
             wordStore.Setdifficulty();
+            wordStore.ResetWordDiff();
             Debug.Log("Savetest5");
             Debug.Log("Close2");
 
@@ -192,6 +209,7 @@ public class TypingManager : MonoBehaviour
             //Letterui currentLetter = letters[currentIndex];
             currentLetter.MarkCorrect();
             currentIndex++;
+
 
         }
         else if (typedChar != currentLetter.Value && CountingSys == wordSys)
@@ -297,6 +315,9 @@ public class TypingManager : MonoBehaviour
         Debug.Log("ClearCurrentWordStartNextWord");
 
         WordData wordData = wordStore.GetRandomWord();
+        sss = wordData;
+        asd.SetActive(false);
+        fgh.SetActive(true);
 
 
         wordSys = wordData.english.Length;
@@ -313,9 +334,9 @@ public class TypingManager : MonoBehaviour
     }
     void ClearCurrentWord() // Add SFX
     {
-        if (AudioManager.Instance != null)
-            AudioManager.Instance.PlayFinishWord();
 
+        if (AudioManager.Instance != null && indicator2 != -1)
+            AudioManager.Instance.PlayFinishWord();
         indicator2++;
         CountingSys = 0;
         Debug.Log("CLearCurrentWordIndi2::" + indicator2);
@@ -333,18 +354,43 @@ public class TypingManager : MonoBehaviour
 
     }
 
-    void PlaySound()
+    void PlaySoundTraining()
     {
-        WordData wordData = wordStore.GetRandomWord();
-        AudioClip Audio = wordData.audio;
+        //wordStore.GetRandomWord();
+        Debug.Log("6767" + wordStore.aaa.english);
+        AudioClip Audio = wordStore.aaa.audio;
 
-        if (Audio == null || audioSource == null) return;
-        audioSource.PlayOneShot(Audio);
+        if (Audio == null || AM.sfxSource == null) return;
+        Debug.Log("PlaySoundWorking");
+        AM.sfxSource.PlayOneShot(Audio);
+    }
+    void PlaySoundGame()
+    {
+        Debug.Log("6767" + sss.english);
+        AudioClip Audio = sss.audio;
+
+        if (Audio == null || AM.sfxSource == null) return;
+        Debug.Log("PlaySoundWorking");
+        AM.sfxSource.PlayOneShot(Audio);
+
+    }
+    void PlaySoundTrainingGame()
+    {
+        Debug.Log("6767" + bbb.english);
+        AudioClip Audio = bbb.audio;
+
+        if (Audio == null || AM.sfxSource == null) return;
+        Debug.Log("PlaySoundWorking");
+        AM.sfxSource.PlayOneShot(Audio);
+
     }
 
     void training()
     {
         Debug.Log("ClearCurrentWordTraining");
+
+        asd.SetActive(true);
+        fgh.SetActive(false);
 
         ClearCurrentWord();
         wordStore.countingsht2++;
@@ -353,6 +399,8 @@ public class TypingManager : MonoBehaviour
 
 
         WordData wordDatas = wordStore.getrandomwordtraining();
+        bbb = wordDatas;
+
         wordSys = wordDatas.english.Length;
         thaiText.text = wordDatas.thai;
         StartCoroutine(CreateWord(wordDatas.english));
@@ -379,6 +427,7 @@ public class TypingManager : MonoBehaviour
             gamescene.SetActive(true);
 
         }
+
 
 
 
