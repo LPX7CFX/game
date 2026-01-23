@@ -9,7 +9,7 @@ public class CategoryName : MonoBehaviour
 
     public TMP_InputField categoryinput;
     public Button Enter;
-    public RectTransform CategoryZone; 
+    public RectTransform CategoryZone;
     public GameObject Category;
     private TextMeshProUGUI CategoryNameText;
     private GameObject GameButton;
@@ -29,12 +29,12 @@ public class CategoryName : MonoBehaviour
     public GameObject Word;
     public WordData Wordsss = new WordData();
 
-    
+
     public string IdSent;
-    
-    
-    
-    
+
+
+
+
     private HashSet<string> HasSaved = new HashSet<string>();
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -46,14 +46,14 @@ public class CategoryName : MonoBehaviour
         EnterVocabll.onClick.AddListener(EnterVocab);
         defaultcateinstant();
 
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-       
-        
+
+
     }
     void EnterGUIXDDD()
     {
@@ -65,11 +65,11 @@ public class CategoryName : MonoBehaviour
     void NameEnter()
     {
         string categoryname = categoryinput.text.Trim();
-        
-        if(HasSaved.Contains(categoryname)) return; 
 
-        if(string.IsNullOrEmpty(categoryname)) return;
- 
+        if (HasSaved.Contains(categoryname)) return;
+
+        if (string.IsNullOrEmpty(categoryname)) return;
+
         GameObject CategoryBlocks = Instantiate(Category, CategoryZone, false);
         CategoryBlocks.transform.SetSiblingIndex(0);
         GameButton = CategoryBlocks;
@@ -77,18 +77,18 @@ public class CategoryName : MonoBehaviour
         category.ID = categoryname;
 
         Button CategorySuperButton = CategoryBlocks.GetComponent<Button>();
-        CategorySuperButton.onClick.AddListener(() => Print(category.ID)) ;
+        CategorySuperButton.onClick.AddListener(() => Print(category.ID));
         HasSaved.Add(categoryname);
 
-        
+
 
         Transform CategoryRealBlocks = CategoryBlocks.transform.GetChild(0);
 
         //Transform CategoryNameTextTrans = CategoryRealBlocks.GetChild(0);
         CategoryNameText = CategoryRealBlocks.GetComponent<TextMeshProUGUI>();
 
-        CategoryNameText.text  = categoryname;
-        cate.Add(new Cate { Name = categoryname});
+        CategoryNameText.text = categoryname;
+        cate.Add(new Cate { Name = categoryname });
 
 
 
@@ -98,7 +98,7 @@ public class CategoryName : MonoBehaviour
     void Print(string ID)
     {
         TextMeshProUGUI Word = GameButton.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
-        
+
 
 
 
@@ -106,7 +106,7 @@ public class CategoryName : MonoBehaviour
         IdSent = ID;
         alreadycontainwordinstant();
         CreateWordthreethousand();
-       
+
 
 
 
@@ -115,6 +115,8 @@ public class CategoryName : MonoBehaviour
     void Printx(string ID)
     {
         IdSent = ID;
+        WordAddGUI.SetActive(true);
+        CateAddGUI.SetActive(false);
         alreadycontainwordinstantallword(ID);
 
     }
@@ -129,7 +131,7 @@ public class CategoryName : MonoBehaviour
     void createnewlistforcate(string Topic)
     {
 
-        if(cate.Find(c => c.Name == Topic) != null) return;
+        if (cate.Find(c => c.Name == Topic) != null) return;
 
         Cate newcate = new Cate();
         newcate.Name = Topic;
@@ -137,10 +139,10 @@ public class CategoryName : MonoBehaviour
 
 
         cate.Add(newcate);
-        
-        
 
-       
+
+
+
 
 
 
@@ -149,32 +151,32 @@ public class CategoryName : MonoBehaviour
     {
         string EnglishVocab = English.text.Trim();
         string ThaiVocab = Thai.text.Trim();
-       
+
         Wordsss.english = EnglishVocab;
         Wordsss.thai = ThaiVocab;
         Wordsss.verb = IdSent;
 
-        
+
         Cate category = cate.Find(c => c.Name == IdSent);
         Debug.Log(category);
 
-        if(string.IsNullOrEmpty(EnglishVocab)||string.IsNullOrEmpty(ThaiVocab)) return;
+        if (string.IsNullOrEmpty(EnglishVocab) || string.IsNullOrEmpty(ThaiVocab)) return;
 
-        
+
         if (category != null)
         {
             bool exist = category.words
                 .Any(w => w.english.Equals(EnglishVocab, StringComparison.OrdinalIgnoreCase));
             if (exist)
-        {
-            
-            return;
-        }
+            {
+
+                return;
+            }
         }
 
-        
-        category.words.Add(new WordData { english = EnglishVocab});
-        category.words.Add(new WordData { thai = ThaiVocab});
+
+        category.words.Add(new WordData { english = EnglishVocab });
+        category.words.Add(new WordData { thai = ThaiVocab });
         wordstore.allWords.Add(Wordsss);
         Wordsss = new WordData();
         CreateWordthreethousand();
@@ -184,9 +186,9 @@ public class CategoryName : MonoBehaviour
         //Vocab.text = 
 
 
-       
 
-        
+
+
 
 
 
@@ -206,7 +208,7 @@ public class CategoryName : MonoBehaviour
         int i = 0;
         clearchildthreethousand();
 
-        
+
 
 
 
@@ -215,22 +217,22 @@ public class CategoryName : MonoBehaviour
         foreach (WordData words in category.words)
         {
             Debug.Log("sho sugoi" + words.english);
-            if(holdercount == category.words.Count) break;
+            if (holdercount == category.words.Count) break;
             Debug.Log("BUggg");
-            if(category.words.Count == 0)break;
+            if (category.words.Count == 0) break;
             Debug.Log("BuGGG");
-            if(string.IsNullOrEmpty(words.english))
+            if (string.IsNullOrEmpty(words.english))
             {
                 category.words.Remove(words);
                 break;
 
             }
 
-            if(holdercount == 0&&string.IsNullOrEmpty(words.english) != true)
+            if (holdercount == 0 && string.IsNullOrEmpty(words.english) != true)
             {
                 GameObject Safe = Instantiate(Word, TheHolder, false);
                 Debug.Log("holdercount0");
-                
+
                 Transform ETT = Safe.transform.GetChild(1);
                 TextMeshProUGUI Eng = ETT.GetChild(0).transform.GetComponent<TextMeshProUGUI>();
                 TextMeshProUGUI Tha = ETT.GetChild(1).transform.GetComponent<TextMeshProUGUI>();
@@ -240,18 +242,19 @@ public class CategoryName : MonoBehaviour
 
 
             }
-            else if(category.words.Find(c => c.english == En.text) == null&&holdercount!=0&&string.IsNullOrEmpty(words.english) != true){
-            
+            else if (category.words.Find(c => c.english == En.text) == null && holdercount != 0 && string.IsNullOrEmpty(words.english) != true)
+            {
+
                 GameObject Safe = Instantiate(Word, TheHolder, false);
                 Debug.Log("elseifone");
-                
+
                 Transform ETT = Safe.transform.GetChild(1);
                 TextMeshProUGUI Eng = ETT.GetChild(0).transform.GetComponent<TextMeshProUGUI>();
                 TextMeshProUGUI Tha = ETT.GetChild(1).transform.GetComponent<TextMeshProUGUI>();
                 string interesteden = category.words[i].english;
                 i++;
                 Eng.text = interesteden;
-                
+
 
             }
             else break;
@@ -261,7 +264,7 @@ public class CategoryName : MonoBehaviour
         }
         i = 0;
 
-        
+
 
 
     }
@@ -280,7 +283,7 @@ public class CategoryName : MonoBehaviour
     {
 
         Cate category = cate.Find(c => c.Name == IdSent);
-         
+
         foreach (WordData Words in category.words)
         {
             GameObject Nigg = Instantiate(Word, TheHolder, false);
@@ -302,11 +305,11 @@ public class CategoryName : MonoBehaviour
         //WordData typepu = wordstore.allWords.Find(c => c.verb == ID);
         clearchildthreethousand();
         List<WordData> results = wordstore.allWords.Where(w => w.verb.Contains(ID)).ToList();
-        
+
         //if(string.IsNullOrEmpty(typepu.english)) return;
         //Debug.Log(typepu.english);
-         
-        foreach (WordData type in results) 
+
+        foreach (WordData type in results)
         {
             GameObject Nigg = Instantiate(Word, TheHolder, false);
             Transform Super = Nigg.transform.GetChild(1);
@@ -324,15 +327,16 @@ public class CategoryName : MonoBehaviour
     void defaultcateinstant()
     {
 
-        foreach (WordData words in wordstore.allWords){
-            
-            if(HasSaved.Contains(words.verb)) continue; 
+        foreach (WordData words in wordstore.allWords)
+        {
 
-            if(string.IsNullOrEmpty(words.verb)) continue;
+            if (HasSaved.Contains(words.verb)) continue;
+
+            if (string.IsNullOrEmpty(words.verb)) continue;
             string type = words.verb;
             Debug.Log(type);
             Debug.Log(words.english);
- 
+
             GameObject CategoryBlocks = Instantiate(Category, CategoryZone, false);
             CategoryBlocks.transform.SetSiblingIndex(0);
             GameButton = CategoryBlocks;
@@ -340,26 +344,26 @@ public class CategoryName : MonoBehaviour
             category.ID = type;
 
             Button CategorySuperButton = CategoryBlocks.GetComponent<Button>();
-            CategorySuperButton.onClick.AddListener(() => Printx(category.ID)) ;
+            CategorySuperButton.onClick.AddListener(() => Printx(category.ID));
             HasSaved.Add(type);
 
-        
+
 
             Transform CategoryRealBlocks = CategoryBlocks.transform.GetChild(0);
 
             //Transform CategoryNameTextTrans = CategoryRealBlocks.GetChild(0);
             CategoryNameText = CategoryRealBlocks.GetComponent<TextMeshProUGUI>();
 
-            CategoryNameText.text  = type;
-            cate.Add(new Cate { Name = type});
+            CategoryNameText.text = type;
+            cate.Add(new Cate { Name = type });
         }
-            
 
 
 
-        
+
+
     }
-    
-    
-   
+
+
+
 }
