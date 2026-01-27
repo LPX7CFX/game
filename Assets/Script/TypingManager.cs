@@ -13,6 +13,7 @@ using Unity.VisualScripting;
 
 
 
+
 public class TypingManager : MonoBehaviour
 {
     [SerializeField] RectTransform wordContainer;
@@ -30,9 +31,10 @@ public class TypingManager : MonoBehaviour
     [SerializeField] Button PlayVoice;
     [SerializeField] Button PlayAudio;
     [SerializeField] Button PlaySound;
+    [SerializeField] GameObject CateselGUI;
 
-    [SerializeField] GameObject asd;
-    [SerializeField] GameObject fgh;
+    [SerializeField] private GameObject asd;
+    [SerializeField] private GameObject fgh;
 
 
 
@@ -40,10 +42,12 @@ public class TypingManager : MonoBehaviour
     [SerializeField] GameObject IntroScene;
     [SerializeField] GameObject gamescene;
     [SerializeField] GameObject modescene;
+    public int T = 0;
+    public int C = 0;
 
 
     private List<Letterui> letters = new();
-    private int currentIndex = 0;
+    [SerializeField] private int currentIndex = 0;
 
     private int CountingSys = 1;
     private WordData sss;
@@ -59,6 +63,7 @@ public class TypingManager : MonoBehaviour
     public int indicator2 = -1;
     public int indicator3 = 0;
     public int indicator4 = 0;
+    private int traingingindicator = 0;
     public AudioSource audioSource;
 
 
@@ -71,7 +76,7 @@ public class TypingManager : MonoBehaviour
 
         wordStore.ResetPool();
 
-        Challenge.onClick.AddListener(StartNextWord);
+        Challenge.onClick.AddListener(activaterC);
 
         Training.onClick.AddListener(training);
         PlayAudio.onClick.AddListener(PlaySoundTraining);
@@ -85,6 +90,7 @@ public class TypingManager : MonoBehaviour
 
     void Update()
     {
+        Debug.Log("Kok" + letters.Count);
 
         if (startnextwordcontrollertrain == 5 && currentIndex >= letters.Count)
         {
@@ -105,7 +111,7 @@ public class TypingManager : MonoBehaviour
             wordStore.Setdifficulty();
             Debug.Log("Close");
         }
-        if (currentIndex >= letters.Count && gamescene.activeSelf == true && wordStore.Hard.Count == 0)
+        if (currentIndex >= letters.Count && gamescene.activeSelf == true && wordStore.Hard.Count == 0 && traingningindicator == 0)
         {
             modescene.SetActive(true);
             Debug.Log("SaveTest1");
@@ -314,6 +320,7 @@ public class TypingManager : MonoBehaviour
         ClearCurrentWord();
         Debug.Log("ClearCurrentWordStartNextWord");
 
+
         WordData wordData = wordStore.GetRandomWord();
         sss = wordData;
         asd.SetActive(false);
@@ -385,12 +392,14 @@ public class TypingManager : MonoBehaviour
 
     }
 
-    void training()
+    public void training()
     {
         Debug.Log("ClearCurrentWordTraining");
 
         asd.SetActive(true);
         fgh.SetActive(false);
+        traingingindicator++;
+
 
         ClearCurrentWord();
         wordStore.countingsht2++;
@@ -436,6 +445,21 @@ public class TypingManager : MonoBehaviour
 
 
 
+
+    }
+    public void activaterT()
+    {
+        Debug.Log("ActivaterT");
+        T++;
+        CateselGUI.SetActive(true);
+
+
+    }
+    public void activaterC()
+    {
+        Debug.Log("ActivaterC");
+        C++;
+        CateselGUI.SetActive(true);
 
     }
 
