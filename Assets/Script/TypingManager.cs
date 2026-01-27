@@ -63,6 +63,7 @@ public class TypingManager : MonoBehaviour
     public int indicator2 = -1;
     public int indicator3 = 0;
     public int indicator4 = 0;
+    private int traingingindicator = 0;
     public AudioSource audioSource;
 
 
@@ -110,7 +111,7 @@ public class TypingManager : MonoBehaviour
             wordStore.Setdifficulty();
             Debug.Log("Close");
         }
-        if (currentIndex >= letters.Count && gamescene.activeSelf == true && wordStore.Hard.Count == 0)
+        if (currentIndex >= letters.Count && gamescene.activeSelf == true && wordStore.Hard.Count == 0 && traingningindicator == 0)
         {
             modescene.SetActive(true);
             Debug.Log("SaveTest1");
@@ -397,6 +398,7 @@ public class TypingManager : MonoBehaviour
 
         asd.SetActive(true);
         fgh.SetActive(false);
+        traingingindicator++;
 
 
         ClearCurrentWord();
