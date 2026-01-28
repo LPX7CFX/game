@@ -78,8 +78,6 @@ public class AudioManager : MonoBehaviour
             sfxSource.volume = value;
     }
 
-
-
     void Awake()
     {
         if (Instance == null)
@@ -98,10 +96,9 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
-        // init prevActive
         for (int i = 0; i < canvasBgms.Count; i++)
         {
-            canvasBgms[i].prevActive = IsCanvasActive(canvasBgms[i].canvas);
+            canvasBgms[i].prevActive = IsCanvasActive(canvasBgms[i].canvas); //เปลี่ยนสถานะ prevActive ของแต่ละ canvasBGM เป็นสถานะตาม .canvas
         }
 
         // play initial BGM: if multiple active, choose last in list (higher index has higher priority)

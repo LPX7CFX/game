@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using Unity.VisualScripting;
+using System.Diagnostics.Contracts;
 
 public class WordStore : MonoBehaviour
 {
@@ -41,6 +42,9 @@ public class WordStore : MonoBehaviour
     public int countingsht4 = 0;
     public int countingsht5 = 0;
     public int countingsht6 = 0;
+    public GameObject CateselGUI;
+    public GameObject TrainingScene;
+    public int T = 0;
 
 
     public void Awake()
@@ -57,7 +61,7 @@ public class WordStore : MonoBehaviour
     {
         ExitTraining.onClick.AddListener(ResetWordDiffTraining);
         Exit.onClick.AddListener(ExitMain);
-        Training.onClick.AddListener(training);
+        Training.onClick.AddListener(adder);
         NextWord.onClick.AddListener(OnmyButtonclick);
         ExitMainButton.onClick.AddListener(ExitMain);
         countingsht5 = allWords.Count;
@@ -97,7 +101,7 @@ public class WordStore : MonoBehaviour
 
             if (LettersCount >= 0 && LettersCount <= 5)
             {
-                if (!EasyWord.Contains(word))
+                if (!Easy.Contains(word))
                     Easy.Add(word);
                 if (!EasyWord.Contains(word))
                     EasyWord.Add(word);
@@ -105,7 +109,7 @@ public class WordStore : MonoBehaviour
             }
             else if (LettersCount >= 6 && LettersCount <= 8)
             {
-                if (!MediumWord.Contains(word))
+                if (!Medium.Contains(word))
                     Medium.Add(word);
                 if (!MediumWord.Contains(word))
                     MediumWord.Add(word);
@@ -113,7 +117,7 @@ public class WordStore : MonoBehaviour
             }
             else
             {
-                if (!HardWord.Contains(word))
+                if (!Hard.Contains(word))
                     Hard.Add(word);
                 if (!HardWord.Contains(word))
                     HardWord.Add(word);
@@ -267,6 +271,8 @@ public class WordStore : MonoBehaviour
     {
 
         WordData word;
+        TrainingScene.SetActive(true);
+        CateselGUI.SetActive(false);
 
         int i;
         i = 0;
@@ -341,6 +347,43 @@ public class WordStore : MonoBehaviour
         SceneBth.SetActive(true);
         SceneCth.SetActive(false);
 
+
+    }
+    public void adder()
+    {
+        T++;
+        CateselGUI.SetActive(true);
+
+
+    }
+    public void NewSetdifficulty()
+    {
+        Easy.Clear();
+        Medium.Clear();
+        Hard.Clear();
+        foreach (WordData word in remainingWords)
+        {
+            int LettersCount = word.english.Length;
+
+            if (LettersCount >= 0 && LettersCount <= 5)
+            {
+                if (!Easy.Contains(word))
+                    Easy.Add(word);
+
+            }
+            else if (LettersCount >= 6 && LettersCount <= 8)
+            {
+                if (!Medium.Contains(word))
+                    Medium.Add(word);
+
+            }
+            else
+            {
+                if (!Hard.Contains(word))
+                    Hard.Add(word);
+            }
+
+        }
 
     }
 }

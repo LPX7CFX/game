@@ -10,6 +10,7 @@ public class WordData
     public string english;
     public string thai;
     public string verb;
+    public string category;
     public AudioClip audio;
 
 }
