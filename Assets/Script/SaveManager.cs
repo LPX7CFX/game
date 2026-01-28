@@ -43,7 +43,7 @@ public class SaveManager : MonoBehaviour
         }
     }
 
-    public void SubmitScore(string username, int timeSeconds)
+    public void SubmitScore(string username, string savetype, int timeSeconds)
     {
         var entry = data.entries.Find(e => e.username == username);
         Debug.Log("Savetest11");
@@ -54,6 +54,7 @@ public class SaveManager : MonoBehaviour
             data.entries.Add(new LeaderboardEntry
             {
                 username = username,
+                type = savetype,
                 bestTimeSeconds = timeSeconds
             });
             Debug.Log("Savetest13");

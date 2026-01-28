@@ -44,6 +44,7 @@ public class WordStore : MonoBehaviour
     public int countingsht6 = 0;
     public GameObject CateselGUI;
     public GameObject TrainingScene;
+    public GameObject gamescene;
     public int T = 0;
 
 
@@ -72,7 +73,7 @@ public class WordStore : MonoBehaviour
     }
     public void Update()
     {
-        if (remainingWords.Count == 0)
+        if (remainingWords.Count == 0 && gamescene.activeSelf == false)
         {
             ResetPool();
 

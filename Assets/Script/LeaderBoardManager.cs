@@ -7,14 +7,15 @@ public class LeaderboardManager : MonoBehaviour
 {
     public Transform contentParent;   // Where rows will be spawned
     public GameObject rowPrefab;      // One leaderboard row prefab
+    public Categorychoose cc;
     public int maxShown = 10;
 
     public void Awake()
     {
-        
+
     }
 
-    public void ShowLeaderboard()
+    public void ShowLeaderboard(string type)
     {
         Debug.Log("ShowleaderboardStart");
         if (SaveManager.Instance == null) return;
@@ -29,14 +30,19 @@ public class LeaderboardManager : MonoBehaviour
         }
 
         // Sort by LOWEST time (best first)
-        List<LeaderboardEntry> sorted =
+        /*List<LeaderboardEntry> sorted =
             SaveManager.Instance.data.entries
+            .OrderBy(e => e.bestTimeSeconds)
+            .Take(maxShown)
+            .ToList();*/
+
+        List<LeaderboardEntry> sorted2 = SaveManager.Instance.data.entries.Find(c => c.type == type)
             .OrderBy(e => e.bestTimeSeconds)
             .Take(maxShown)
             .ToList();
 
         // Spawn rows
-        for (int i = 0; i < sorted.Count; i++)
+        for (int i = 0; i < sorted2.Count; i++)
         {
             GameObject row = Instantiate(rowPrefab, contentParent);
 

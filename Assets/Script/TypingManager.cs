@@ -99,7 +99,7 @@ public class TypingManager : MonoBehaviour
             Debug.Log("clearcurrentword");
         }
 
-        if (wordStore.WordSetData.Count == 0 && currentIndex >= letters.Count && wordStore.countingsht3 - 1 == indicator2 && indicator4 == wordStore.countingsht5 / 5 && wordStore.countingsht4 == 1 && indicator3 == wordStore.countingsht5 % 5)
+        if (wordStore.WordSetData.Count == 0 && currentIndex >= letters.Count && wordStore.remainingWords.Count == 0 && gamescene.activeSelf == true)
         {
 
             modescene.SetActive(true);
@@ -111,7 +111,7 @@ public class TypingManager : MonoBehaviour
             wordStore.Setdifficulty();
             Debug.Log("Close");
         }
-        if (currentIndex >= letters.Count && gamescene.activeSelf == true && wordStore.Hard.Count == 0 && traingningindicator == 0)
+        if (currentIndex >= letters.Count && gamescene.activeSelf == true && wordStore.Hard.Count == 0 && traingingindicator == 0)
         {
             modescene.SetActive(true);
             Debug.Log("SaveTest1");
@@ -167,7 +167,7 @@ public class TypingManager : MonoBehaviour
                 StartNextWord();
 
             }
-            if (currentIndex >= letters.Count && indicator2 != -1 && modescene.activeSelf == false)
+            if (currentIndex >= letters.Count && indicator2 != -1 && modescene.activeSelf == false && wordStore.remainingWords.Count != 0)
             {
                 training();
 
