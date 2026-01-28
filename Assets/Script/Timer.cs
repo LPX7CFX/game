@@ -48,12 +48,12 @@ public class Timer : MonoBehaviour
     }
 
     public void StopTimer()
-    {   
+    {
 
         Debug.Log("Savetest6");
-         if (hasSaved) return;
-            hasSaved = true;
-            Debug.Log("Savetest7");
+        if (hasSaved) return;
+        hasSaved = true;
+        Debug.Log("Savetest7");
         running = false;
         Debug.Log("Savetest8");
 
@@ -62,6 +62,7 @@ public class Timer : MonoBehaviour
 
         SaveManager.Instance.SubmitScore(
             LoginManager.CurrentUser,
+            Categorychoose.type3k,
             finalTime
         );
         Debug.Log("Savetest10");

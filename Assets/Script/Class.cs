@@ -11,5 +11,6 @@ public class GameData
 public class LeaderboardEntry
 {
     public string username;
+    public string type;
     public int bestTimeSeconds;
 }

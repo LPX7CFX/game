@@ -15,6 +15,7 @@ public class Categorychoose : MonoBehaviour
     public RectTransform Catepanel;
     [SerializeField] private TypingManager tm;
     public HashSet<string> hasalready = new HashSet<string>();
+    public string type3k;
 
     void Start()
     {
@@ -73,6 +74,7 @@ public class Categorychoose : MonoBehaviour
         List<WordData> selectedwords = ws.allWords.Where(word => word.category == categoryname).ToList();
 
         ws.remainingWords = selectedwords;
+        type3k = categoryname;
         ws.NewSetdifficulty();
         if (ws.T != 0)
         {
@@ -96,6 +98,7 @@ public class Categorychoose : MonoBehaviour
         List<WordData> selectedwords = ws.allWords.Where(word => word.verb == verbname).ToList();
 
         ws.remainingWords = selectedwords;
+        type3k = verbname;
         ws.NewSetdifficulty();
         if (ws.T != 0)
         {
@@ -128,6 +131,7 @@ public class Categorychoose : MonoBehaviour
     {
 
         ws.remainingWords = ws.allWords;
+        type3k = "AllWords";
         ws.NewSetdifficulty();
         if (ws.T != 0)
         {
