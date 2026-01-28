@@ -9,12 +9,9 @@ public class WordData
 {
     public string english;
     public string thai;
-<<<<<<< HEAD
     public string verb;
     public string category;
-=======
     public string type;
->>>>>>> ChinNoWork
     public AudioClip audio;
 
 }
