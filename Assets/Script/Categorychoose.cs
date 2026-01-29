@@ -130,8 +130,8 @@ public class Categorychoose : MonoBehaviour
     void origin()
     {
 
-        ws.remainingWords = ws.allWords;
-        type3k = "AllWords";
+        ws.remainingWords = new List<WordData>(ws.allWords);
+        type3k = "allword";
         ws.NewSetdifficulty();
         if (ws.T != 0)
         {

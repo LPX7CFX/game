@@ -26,7 +26,7 @@ public class SaveManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-        leaderboardManager.ShowLeaderboard();
+        leaderboardManager.ShowLeaderboard("allword");
     }
 
     void LoadOrCreate()
