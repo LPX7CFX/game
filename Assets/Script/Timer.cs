@@ -13,6 +13,7 @@ public class Timer : MonoBehaviour
     public float currentTime;
     private bool running;
     bool hasSaved = false;
+    public Categorychoose cc;
 
     void Start()
     {
@@ -58,11 +59,12 @@ public class Timer : MonoBehaviour
         Debug.Log("Savetest8");
 
         int finalTime = Mathf.FloorToInt(currentTime);
+        string typename = cc.type3k;
         Debug.Log("Savetest9");
 
         SaveManager.Instance.SubmitScore(
             LoginManager.CurrentUser,
-            Categorychoose.type3k,
+            typename,
             finalTime
         );
         Debug.Log("Savetest10");

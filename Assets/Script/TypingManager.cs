@@ -111,7 +111,7 @@ public class TypingManager : MonoBehaviour
             wordStore.Setdifficulty();
             Debug.Log("Close");
         }
-        if (currentIndex >= letters.Count && gamescene.activeSelf == true && wordStore.Hard.Count == 0 && traingingindicator == 0)
+        if (currentIndex >= letters.Count && wordStore.remainingWords.Count == 0 && traingingindicator == 0)
         {
             modescene.SetActive(true);
             Debug.Log("SaveTest1");
@@ -119,7 +119,7 @@ public class TypingManager : MonoBehaviour
             Debug.Log("SaveTest2");
             Timerfr.StopTimer();
             Debug.Log("Savetest3");
-            Leaderboard.ShowLeaderboard();
+            Leaderboard.ShowLeaderboard("allword");
             Debug.Log("Savetest4");
             wordStore.Setdifficulty();
             wordStore.ResetWordDiff();
@@ -162,7 +162,7 @@ public class TypingManager : MonoBehaviour
         }
         if (currentIndex >= letters.Count)
         {
-            if (startnextwordcontroller != 0 && modescene.activeSelf == false)
+            if (startnextwordcontroller != 0 && modescene.activeSelf == false && wordStore.remainingWords.Count != 0)
             {
                 StartNextWord();
 
