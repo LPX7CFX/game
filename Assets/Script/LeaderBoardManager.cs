@@ -102,7 +102,18 @@ public class LeaderboardManager : MonoBehaviour
             .Take(maxShown)
             .ToList();*/
 
-        List<LeaderboardEntry> sorted2 = SaveManager.Instance.data.entries.Where(c => c.type == type).ToList();
+        List<LeaderboardEntry> sorted2;
+
+        // ถ้า type = "allword" ให้แสดงทุก category ไม่อย่างนั้นกรองตาม category
+        if (type == "allword")
+        {
+            sorted2 = SaveManager.Instance.data.entries.ToList();
+        }
+        else
+        {
+            sorted2 = SaveManager.Instance.data.entries.Where(c => c.category == type).ToList();
+        }
+
         List<LeaderboardEntry> sorted3 =
             sorted2.OrderBy(e => e.bestTimeSeconds)
             .Take(maxShown)

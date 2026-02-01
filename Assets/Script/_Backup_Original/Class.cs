@@ -1,4 +1,4 @@
-using System;
+/*using System;
 using System.Collections.Generic;
 
 [Serializable]
@@ -11,6 +11,7 @@ public class GameData
 public class LeaderboardEntry
 {
     public string username;
-    public string category;  // เปลี่ยนจาก "type" เป็น "category"
+    public string type;
     public int bestTimeSeconds;
 }
+*/
