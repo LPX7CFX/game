@@ -46,7 +46,7 @@ public class SaveManager : MonoBehaviour
     public void SubmitScore(string username, string savetype, int timeSeconds)
     {
         // ค้นหา entry ด้วย username + category (ไม่ใช่แค่ username)
-        var entry = data.entries.Find(e => e.username == username && e.category == savetype);
+        var entry = data.entries.Find(e => e.username == username && e.type == savetype);
         Debug.Log("Savetest11");
 
         if (entry == null)
@@ -55,12 +55,12 @@ public class SaveManager : MonoBehaviour
             data.entries.Add(new LeaderboardEntry
             {
                 username = username,
-                category = savetype,  // เปลี่ยนจาก "type"
+                type = savetype,
                 bestTimeSeconds = timeSeconds
             });
             Debug.Log("Savetest13");
         }
-        else if (timeSeconds < entry.bestTimeSeconds)
+        else if (timeSeconds < entry.bestTimeSeconds && entry.type == savetype)
         {
             Debug.Log("Savetest14");
             entry.bestTimeSeconds = timeSeconds;
