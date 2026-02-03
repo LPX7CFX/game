@@ -35,7 +35,7 @@ public class LeaderboardManager : MonoBehaviour
     {
         List<string> catename = ws.allWords.Select(w => w.category).Distinct().ToList();
         Debug.Log("CateName:" + catename.Count);
-        Debug.Log("CateName:" + catename[0] + "," + catename[1] + "," + catename[2]);
+        Debug.Log("CateName:" + catename[0]);
 
         foreach (string word in catename)
         {

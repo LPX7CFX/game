@@ -27,10 +27,10 @@ public class TypingManager : MonoBehaviour
 
     [SerializeField] GameObject StartUi;
 
-    [SerializeField] Button Training;
-    [SerializeField] Button PlayVoice;
-    [SerializeField] Button PlayAudio;
-    [SerializeField] Button PlaySound;
+    public Button Training;
+    public Button PlayVoice;
+    public Button PlayAudio;
+    public Button PlaySound;
     [SerializeField] GameObject CateselGUI;
 
     [SerializeField] private GameObject asd;
