@@ -7,16 +7,17 @@ public class TutorialManager : MonoBehaviour
     public static TutorialManager Instance { get; private set; }
 
     [Header("Tutorial Scene")]
-    [SerializeField] private GameObject tutorialScene; // Tutorial Scene หรือ Canvas ของ Tutorial
-    [SerializeField] private string modeSceneName = "Mode Scene"; // ชื่อ Scene Mode Scene
+    [SerializeField] private GameObject tutorialScene;
+    [SerializeField] private string modeSceneName = "Mode Scene";
 
     [Header("Tutorial Steps (Canvas/GameObjects)")]
     [SerializeField] private GameObject[] tutorialSteps = new GameObject[5];
 
     [Header("Control Buttons")]
-    [SerializeField] private Button playButton; // ปุ่ม Play ใน Start Scene
-    [SerializeField] private Button nextButton; // ปุ่ม Next ใน Tutorial Scene
-    [SerializeField] private Button modeSceneReplayButton; // ปุ่ม Replay Tutorial ใน Mode Scene
+    [SerializeField] private Button playButton;
+    [SerializeField] private Button nextButton;
+    [SerializeField] private Button previousButton; // เพิ่มปุ่ม Previous (ถ้ามี)
+    [SerializeField] private Button modeSceneReplayButton;
 
     private int currentTutorialStep = 0;
     private static bool hasShownFirstTimeOnModeScene = false;
@@ -35,24 +36,19 @@ public class TutorialManager : MonoBehaviour
             return;
         }
 
-        // ปิด Tutorial Scene ตั้งแต่เริ่มต้น
         if (tutorialScene != null)
             tutorialScene.SetActive(false);
 
-        // ลงทะเบียน listener สำหรับการโหลด Scene
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     private void OnDestroy()
     {
-        // ยกเลิก listener เมื่อ destroy
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
-    // เรียกอัตโนมัติเมื่อโหลด Scene
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        // ตรวจสอบว่าเข้า Mode Scene ในครั้งแรกของการเปิดเกมหรือไม่
         if (scene.name == modeSceneName && isFirstGameStart && !hasShownFirstTimeOnModeScene)
         {
             isFirstGameStart = false;
@@ -62,23 +58,19 @@ public class TutorialManager : MonoBehaviour
 
     private void Start()
     {
-        // ลงทะเบียน listener สำหรับปุ่ม Play ใน Start Scene
         if (playButton != null)
             playButton.onClick.AddListener(ShowTutorialFirstTime);
 
-        // ลงทะเบียน listener สำหรับปุ่ม Next
         if (nextButton != null)
             nextButton.onClick.AddListener(GoToNextTutorialStep);
 
-        // ลงทะเบียน listener สำหรับปุ่ม Replay Tutorial ใน Mode Scene
+        if (previousButton != null) // เพิ่ม listener ปุ่ม Previous (ถ้ามี)
+            previousButton.onClick.AddListener(GoToPreviousTutorialStep);
+
         if (modeSceneReplayButton != null)
             modeSceneReplayButton.onClick.AddListener(ReplayTutorial);
     }
 
-    /// <summary>
-    /// เรียกตอนเข้า Mode Scene ครั้งแรก (นับจากตอนเปิดเกม)
-    /// โดยเช่น: Training Button ใน Mode Scene เรียกฟังก์ชันนี้เมื่อกด
-    /// </summary>
     public void ShowTutorialFirstTime()
     {
         if (!hasShownFirstTimeOnModeScene)
@@ -88,18 +80,11 @@ public class TutorialManager : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// เรียกจากปุ่ม Replay Tutorial ใน Mode Scene
-    /// เปิด Tutorial Scene ใหม่ตั้งแต่ step 0
-    /// </summary>
     public void ReplayTutorial()
     {
         OpenTutorialScene();
     }
 
-    /// <summary>
-    /// ฟังก์ชันส่วนตัว: เปิด Tutorial Scene และแสดง step แรก
-    /// </summary>
     private void OpenTutorialScene()
     {
         currentTutorialStep = 0;
@@ -108,39 +93,46 @@ public class TutorialManager : MonoBehaviour
             tutorialScene.SetActive(true);
 
         ShowTutorialStep(0);
+        UpdateButtonStates(); // **เพิ่มบรรทัดนี้** - สำคัญมาก!
     }
 
-    /// <summary>
-    /// ปุ่ม Next จะเรียกฟังก์ชันนี้
-    /// ถ้าเลยหน้าสุดท้าย จะปิด Tutorial Scene
-    /// </summary>
     public void GoToNextTutorialStep()
     {
         currentTutorialStep++;
 
         if (currentTutorialStep >= tutorialSteps.Length)
         {
-            // ครบทุกหน้า ปิด Tutorial Scene
             CloseTutorialScene();
             return;
         }
 
         ShowTutorialStep(currentTutorialStep);
+        UpdateButtonStates(); // **เพิ่มบรรทัดนี้**
     }
 
-    /// <summary>
-    /// แสดง step ที่กำหนด
-    /// </summary>
+    // เพิ่มฟังก์ชัน Previous (ถ้าต้องการ)
+    public void GoToPreviousTutorialStep()
+    {
+        currentTutorialStep--;
+
+        if (currentTutorialStep < 0)
+        {
+            currentTutorialStep = 0;
+            return;
+        }
+
+        ShowTutorialStep(currentTutorialStep);
+        UpdateButtonStates(); // **เพิ่มบรรทัดนี้**
+    }
+
     private void ShowTutorialStep(int step)
     {
-        // ซ่อนทั้งหมด
         foreach (var tutorialStep in tutorialSteps)
         {
             if (tutorialStep != null)
                 tutorialStep.SetActive(false);
         }
 
-        // แสดงเฉพาะที่กำหนด
         if (step >= 0 && step < tutorialSteps.Length && tutorialSteps[step] != null)
         {
             tutorialSteps[step].SetActive(true);
@@ -148,8 +140,23 @@ public class TutorialManager : MonoBehaviour
     }
 
     /// <summary>
-    /// ปิด Tutorial Scene
+    /// ฟังก์ชันใหม่: อัพเดทสถานะปุ่ม
     /// </summary>
+    private void UpdateButtonStates()
+    {
+        // ซ่อนปุ่ม Previous เมื่ออยู่หน้าแรก
+        if (previousButton != null)
+        {
+            previousButton.gameObject.SetActive(currentTutorialStep > 0);
+        }
+
+        // ซ่อนปุ่ม Next เมื่ออยู่หน้าสุดท้าย
+        if (nextButton != null)
+        {
+            nextButton.gameObject.SetActive(currentTutorialStep < tutorialSteps.Length - 1);
+        }
+    }
+
     private void CloseTutorialScene()
     {
         if (tutorialScene != null)
