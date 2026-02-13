@@ -2,9 +2,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class TutorialManager : MonoBehaviour
+public class ModeTutorial : MonoBehaviour
 {
-    public static TutorialManager Instance { get; private set; }
+    public static ModeTutorial Instance { get; private set; }
 
     [Header("Tutorial Scene")]
     [SerializeField] private GameObject tutorialScene;
@@ -16,7 +16,8 @@ public class TutorialManager : MonoBehaviour
     [Header("Control Buttons")]
     [SerializeField] private Button playButton;
     [SerializeField] private Button nextButton;
-    [SerializeField] private Button previousButton; // เพิ่มปุ่ม Previous (ถ้ามี)
+    [SerializeField] private Button previousButton;
+    [SerializeField] private Button closeButton;
     [SerializeField] private Button modeSceneReplayButton;
 
     private int currentTutorialStep = 0;
@@ -64,8 +65,11 @@ public class TutorialManager : MonoBehaviour
         if (nextButton != null)
             nextButton.onClick.AddListener(GoToNextTutorialStep);
 
-        if (previousButton != null) // เพิ่ม listener ปุ่ม Previous (ถ้ามี)
+        if (previousButton != null)
             previousButton.onClick.AddListener(GoToPreviousTutorialStep);
+
+        if (closeButton != null)
+            closeButton.onClick.AddListener(CloseTutorialScene);
 
         if (modeSceneReplayButton != null)
             modeSceneReplayButton.onClick.AddListener(ReplayTutorial);
@@ -93,7 +97,7 @@ public class TutorialManager : MonoBehaviour
             tutorialScene.SetActive(true);
 
         ShowTutorialStep(0);
-        UpdateButtonStates(); // **เพิ่มบรรทัดนี้** - สำคัญมาก!
+        UpdateButtonStates();
     }
 
     public void GoToNextTutorialStep()
@@ -107,10 +111,9 @@ public class TutorialManager : MonoBehaviour
         }
 
         ShowTutorialStep(currentTutorialStep);
-        UpdateButtonStates(); // **เพิ่มบรรทัดนี้**
+        UpdateButtonStates();
     }
 
-    // เพิ่มฟังก์ชัน Previous (ถ้าต้องการ)
     public void GoToPreviousTutorialStep()
     {
         currentTutorialStep--;
@@ -122,7 +125,7 @@ public class TutorialManager : MonoBehaviour
         }
 
         ShowTutorialStep(currentTutorialStep);
-        UpdateButtonStates(); // **เพิ่มบรรทัดนี้**
+        UpdateButtonStates();
     }
 
     private void ShowTutorialStep(int step)
@@ -138,19 +141,13 @@ public class TutorialManager : MonoBehaviour
             tutorialSteps[step].SetActive(true);
         }
     }
-
-    /// <summary>
-    /// ฟังก์ชันใหม่: อัพเดทสถานะปุ่ม
-    /// </summary>
     private void UpdateButtonStates()
     {
-        // ซ่อนปุ่ม Previous เมื่ออยู่หน้าแรก
         if (previousButton != null)
         {
             previousButton.gameObject.SetActive(currentTutorialStep > 0);
         }
 
-        // ซ่อนปุ่ม Next เมื่ออยู่หน้าสุดท้าย
         if (nextButton != null)
         {
             nextButton.gameObject.SetActive(currentTutorialStep < tutorialSteps.Length - 1);
@@ -161,7 +158,6 @@ public class TutorialManager : MonoBehaviour
     {
         if (tutorialScene != null)
             tutorialScene.SetActive(false);
-
         currentTutorialStep = 0;
     }
 }
