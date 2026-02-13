@@ -17,7 +17,7 @@ public class ModeTutorial : MonoBehaviour
     [SerializeField] private Button playButton;
     [SerializeField] private Button nextButton;
     [SerializeField] private Button previousButton;
-    [SerializeField] private Button closeButton;
+    [SerializeField] private Button closeButton; // ✅ เพิ่ม
     [SerializeField] private Button modeSceneReplayButton;
 
     private int currentTutorialStep = 0;
@@ -48,6 +48,7 @@ public class ModeTutorial : MonoBehaviour
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
+    // ✅ ระบบแสดง Tutorial ครั้งแรกตอนเข้า Mode Scene (เก็บไว้)
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         if (scene.name == modeSceneName && isFirstGameStart && !hasShownFirstTimeOnModeScene)
@@ -69,12 +70,13 @@ public class ModeTutorial : MonoBehaviour
             previousButton.onClick.AddListener(GoToPreviousTutorialStep);
 
         if (closeButton != null)
-            closeButton.onClick.AddListener(CloseTutorialScene);
+            closeButton.onClick.AddListener(CloseTutorialScene); // ✅ เพิ่ม
 
         if (modeSceneReplayButton != null)
             modeSceneReplayButton.onClick.AddListener(ReplayTutorial);
     }
 
+    // ✅ แสดง Tutorial ครั้งแรก (เก็บไว้)
     public void ShowTutorialFirstTime()
     {
         if (!hasShownFirstTimeOnModeScene)
@@ -84,6 +86,7 @@ public class ModeTutorial : MonoBehaviour
         }
     }
 
+    // ✅ เปิด Tutorial ซ้ำได้ (เก็บไว้)
     public void ReplayTutorial()
     {
         OpenTutorialScene();
@@ -97,7 +100,7 @@ public class ModeTutorial : MonoBehaviour
             tutorialScene.SetActive(true);
 
         ShowTutorialStep(0);
-        UpdateButtonStates();
+        UpdateButtonStates(); // ✅ เพิ่ม - อัพเดทปุ่ม
     }
 
     public void GoToNextTutorialStep()
@@ -111,7 +114,7 @@ public class ModeTutorial : MonoBehaviour
         }
 
         ShowTutorialStep(currentTutorialStep);
-        UpdateButtonStates();
+        UpdateButtonStates(); // ✅ เพิ่ม
     }
 
     public void GoToPreviousTutorialStep()
@@ -125,7 +128,7 @@ public class ModeTutorial : MonoBehaviour
         }
 
         ShowTutorialStep(currentTutorialStep);
-        UpdateButtonStates();
+        UpdateButtonStates(); // ✅ เพิ่ม
     }
 
     private void ShowTutorialStep(int step)
@@ -141,13 +144,17 @@ public class ModeTutorial : MonoBehaviour
             tutorialSteps[step].SetActive(true);
         }
     }
+
+    // ✅ ฟังก์ชันใหม่ - ซ่อน/แสดงปุ่มอัตโนมัติ
     private void UpdateButtonStates()
     {
+        // ซ่อน Previous ถ้าอยู่หน้าแรก (0)
         if (previousButton != null)
         {
             previousButton.gameObject.SetActive(currentTutorialStep > 0);
         }
 
+        // ซ่อน Next ถ้าอยู่หน้าสุดท้าย
         if (nextButton != null)
         {
             nextButton.gameObject.SetActive(currentTutorialStep < tutorialSteps.Length - 1);
