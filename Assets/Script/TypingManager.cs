@@ -27,10 +27,10 @@ public class TypingManager : MonoBehaviour
 
     [SerializeField] GameObject StartUi;
 
-    [SerializeField] Button Training;
-    [SerializeField] Button PlayVoice;
-    [SerializeField] Button PlayAudio;
-    [SerializeField] Button PlaySound;
+    public Button Training;
+    public Button PlayVoice;
+    public Button PlayAudio;
+    public Button PlaySound;
     [SerializeField] GameObject CateselGUI;
 
     [SerializeField] private GameObject asd;
@@ -55,9 +55,9 @@ public class TypingManager : MonoBehaviour
 
 
 
-    private int startnextwordcontroller = 0;
+    public int startnextwordcontroller = 0;
     private int wordSys;
-    private int startnextwordcontrollertrain = 0;
+    public int startnextwordcontrollertrain = 0;
 
     public int indicator = 0;
     public int indicator2 = -1;
@@ -105,6 +105,7 @@ public class TypingManager : MonoBehaviour
             modescene.SetActive(true);
             gamescene.SetActive(false);
             wordStore.countingsht3 = 0;
+            startnextwordcontrollertrain = 0;
             indicator4 = 0;
             indicator3 = 0;
 
@@ -123,6 +124,8 @@ public class TypingManager : MonoBehaviour
             Debug.Log("Savetest4");
             wordStore.Setdifficulty();
             wordStore.ResetWordDiff();
+            startnextwordcontroller = 0;
+            indicator2 = -1;
             Debug.Log("Savetest5");
             Debug.Log("Close2");
 
@@ -396,7 +399,7 @@ public class TypingManager : MonoBehaviour
     {
         Debug.Log("ClearCurrentWordTraining");
 
-        asd.SetActive(true);
+        //asd.SetActive(true);
         fgh.SetActive(false);
         traingingindicator++;
 

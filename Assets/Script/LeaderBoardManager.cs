@@ -35,7 +35,7 @@ public class LeaderboardManager : MonoBehaviour
     {
         List<string> catename = ws.allWords.Select(w => w.category).Distinct().ToList();
         Debug.Log("CateName:" + catename.Count);
-        Debug.Log("CateName:" + catename[0] + "," + catename[1] + "," + catename[2]);
+        Debug.Log("CateName:" + catename[0]);
 
         foreach (string word in catename)
         {
@@ -103,6 +103,9 @@ public class LeaderboardManager : MonoBehaviour
             .ToList();*/
 
         List<LeaderboardEntry> sorted2 = SaveManager.Instance.data.entries.Where(c => c.type == type).ToList();
+        Debug.Log("ShowLead" + type);
+        if (sorted2.Count == 0) return;
+        Debug.Log(sorted2[0].username);
         List<LeaderboardEntry> sorted3 =
             sorted2.OrderBy(e => e.bestTimeSeconds)
             .Take(maxShown)

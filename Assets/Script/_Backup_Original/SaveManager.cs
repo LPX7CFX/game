@@ -1,4 +1,4 @@
-using UnityEngine;
+/*using UnityEngine;
 using System.IO;
 using System;
 
@@ -45,8 +45,7 @@ public class SaveManager : MonoBehaviour
 
     public void SubmitScore(string username, string savetype, int timeSeconds)
     {
-        // ค้นหา entry ด้วย username + category (ไม่ใช่แค่ username)
-        var entry = data.entries.Find(e => e.username == username && e.type == savetype);
+        var entry = data.entries.Find(e => e.username == username);
         Debug.Log("Savetest11");
 
         if (entry == null)
@@ -60,7 +59,7 @@ public class SaveManager : MonoBehaviour
             });
             Debug.Log("Savetest13");
         }
-        else if (timeSeconds < entry.bestTimeSeconds && entry.type == savetype)
+        else if (timeSeconds < entry.bestTimeSeconds)
         {
             Debug.Log("Savetest14");
             entry.bestTimeSeconds = timeSeconds;
@@ -80,3 +79,4 @@ public class SaveManager : MonoBehaviour
         Debug.Log("Savetest19");
     }
 }
+*/

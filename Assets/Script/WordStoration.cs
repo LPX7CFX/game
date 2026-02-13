@@ -340,6 +340,8 @@ public class WordStore : MonoBehaviour
         TM.indicator2 = -1;
         TM.indicator3 = 0;
         TM.indicator4 = 0;
+        TM.startnextwordcontroller = 0;
+        TM.startnextwordcontrollertrain = 0;
         countingsht = 0;
         countingsht2 = 0;
         countingsht3 = 0;

@@ -80,6 +80,10 @@ public class Categorychoose : MonoBehaviour
         {
             ws.T = 0;
             ws.training();
+            GameObject ButtonTraining = tm.PlayVoice.gameObject;
+            GameObject Buttontm = tm.PlaySound.gameObject;
+            ButtonTraining.SetActive(false);
+            Buttontm.SetActive(true);
             ModeScene.SetActive(false);
 
         }
@@ -87,7 +91,12 @@ public class Categorychoose : MonoBehaviour
         {
             tm.C = 0;
             tm.StartNextWord();
-            ModeScene.SetActive(false);
+            GameObject Buttontm = tm.PlaySound.gameObject;
+            GameObject ButtonTraining = tm.PlayVoice.gameObject;
+            ButtonTraining.SetActive(false);
+
+            Buttontm.SetActive(false);
+            ModeScene.SetActive(true);
 
         }
 
@@ -104,6 +113,10 @@ public class Categorychoose : MonoBehaviour
         {
             ws.T = 0;
             ws.training();
+            GameObject ButtonTraining = tm.PlayVoice.gameObject;
+            GameObject Buttontm = tm.PlaySound.gameObject;
+            ButtonTraining.SetActive(false);
+            Buttontm.SetActive(true);
             ModeScene.SetActive(false);
 
         }
@@ -111,6 +124,10 @@ public class Categorychoose : MonoBehaviour
         {
             tm.C = 0;
             tm.StartNextWord();
+            GameObject ButtonTraining = tm.PlayVoice.gameObject;
+            GameObject Buttontm = tm.PlaySound.gameObject;
+            ButtonTraining.SetActive(true);
+            Buttontm.SetActive(false);
             ModeScene.SetActive(false);
 
         }
@@ -138,6 +155,10 @@ public class Categorychoose : MonoBehaviour
             ws.T = 0;
             ModeScene.SetActive(false);
             ws.training();
+            GameObject ButtonTraining = tm.PlayVoice.gameObject;
+            GameObject Buttontm = tm.PlaySound.gameObject;
+            ButtonTraining.SetActive(false);
+            Buttontm.SetActive(true);
 
         }
         if (tm.C != 0)
@@ -145,6 +166,10 @@ public class Categorychoose : MonoBehaviour
             tm.C = 0;
             ModeScene.SetActive(false);
             tm.StartNextWord();
+            GameObject ButtonTraining = tm.PlayVoice.gameObject;
+            GameObject Buttontm = tm.PlaySound.gameObject;
+            ButtonTraining.SetActive(true);
+            Buttontm.SetActive(false);
 
         }
 
