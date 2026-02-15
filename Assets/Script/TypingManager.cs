@@ -90,7 +90,8 @@ public class TypingManager : MonoBehaviour
 
     void Update()
     {
-        Debug.Log("Kok" + letters.Count);
+        // Debug.Log("Kok" + letters.Count); ไอเหี่ย ปิดเหอะ กูขอ🙏
+
 
         if (startnextwordcontrollertrain == 5 && currentIndex >= letters.Count)
         {
@@ -159,9 +160,9 @@ public class TypingManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("lose");
-            Debug.Log("Lose::" + startnextwordcontrollertrain);
-            Debug.Log("Indicator2:" + indicator2);
+            // Debug.Log("lose");
+            //Debug.Log("Lose::" + startnextwordcontrollertrain);
+            //Debug.Log("Indicator2:" + indicator2);
         }
         if (currentIndex >= letters.Count)
         {
@@ -323,12 +324,10 @@ public class TypingManager : MonoBehaviour
         ClearCurrentWord();
         Debug.Log("ClearCurrentWordStartNextWord");
 
-
         WordData wordData = wordStore.GetRandomWord();
         sss = wordData;
         asd.SetActive(false);
         fgh.SetActive(true);
-
 
         wordSys = wordData.english.Length;
         thaiText.text = wordData.thai;

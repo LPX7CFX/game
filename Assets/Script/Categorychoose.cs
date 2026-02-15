@@ -96,7 +96,7 @@ public class Categorychoose : MonoBehaviour
             ButtonTraining.SetActive(false);
 
             Buttontm.SetActive(false);
-            ModeScene.SetActive(true);
+            // ModeScene.SetActive(true); อันนี้มันเปิดให้กูอะ กูเลยปิดแม่งไปเลย
 
         }
 
