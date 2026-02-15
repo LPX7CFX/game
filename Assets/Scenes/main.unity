@@ -23281,7 +23281,7 @@ MonoBehaviour:
   - english: PREVENT
     thai: "\u0E1B\u0E49\u0E2D\u0E07\u0E01\u0E31\u0E19\u0E44\u0E21\u0E48\u0E43\u0E2B\u0E49\u0E40\u0E01\u0E34\u0E14"
     verb: Verb
-    category: TEST
+    category: B1
     audio: {fileID: 8300000, guid: a147c4be46ed899488a360af617f3f1c, type: 3}
   - english: ACTUALLY
     thai: "\u0E08\u0E23\u0E34\u0E07\u0E46\u0E41\u0E25\u0E49\u0E27"
@@ -23291,107 +23291,107 @@ MonoBehaviour:
   - english: ESCAPE
     thai: "\u0E2B\u0E19\u0E35"
     verb: Verb
-    category: TEST
+    category: B1
     audio: {fileID: 8300000, guid: d19af3593d0ae114d94c1c539d294a55, type: 3}
   - english: INTERRUPT
     thai: "\u0E02\u0E31\u0E14\u0E08\u0E31\u0E07\u0E2B\u0E27\u0E30"
     verb: Verb
-    category: TEST
+    category: B1
     audio: {fileID: 8300000, guid: c94f9e7dcbfac7e4daec95b52d92b7fc, type: 3}
   - english: BEHAVIOUR
     thai: "\u0E1E\u0E24\u0E15\u0E34\u0E01\u0E23\u0E23\u0E21"
     verb: Noun
-    category: TEST
+    category: A2
     audio: {fileID: 8300000, guid: 922f284e3d9c18c419dc02fe16cfc07a, type: 3}
   - english: ALLOW
     thai: "\u0E2D\u0E19\u0E38\u0E0D\u0E32\u0E15"
     verb: Verb
-    category: TEST
+    category: A2
     audio: {fileID: 8300000, guid: 062c4de2b3eb2454a9a650e25d54caef, type: 3}
   - english: SUITABLE
     thai: "\u0E40\u0E2B\u0E21\u0E32\u0E30\u0E2A\u0E21"
     verb: Adjective
-    category: TEST
+    category: B1
     audio: {fileID: 8300000, guid: 4638d65ef0d078c418fc770cfad80628, type: 3}
   - english: REDUCE
     thai: "\u0E25\u0E14\u0E25\u0E07"
     verb: Verb
-    category: TEST
+    category: B1
     audio: {fileID: 8300000, guid: 1cb200b4ab4b4064db8951d16f14c2cc, type: 3}
   - english: BORROW
     thai: "\u0E22\u0E37\u0E21"
     verb: Verb
-    category: TEST
+    category: A2
     audio: {fileID: 8300000, guid: 6aa15fc41f011474f851e72d9ef38ee2, type: 3}
   - english: SWITCH OFF
     thai: "\u0E1B\u0E34\u0E14(\u0E2D\u0E38\u0E1B\u0E01\u0E23\u0E13\u0E4C\u0E44\u0E1F\u0E1F\u0E49\u0E32)"
     verb: Verb
-    category: TEST
+    category: B1
     audio: {fileID: 8300000, guid: 82104becb54e2c34cb7c3d922f0a7dc5, type: 3}
   - english: UPSET
     thai: "\u0E2B\u0E07\u0E38\u0E14\u0E2B\u0E07\u0E34\u0E14, \u0E44\u0E21\u0E48\u0E1E\u0E2D\u0E43\u0E08"
     verb: Verb
-    category: TEST
+    category: B1
     audio: {fileID: 8300000, guid: 43e0a76fcb6fb8c4bbb75f42365be3b7, type: 3}
   - english: FOLLOW
     thai: "\u0E15\u0E32\u0E21, \u0E17\u0E33\u0E15\u0E32\u0E21"
     verb: Verb
-    category: TEST
+    category: A2
     audio: {fileID: 8300000, guid: 887976a420c6f9a49abb63f176f8f81d, type: 3}
   - english: REVIEW
     thai: "\u0E01\u0E32\u0E23\u0E17\u0E1A\u0E17\u0E27\u0E19, \u0E01\u0E32\u0E23\u0E27\u0E34\u0E08\u0E32\u0E23\u0E13\u0E4C"
     verb: Verb
-    category: TEST
+    category: B1
     audio: {fileID: 8300000, guid: 9008482be002cce4fbc41d2820be01ab, type: 3}
   - english: CHANGE
     thai: "\u0E40\u0E1B\u0E25\u0E35\u0E48\u0E22\u0E19"
     verb: Verb
-    category: TEST
+    category: A1
     audio: {fileID: 8300000, guid: f5d4c80599271ca489427b223825f253, type: 3}
   - english: DIE
     thai: "\u0E15\u0E32\u0E22"
     verb: Verb
-    category: TEST
+    category: A1
     audio: {fileID: 8300000, guid: daadc085f87c19c489d9949ede9f2c32, type: 3}
   - english: ENCOURAGE
     thai: "\u0E43\u0E2B\u0E49\u0E01\u0E33\u0E25\u0E31\u0E07\u0E43\u0E08"
     verb: Verb
-    category: TEST
+    category: B1
     audio: {fileID: 8300000, guid: ce9ca27cc724b324b8b5cd4870982de7, type: 3}
   - english: PREDICT
     thai: "\u0E04\u0E32\u0E14\u0E01\u0E32\u0E23\u0E13\u0E4C"
     verb: Verb
-    category: TEST
+    category: B1
     audio: {fileID: 8300000, guid: d566d9279c154a8429a2b3472ef2a2b7, type: 3}
   - english: EFFORT
     thai: "\u0E04\u0E27\u0E32\u0E21\u0E1E\u0E22\u0E32\u0E22\u0E32\u0E21"
     verb: Noun
-    category: TEST
+    category: B1
     audio: {fileID: 8300000, guid: 6c88fbf6ef791bb42816d85ae5b5e5e5, type: 3}
   - english: ENVIRONMENT
     thai: "\u0E2A\u0E34\u0E48\u0E07\u0E41\u0E27\u0E14\u0E25\u0E49\u0E2D\u0E21"
     verb: Noun
-    category: TEST
+    category: A2
     audio: {fileID: 8300000, guid: 809ae9ec724743645955af812ea4a48f, type: 3}
   - english: APOLOGISE
     thai: "\u0E02\u0E2D\u0E2D\u0E20\u0E31\u0E22"
     verb: Verb
-    category: TEST
+    category: B1
     audio: {fileID: 8300000, guid: 66522fe317c718f449984220102f9760, type: 3}
   - english: ABILITY
     thai: "\u0E04\u0E27\u0E32\u0E21\u0E2A\u0E32\u0E21\u0E32\u0E23\u0E16"
     verb: Noun
-    category: TEST
+    category: B1
     audio: {fileID: 8300000, guid: 4e64d7f395831bc419cd3d9d5981ae07, type: 3}
   - english: CONDITION
     thai: "\u0E40\u0E07\u0E37\u0E48\u0E2D\u0E19\u0E44\u0E02"
     verb: Noun
-    category: TEST
+    category: B1
     audio: {fileID: 8300000, guid: 9585cc9b866f967478968ce7e06b79dc, type: 3}
   - english: LACK
     thai: "\u0E02\u0E32\u0E14\u0E41\u0E04\u0E25\u0E19"
     verb: Verb
-    category: TEST
+    category: B1
     audio: {fileID: 8300000, guid: 4dec18f9fe2b5b043a5cbbd38be7f955, type: 3}
   - english: REQUIRE
     thai: "\u0E15\u0E49\u0E2D\u0E07\u0E01\u0E32\u0E23, \u0E08\u0E33\u0E40\u0E1B\u0E47\u0E19\u0E15\u0E49\u0E2D\u0E07\u0E43\u0E0A\u0E49"
