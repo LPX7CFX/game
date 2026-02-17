@@ -79,6 +79,7 @@ public class Categorychoose : MonoBehaviour
         if (ws.T != 0)
         {
             ws.T = 0;
+            tm.CateselGUI.SetActive(false);
             ws.training();
             GameObject ButtonTraining = tm.PlayVoice.gameObject;
             GameObject Buttontm = tm.PlaySound.gameObject;
@@ -90,12 +91,14 @@ public class Categorychoose : MonoBehaviour
         if (tm.C != 0)
         {
             tm.C = 0;
+            tm.CateselGUI.SetActive(false);
             tm.StartNextWord();
             GameObject Buttontm = tm.PlaySound.gameObject;
             GameObject ButtonTraining = tm.PlayVoice.gameObject;
-            ButtonTraining.SetActive(false);
-
+            ButtonTraining.SetActive(true);
             Buttontm.SetActive(false);
+
+
             // ModeScene.SetActive(true); อันนี้มันเปิดให้กูอะ กูเลยปิดแม่งไปเลย
 
         }
@@ -112,6 +115,7 @@ public class Categorychoose : MonoBehaviour
         if (ws.T != 0)
         {
             ws.T = 0;
+            tm.CateselGUI.SetActive(false);
             ws.training();
             GameObject ButtonTraining = tm.PlayVoice.gameObject;
             GameObject Buttontm = tm.PlaySound.gameObject;
@@ -123,6 +127,7 @@ public class Categorychoose : MonoBehaviour
         if (tm.C != 0)
         {
             tm.C = 0;
+            tm.CateselGUI.SetActive(false);
             tm.StartNextWord();
             GameObject ButtonTraining = tm.PlayVoice.gameObject;
             GameObject Buttontm = tm.PlaySound.gameObject;
@@ -153,6 +158,7 @@ public class Categorychoose : MonoBehaviour
         if (ws.T != 0)
         {
             ws.T = 0;
+            tm.CateselGUI.SetActive(false);
             ModeScene.SetActive(false);
             ws.training();
             GameObject ButtonTraining = tm.PlayVoice.gameObject;
@@ -164,6 +170,7 @@ public class Categorychoose : MonoBehaviour
         if (tm.C != 0)
         {
             tm.C = 0;
+            tm.CateselGUI.SetActive(false);
             ModeScene.SetActive(false);
             tm.StartNextWord();
             GameObject ButtonTraining = tm.PlayVoice.gameObject;

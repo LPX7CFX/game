@@ -23409,65 +23409,215 @@ MonoBehaviour:
     category: TEST
     audio: {fileID: 8300000, guid: 57fb9890bef6a1f49ba56b5a34e1c82c, type: 3}
   - english: COMFORTABLE
-    thai: "\u0E2A\u0E1A\u0E32\u0E22\u0E43\u0E08"
+    thai: "\u0E2A\u0E1A\u0E32\u0E22"
     verb: Adjective
     category: A2
-    audio: {fileID: 8300000, guid: f5d4c80599271ca489427b223825f253, type: 3}
+    audio: {fileID: 8300000, guid: d98956a495bc6f843ba83131d1b64fc1, type: 3}
   - english: CURIOUS
     thai: "\u0E2D\u0E22\u0E32\u0E01\u0E23\u0E39\u0E49\u0E2D\u0E22\u0E32\u0E01\u0E40\u0E2B\u0E47\u0E19"
     verb: Adjective
     category: A2
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 1bcb8420ca319894b876d93db97cb3c3, type: 3}
   - english: FRIENDLY
     thai: "\u0E40\u0E1B\u0E47\u0E19\u0E21\u0E34\u0E15\u0E23"
     verb: Adjective
     category: A2
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: cd94709019eca14418293a35201b235f, type: 3}
   - english: LAZY
     thai: "\u0E02\u0E35\u0E49\u0E40\u0E01\u0E35\u0E22\u0E08"
     verb: Adjective
     category: A2
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 789c1ca6f1ed436418a172874fa377d0, type: 3}
   - english: SERIOUS
     thai: "\u0E08\u0E23\u0E34\u0E07\u0E08\u0E31\u0E07"
     verb: Adjective
     category: A2
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: e6e2897a47df2484096b42950d42c3eb, type: 3}
   - english: STRANGE
     thai: "\u0E41\u0E1B\u0E25\u0E01"
     verb: Adjective
     category: A2
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 3c56b02c011a6ac4f946a520f1ab7e53, type: 3}
   - english: CARRY
     thai: "\u0E16\u0E37\u0E2D"
     verb: Verb
     category: A2
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: e8d80e4120c4aa2478af49573140796f, type: 3}
   - english: CATCH
     thai: "\u0E08\u0E31\u0E1A"
     verb: Verb
     category: A2
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: a61ef4e6b1cbf124cb5fd6d33948930a, type: 3}
   - english: DROP
     thai: "\u0E17\u0E33\u0E15\u0E01 / \u0E2B\u0E22\u0E14"
     verb: Verb
     category: A2
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: d2ca5c9534b5e044eb818b8823e79734, type: 3}
   - english: PUSH
     thai: "\u0E1C\u0E25\u0E31\u0E01"
     verb: Verb
     category: A2
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 6f85b376f65caf940a2b55feb182e22b, type: 3}
   - english: PULL
     thai: "\u0E14\u0E36\u0E07"
     verb: Verb
     category: A2
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: e781a090bc06c004bb3085b50a04d27e, type: 3}
+  - english: STEAM
+    thai: "\u0E44\u0E2D\u0E19\u0E4D\u0E49\u0E32"
+    verb: Verb
+    category: A2
+    audio: {fileID: 8300000, guid: 7026ab845a6071e42b03047f88377246, type: 3}
   - english: ARRIVE
     thai: "\u0E21\u0E32\u0E16\u0E36\u0E07"
     verb: Verb
     category: A2
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 31605ea2029a554459a67149777ca2d7, type: 3}
+  - english: FRY
+    thai: "\u0E17\u0E2D\u0E14"
+    verb: Verb
+    category: cooking actions & kitchen terms
+    audio: {fileID: 8300000, guid: d4189307a5d19024daf4eaefc87d0327, type: 3}
+  - english: GRILL
+    thai: "\u0E22\u0E48\u0E32\u0E07\u0E1A\u0E19\u0E15\u0E30\u0E41\u0E01\u0E23\u0E07"
+    verb: Verb
+    category: cooking actions & kitchen terms
+    audio: {fileID: 8300000, guid: 6627052a24be35441b24b07aeceab275, type: 3}
+  - english: ROAST
+    thai: "\u0E2D\u0E1A/\u0E22\u0E48\u0E32\u0E07\u0E40\u0E15\u0E32"
+    verb: Verb
+    category: cooking actions & kitchen terms
+    audio: {fileID: 8300000, guid: 1dc6e8d6db069f14c9fa84de5b6d2cf2, type: 3}
+  - english: BAKE
+    thai: "\u0E2D\u0E1A (\u0E02\u0E19\u0E21\u0E1B\u0E31\u0E07/\u0E40\u0E04\u0E49\u0E01)"
+    verb: Verb
+    category: cooking actions & kitchen terms
+    audio: {fileID: 8300000, guid: a2d204d80014fb047a2849c9b6263c02, type: 3}
+  - english: BOIL
+    thai: "\u0E15\u0E49\u0E21"
+    verb: Verb
+    category: cooking actions & kitchen terms
+    audio: {fileID: 8300000, guid: a0f23d3a8d54522408382f73a7d19554, type: 3}
+  - english: STEAM
+    thai: "\u0E19\u0E36\u0E48\u0E07"
+    verb: Verb
+    category: cooking actions & kitchen terms
+    audio: {fileID: 8300000, guid: 7026ab845a6071e42b03047f88377246, type: 3}
+  - english: CHOP
+    thai: "\u0E2A\u0E31\u0E1A"
+    verb: Verb
+    category: cooking actions & kitchen terms
+    audio: {fileID: 8300000, guid: 40cee33094866f64a8cad92d5ce59a09, type: 3}
+  - english: SLICE
+    thai: "\u0E2B\u0E31\u0E48\u0E19\u0E40\u0E1B\u0E47\u0E19\u0E41\u0E1C\u0E48\u0E19"
+    verb: Verb
+    category: cooking actions & kitchen terms
+    audio: {fileID: 8300000, guid: 953df556d7a24a7469989af3f634ff21, type: 3}
+  - english: PEEL
+    thai: "\u0E1B\u0E2D\u0E01\u0E40\u0E1B\u0E25\u0E37\u0E2D\u0E01"
+    verb: Verb
+    category: cooking actions & kitchen terms
+    audio: {fileID: 8300000, guid: 50474adc53e2bd14ab5485135fec5eb0, type: 3}
+  - english: STIR
+    thai: "\u0E04\u0E19 (Verb)"
+    verb: Verb
+    category: cooking actions & kitchen terms
+    audio: {fileID: 8300000, guid: 28e371def8fdade4eb109f8040b7dcf4, type: 3}
+  - english: POUR
+    thai: "\u0E40\u0E17"
+    verb: Verb
+    category: cooking actions & kitchen terms
+    audio: {fileID: 8300000, guid: 24e4cd69cc82ee142a1987355d1ba0df, type: 3}
+  - english: HEAT
+    thai: "\u0E17\u0E33\u0E43\u0E2B\u0E49\u0E23\u0E49\u0E2D\u0E19"
+    verb: Verb
+    category: cooking actions & kitchen terms
+    audio: {fileID: 8300000, guid: dea8d7b9fee84a440bc33f0601bf9a73, type: 3}
+  - english: MELT
+    thai: "\u0E25\u0E30\u0E25\u0E32\u0E22"
+    verb: Verb
+    category: cooking actions & kitchen terms
+    audio: {fileID: 8300000, guid: caf0fcf5477207c468cf95a1e68ed288, type: 3}
+  - english: SPREAD
+    thai: "\u0E17\u0E32/\u0E1B\u0E32\u0E14"
+    verb: Verb
+    category: cooking actions & kitchen terms
+    audio: {fileID: 8300000, guid: 7bea28427722c79448ef5e71d6fb9a83, type: 3}
+  - english: WEIGH
+    thai: "\u0E0A\u0E31\u0E48\u0E07\u0E19\u0E49\u0E33\u0E2B\u0E19\u0E31\u0E01"
+    verb: Verb
+    category: A2
+    audio: {fileID: 8300000, guid: b0bb32c04a190ed4488e11045095734f, type: 3}
+  - english: MEASURE
+    thai: "\u0E15\u0E27\u0E07/\u0E27\u0E31\u0E14"
+    verb: Verb
+    category: cooking actions & kitchen terms
+    audio: {fileID: 8300000, guid: 6fa63a88ca64a1b40aaa50b6953a0af0, type: 3}
+  - english: ADD
+    thai: "\u0E40\u0E15\u0E34\u0E21"
+    verb: Verb
+    category: cooking actions & kitchen terms
+    audio: {fileID: 8300000, guid: d537d723d565d184baa7380c21f93ac3, type: 3}
+  - english: SERVE
+    thai: "\u0E40\u0E2A\u0E34\u0E23\u0E4C\u0E1F"
+    verb: Verb
+    category: cooking actions & kitchen terms
+    audio: {fileID: 8300000, guid: 21d83cba753bf2549b29eacc13636f9b, type: 3}
+  - english: PREPARE
+    thai: "\u0E40\u0E15\u0E23\u0E35\u0E22\u0E21"
+    verb: Verb
+    category: cooking actions & kitchen terms
+    audio: {fileID: 8300000, guid: 8dc033d4a9920344a889480eb4a6f576, type: 3}
+  - english: RECIPE
+    thai: "\u0E2A\u0E39\u0E15\u0E23\u0E2D\u0E32\u0E2B\u0E32\u0E23"
+    verb: Nous
+    category: cooking actions & kitchen terms
+    audio: {fileID: 8300000, guid: 11620f1edb1dce64cbb75304c0141841, type: 3}
+  - english: INGREDIENT
+    thai: "\u0E2A\u0E48\u0E27\u0E19\u0E1C\u0E2A\u0E21"
+    verb: Nous
+    category: cooking actions & kitchen terms
+    audio: {fileID: 8300000, guid: 77641037570394c4386f8ecb741671b6, type: 3}
+  - english: FLOUR
+    thai: "\u0E41\u0E1B\u0E49\u0E07\u0E2A\u0E32\u0E25\u0E35"
+    verb: Nous
+    category: cooking actions & kitchen terms
+    audio: {fileID: 8300000, guid: 12a0a3f3fef11954ca73f42749e429f8, type: 3}
+  - english: OIL
+    thai: "\u0E19\u0E49\u0E33\u0E21\u0E31\u0E19"
+    verb: Nous
+    category: cooking actions & kitchen terms
+    audio: {fileID: 8300000, guid: 6d99aaa3660540542be57052f6983598, type: 3}
+  - english: VINEGAR
+    thai: "\u0E19\u0E49\u0E33\u0E2A\u0E49\u0E21\u0E2A\u0E32\u0E22\u0E0A\u0E39"
+    verb: Nous
+    category: cooking actions & kitchen terms
+    audio: {fileID: 8300000, guid: c90be3bc38e9f3747a858fad1ec3402e, type: 3}
+  - english: SPICE
+    thai: "\u0E40\u0E04\u0E23\u0E37\u0E48\u0E2D\u0E07\u0E40\u0E17\u0E28"
+    verb: Nous
+    category: cooking actions & kitchen terms
+    audio: {fileID: 8300000, guid: f2ad8643ef19be54e8099d82e2b24ac7, type: 3}
+  - english: OVEN
+    thai: "\u0E40\u0E15\u0E32\u0E2D\u0E1A"
+    verb: Nous
+    category: cooking actions & kitchen terms
+    audio: {fileID: 8300000, guid: 2522df272aa6c404f83cc77370fc6538, type: 3}
+  - english: PAN
+    thai: "\u0E01\u0E23\u0E30\u0E17\u0E30"
+    verb: Nous
+    category: cooking actions & kitchen terms
+    audio: {fileID: 8300000, guid: f6dd4d2b4878d714b9907033ada3efd9, type: 3}
+  - english: SAUCEPAN
+    thai: "\u0E2B\u0E21\u0E49\u0E2D\u0E14\u0E49\u0E32\u0E21"
+    verb: Nous
+    category: cooking actions & kitchen terms
+    audio: {fileID: 8300000, guid: b2a6e283751ee26448b7cf147639e4c7, type: 3}
+  - english: LID
+    thai: "\u0E1D\u0E32\u0E2B\u0E21\u0E49\u0E2D"
+    verb: Nous
+    category: cooking actions & kitchen terms
+    audio: {fileID: 8300000, guid: b09a8c645e4f32a41a7ca58bb65caa0f, type: 3}
   NextWord: {fileID: 1001430011}
   Training: {fileID: 448626946}
   Exit: {fileID: 672636814}
@@ -41785,7 +41935,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1368567718
 RectTransform:
   m_ObjectHideFlags: 0
@@ -47324,9 +47474,9 @@ RectTransform:
   m_Father: {fileID: 1452747262}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: -17}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1549969475
 MonoBehaviour:
@@ -51246,7 +51396,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1657441010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60174,7 +60324,7 @@ RectTransform:
   m_Father: {fileID: 1134038}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -62486,7 +62636,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 116.86}
+  m_SizeDelta: {x: -960.532, y: 116.86}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2044410671
 MonoBehaviour:

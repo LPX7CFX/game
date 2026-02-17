@@ -5,8 +5,10 @@ using TMPro;
 using System.Linq;
 using System;
 using JetBrains.Annotations;
+#if UNITY_EDITOR
 using UnityEditor.Callbacks;
 using UnityEditor.PackageManager;
+#endif
 using UnityEngine.UI;
 using Unity.VisualScripting;
 
@@ -31,7 +33,7 @@ public class TypingManager : MonoBehaviour
     public Button PlayVoice;
     public Button PlayAudio;
     public Button PlaySound;
-    [SerializeField] GameObject CateselGUI;
+    public GameObject CateselGUI;
 
     [SerializeField] private GameObject asd;
     [SerializeField] private GameObject fgh;
