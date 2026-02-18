@@ -23421,12 +23421,12 @@ MonoBehaviour:
   - english: FRIENDLY
     thai: "\u0E40\u0E1B\u0E47\u0E19\u0E21\u0E34\u0E15\u0E23"
     verb: Adjective
-    category: A2
+    category: PERSONALITY
     audio: {fileID: 8300000, guid: cd94709019eca14418293a35201b235f, type: 3}
   - english: LAZY
     thai: "\u0E02\u0E35\u0E49\u0E40\u0E01\u0E35\u0E22\u0E08"
     verb: Adjective
-    category: A2
+    category: PERSONALITY
     audio: {fileID: 8300000, guid: 789c1ca6f1ed436418a172874fa377d0, type: 3}
   - english: SERIOUS
     thai: "\u0E08\u0E23\u0E34\u0E07\u0E08\u0E31\u0E07"
@@ -23443,6 +23443,11 @@ MonoBehaviour:
     verb: Verb
     category: ACTIONS & MOVEMENT
     audio: {fileID: 8300000, guid: e8d80e4120c4aa2478af49573140796f, type: 3}
+  - english: PUSH
+    thai: "\u0E1C\u0E25\u0E31\u0E01"
+    verb: Verb
+    category: ACTIONS & MOVEMENT
+    audio: {fileID: 8300000, guid: 6f85b376f65caf940a2b55feb182e22b, type: 3}
   - english: CATCH
     thai: "\u0E08\u0E31\u0E1A"
     verb: Verb
@@ -23453,11 +23458,6 @@ MonoBehaviour:
     verb: Verb
     category: ACTIONS & MOVEMENT
     audio: {fileID: 8300000, guid: d2ca5c9534b5e044eb818b8823e79734, type: 3}
-  - english: PUSH
-    thai: "\u0E1C\u0E25\u0E31\u0E01"
-    verb: Verb
-    category: ACTIONS & MOVEMENT
-    audio: {fileID: 8300000, guid: 6f85b376f65caf940a2b55feb182e22b, type: 3}
   - english: PULL
     thai: "\u0E14\u0E36\u0E07"
     verb: Verb
@@ -23622,7 +23622,7 @@ MonoBehaviour:
     thai: "\u0E1B\u0E23\u0E30\u0E2B\u0E21\u0E48\u0E32"
     verb: ADJ
     category: Feelings & Emotions
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: c3ff361c204dd0e4ca209138eccb0488, type: 3}
   - english: PROUD
     thai: "\u0E20\u0E39\u0E21\u0E34\u0E43\u0E08"
     verb: ADJ
@@ -23637,7 +23637,7 @@ MonoBehaviour:
     thai: "\u0E1C\u0E48\u0E2D\u0E19\u0E04\u0E25\u0E32\u0E22"
     verb: ADJ
     category: Feelings & Emotions
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 3a0cf8ce9744c654a998115d4cef96cc, type: 3}
   - english: WORRIED
     thai: "\u0E01\u0E31\u0E07\u0E27\u0E25"
     verb: ADJ
@@ -23657,52 +23657,52 @@ MonoBehaviour:
     thai: "\u0E1C\u0E34\u0E14\u0E2B\u0E27\u0E31\u0E07"
     verb: ADJ
     category: Feelings & Emotions
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 2373540caf4558e4fa15ab872f131e0b, type: 3}
   - english: EMBARRASSED
     thai: "\u0E2D\u0E32\u0E22"
     verb: ADJ
     category: Feelings & Emotions
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 240a0e4ef7785da48af4207e7b453f62, type: 3}
   - english: JEALOUS
     thai: "\u0E2B\u0E36\u0E07/\u0E2D\u0E34\u0E08\u0E09\u0E32"
     verb: ADJ
     category: Feelings & Emotions
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 8fff56dd6d5fb354facb30cd8f92c879, type: 3}
   - english: LONELY
     thai: "\u0E40\u0E2B\u0E07\u0E32"
     verb: ADJ
     category: Feelings & Emotions
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 09a764c1cffccc4499b84d433999d40f, type: 3}
   - english: BORED
     thai: "\u0E40\u0E1A\u0E37\u0E48\u0E2D"
     verb: ADJ
     category: Feelings & Emotions
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: b2e98ac999c9ee443ae0c1c6aa9ef483, type: 3}
   - english: CONFUSED
     thai: "\u0E2A\u0E31\u0E1A\u0E2A\u0E19"
     verb: ADJ
     category: Feelings & Emotions
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 7796b1d2bf188434891a14dc09e83788, type: 3}
   - english: SHOCKED
     thai: "\u0E15\u0E01\u0E43\u0E08"
     verb: ADJ
     category: Feelings & Emotions
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 39d765497f5cfa745943b17be6309040, type: 3}
   - english: FRIGHTENED
     thai: "\u0E01\u0E25\u0E31\u0E27"
     verb: ADJ
     category: Feelings & Emotions
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 9eb446729dae7764a8841a05e6620ba5, type: 3}
   - english: ANNOYED
     thai: "\u0E2B\u0E07\u0E38\u0E14\u0E2B\u0E07\u0E34\u0E14"
     verb: ADJ
     category: Feelings & Emotions
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: e41b03ef4ee981549bc3d49afaad26f0, type: 3}
   - english: PLEASED
     thai: "\u0E22\u0E34\u0E19\u0E14\u0E35/\u0E1E\u0E2D\u0E43\u0E08"
     verb: ADJ
     category: Feelings & Emotions
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 7ec4983f19579b34f883db2d3cb6c46e, type: 3}
   - english: SATISFIED
     thai: "\u0E1E\u0E36\u0E07\u0E1E\u0E2D\u0E43\u0E08"
     verb: ADJ
@@ -23712,46 +23712,166 @@ MonoBehaviour:
     thai: "\u0E23\u0E39\u0E49\u0E2A\u0E36\u0E01\u0E40\u0E2A\u0E35\u0E22\u0E43\u0E08\u0E20\u0E32\u0E22\u0E2B\u0E25\u0E31\u0E07"
     verb: Verb
     category: Feelings & Emotions
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 875df86fbf52de74085ea6ab3441d765, type: 3}
   - english: HOPE
     thai: "\u0E04\u0E32\u0E14\u0E2B\u0E27\u0E31\u0E07"
     verb: Verb
     category: Feelings & Emotions
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 22d7ab17ab1828f429e042dad222e1c3, type: 3}
   - english: FEAR
     thai: "\u0E04\u0E27\u0E32\u0E21\u0E01\u0E25\u0E31\u0E27"
     verb: Noun
     category: Feelings & Emotions
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: e6d2a8193f185024fab6bee3b9d56fd5, type: 3}
   - english: ANGER
     thai: "\u0E04\u0E27\u0E32\u0E21\u0E42\u0E01\u0E23\u0E18"
     verb: Noun
     category: Feelings & Emotions
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 5f9335f4e8f67a64d92ff66da235c293, type: 3}
   - english: STRESS
     thai: "\u0E04\u0E27\u0E32\u0E21\u0E40\u0E04\u0E23\u0E35\u0E22\u0E14"
     verb: Noun
     category: Feelings & Emotions
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 64b93efde7d77de49b55ac0ab34f2a5f, type: 3}
   - english: MOOD
     thai: "\u0E2D\u0E32\u0E23\u0E21\u0E13\u0E4C"
     verb: Noun
     category: Feelings & Emotions
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 17fc367463b047a41844ddd52808b6d2, type: 3}
   - english: FEELING
     thai: "\u0E04\u0E27\u0E32\u0E21\u0E23\u0E39\u0E49\u0E2A\u0E36\u0E01"
     verb: Noun
     category: Feelings & Emotions
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 9f35ca387dedc0a488597129c3509d8a, type: 3}
   - english: CONFIDENCE
     thai: "\u0E04\u0E27\u0E32\u0E21\u0E21\u0E31\u0E48\u0E19\u0E43\u0E08"
     verb: Noun
     category: Feelings & Emotions
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: e82297a632ad49e4b9f7b080021cdd61, type: 3}
   - english: TRUST
     thai: "\u0E04\u0E27\u0E32\u0E21\u0E44\u0E27\u0E49\u0E27\u0E32\u0E07\u0E43\u0E08"
     verb: Noun
     category: Feelings & Emotions
+    audio: {fileID: 8300000, guid: 28d9703f9f52bf44589315a52ebfaaf2, type: 3}
+  - english: BEND
+    thai: "\u0E07\u0E2D"
+    verb: Verb
+    category: ACTIONS & MOVEMENT
+    audio: {fileID: 0}
+  - english: STRETCH
+    thai: "\u0E22\u0E37\u0E14"
+    verb: Verb
+    category: ACTIONS & MOVEMENT
+    audio: {fileID: 0}
+  - english: LEAN
+    thai: "\u0E40\u0E2D\u0E19"
+    verb: Verb
+    category: ACTIONS & MOVEMENT
+    audio: {fileID: 0}
+  - english: CRAWL
+    thai: "\u0E04\u0E25\u0E32\u0E19"
+    verb: Verb
+    category: ACTIONS & MOVEMENT
+    audio: {fileID: 0}
+  - english: SLIDE
+    thai: "\u0E25\u0E37\u0E48\u0E19\u0E44\u0E16\u0E25"
+    verb: Verb
+    category: ACTIONS & MOVEMENT
+    audio: {fileID: 0}
+  - english: ROLL
+    thai: "\u0E01\u0E25\u0E34\u0E49\u0E07"
+    verb: Verb
+    category: ACTIONS & MOVEMENT
+    audio: {fileID: 0}
+  - english: SHAKE
+    thai: "\u0E40\u0E02\u0E22\u0E48\u0E32"
+    verb: Verb
+    category: ACTIONS & MOVEMENT
+    audio: {fileID: 0}
+  - english: NOD
+    thai: "\u0E1E\u0E22\u0E31\u0E01\u0E2B\u0E19\u0E49\u0E32"
+    verb: Verb
+    category: ACTIONS & MOVEMENT
+    audio: {fileID: 0}
+  - english: WAVE
+    thai: "\u0E42\u0E1A\u0E01\u0E21\u0E37\u0E2D"
+    verb: Verb
+    category: ACTIONS & MOVEMENT
+    audio: {fileID: 0}
+  - english: WHISPER
+    thai: "\u0E01\u0E23\u0E30\u0E0B\u0E34\u0E1A"
+    verb: Verb
+    category: ACTIONS & MOVEMENT
+    audio: {fileID: 0}
+  - english: SHOUT
+    thai: "\u0E15\u0E30\u0E42\u0E01\u0E19"
+    verb: Verb
+    category: ACTIONS & MOVEMENT
+    audio: {fileID: 0}
+  - english: CHASE
+    thai: "\u0E44\u0E25\u0E48\u0E15\u0E32\u0E21"
+    verb: Verb
+    category: ACTIONS & MOVEMENT
+    audio: {fileID: 0}
+  - english: HIDE
+    thai: "\u0E0B\u0E48\u0E2D\u0E19"
+    verb: Verb
+    category: ACTIONS & MOVEMENT
+    audio: {fileID: 0}
+  - english: GRAB
+    thai: "\u0E04\u0E27\u0E49\u0E32"
+    verb: Verb
+    category: ACTIONS & MOVEMENT
+    audio: {fileID: 0}
+  - english: LIFT
+    thai: "\u0E22\u0E01"
+    verb: Verb
+    category: ACTIONS & MOVEMENT
+    audio: {fileID: 0}
+  - english: STEP
+    thai: "\u0E01\u0E49\u0E32\u0E27"
+    verb: Verb
+    category: ACTIONS & MOVEMENT
+    audio: {fileID: 0}
+  - english: KNOCK
+    thai: "\u0E40\u0E04\u0E32\u0E30"
+    verb: Verb
+    category: ACTIONS & MOVEMENT
+    audio: {fileID: 0}
+  - english: SPIN
+    thai: "\u0E2B\u0E21\u0E38\u0E19"
+    verb: Verb
+    category: ACTIONS & MOVEMENT
+    audio: {fileID: 0}
+  - english: JUMP
+    thai: "\u0E01\u0E23\u0E30\u0E42\u0E14\u0E14"
+    verb: Verb
+    category: ACTIONS & MOVEMENT
+    audio: {fileID: 0}
+  - english: KICK
+    thai: "\u0E40\u0E15\u0E30"
+    verb: Verb
+    category: ACTIONS & MOVEMENT
+    audio: {fileID: 0}
+  - english: CLIMB
+    thai: "\u0E1B\u0E35\u0E19"
+    verb: Verb
+    category: ACTIONS & MOVEMENT
+    audio: {fileID: 0}
+  - english: FALL
+    thai: "\u0E25\u0E49\u0E21"
+    verb: Verb
+    category: ACTIONS & MOVEMENT
+    audio: {fileID: 0}
+  - english: HURRY
+    thai: "\u0E23\u0E35\u0E1A"
+    verb: Verb
+    category: ACTIONS & MOVEMENT
+    audio: {fileID: 0}
+  - english: LEAVE
+    thai: "\u0E2D\u0E2D\u0E01\u0E44\u0E1B"
+    verb: Verb
+    category: ACTIONS & MOVEMENT
     audio: {fileID: 0}
   NextWord: {fileID: 1001430011}
   Training: {fileID: 448626946}
