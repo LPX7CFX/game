@@ -23276,17 +23276,17 @@ MonoBehaviour:
   - english: SEVERAL
     thai: "\u0E2B\u0E25\u0E32\u0E01\u0E2B\u0E25\u0E32\u0E22"
     verb: Pronoun
-    category: TEST
+    category: NONE
     audio: {fileID: 8300000, guid: 783716b08faf17248a885ce86f3a6c87, type: 3}
   - english: PREVENT
     thai: "\u0E1B\u0E49\u0E2D\u0E07\u0E01\u0E31\u0E19\u0E44\u0E21\u0E48\u0E43\u0E2B\u0E49\u0E40\u0E01\u0E34\u0E14"
     verb: Verb
-    category: B1
+    category: NONE
     audio: {fileID: 8300000, guid: a147c4be46ed899488a360af617f3f1c, type: 3}
   - english: ACTUALLY
     thai: "\u0E08\u0E23\u0E34\u0E07\u0E46\u0E41\u0E25\u0E49\u0E27"
     verb: Adverb
-    category: TEST
+    category: NONE
     audio: {fileID: 8300000, guid: 57a0d8aeb97ba0745a18585ecabf9dde, type: 3}
   - english: ESCAPE
     thai: "\u0E2B\u0E19\u0E35"
@@ -23311,17 +23311,17 @@ MonoBehaviour:
   - english: SUITABLE
     thai: "\u0E40\u0E2B\u0E21\u0E32\u0E30\u0E2A\u0E21"
     verb: Adjective
-    category: B1
+    category: NONE
     audio: {fileID: 8300000, guid: 4638d65ef0d078c418fc770cfad80628, type: 3}
   - english: REDUCE
     thai: "\u0E25\u0E14\u0E25\u0E07"
     verb: Verb
-    category: B1
+    category: NONE
     audio: {fileID: 8300000, guid: 1cb200b4ab4b4064db8951d16f14c2cc, type: 3}
   - english: BORROW
     thai: "\u0E22\u0E37\u0E21"
     verb: Verb
-    category: A2
+    category: NONE
     audio: {fileID: 8300000, guid: 6aa15fc41f011474f851e72d9ef38ee2, type: 3}
   - english: SWITCH OFF
     thai: "\u0E1B\u0E34\u0E14(\u0E2D\u0E38\u0E1B\u0E01\u0E23\u0E13\u0E4C\u0E44\u0E1F\u0E1F\u0E49\u0E32)"
@@ -23416,7 +23416,7 @@ MonoBehaviour:
   - english: CURIOUS
     thai: "\u0E2D\u0E22\u0E32\u0E01\u0E23\u0E39\u0E49\u0E2D\u0E22\u0E32\u0E01\u0E40\u0E2B\u0E47\u0E19"
     verb: Adjective
-    category: A2
+    category: FEELINGS & EMOTIONS
     audio: {fileID: 8300000, guid: 1bcb8420ca319894b876d93db97cb3c3, type: 3}
   - english: FRIENDLY
     thai: "\u0E40\u0E1B\u0E47\u0E19\u0E21\u0E34\u0E15\u0E23"
