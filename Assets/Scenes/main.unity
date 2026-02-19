@@ -6972,7 +6972,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.13725491, g: 0.121568635, b: 0.1254902, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -23291,22 +23291,22 @@ MonoBehaviour:
   - english: ESCAPE
     thai: "\u0E2B\u0E19\u0E35"
     verb: Verb
-    category: B1
+    category: ACTIONS & MOVEMENT
     audio: {fileID: 8300000, guid: d19af3593d0ae114d94c1c539d294a55, type: 3}
   - english: INTERRUPT
     thai: "\u0E02\u0E31\u0E14\u0E08\u0E31\u0E07\u0E2B\u0E27\u0E30"
     verb: Verb
-    category: B1
+    category: NONE
     audio: {fileID: 8300000, guid: c94f9e7dcbfac7e4daec95b52d92b7fc, type: 3}
   - english: BEHAVIOUR
     thai: "\u0E1E\u0E24\u0E15\u0E34\u0E01\u0E23\u0E23\u0E21"
     verb: Noun
-    category: A2
+    category: NONE
     audio: {fileID: 8300000, guid: 922f284e3d9c18c419dc02fe16cfc07a, type: 3}
   - english: ALLOW
     thai: "\u0E2D\u0E19\u0E38\u0E0D\u0E32\u0E15"
     verb: Verb
-    category: A2
+    category: NONE
     audio: {fileID: 8300000, guid: 062c4de2b3eb2454a9a650e25d54caef, type: 3}
   - english: SUITABLE
     thai: "\u0E40\u0E2B\u0E21\u0E32\u0E30\u0E2A\u0E21"
@@ -23326,7 +23326,7 @@ MonoBehaviour:
   - english: SWITCH OFF
     thai: "\u0E1B\u0E34\u0E14(\u0E2D\u0E38\u0E1B\u0E01\u0E23\u0E13\u0E4C\u0E44\u0E1F\u0E1F\u0E49\u0E32)"
     verb: Verb
-    category: B1
+    category: NONE
     audio: {fileID: 8300000, guid: 82104becb54e2c34cb7c3d922f0a7dc5, type: 3}
   - english: UPSET
     thai: "\u0E2B\u0E07\u0E38\u0E14\u0E2B\u0E07\u0E34\u0E14, \u0E44\u0E21\u0E48\u0E1E\u0E2D\u0E43\u0E08"
@@ -23336,82 +23336,82 @@ MonoBehaviour:
   - english: FOLLOW
     thai: "\u0E15\u0E32\u0E21, \u0E17\u0E33\u0E15\u0E32\u0E21"
     verb: Verb
-    category: A2
+    category: NONE
     audio: {fileID: 8300000, guid: 887976a420c6f9a49abb63f176f8f81d, type: 3}
   - english: REVIEW
     thai: "\u0E01\u0E32\u0E23\u0E17\u0E1A\u0E17\u0E27\u0E19, \u0E01\u0E32\u0E23\u0E27\u0E34\u0E08\u0E32\u0E23\u0E13\u0E4C"
     verb: Verb
-    category: B1
+    category: NONE
     audio: {fileID: 8300000, guid: 9008482be002cce4fbc41d2820be01ab, type: 3}
   - english: CHANGE
     thai: "\u0E40\u0E1B\u0E25\u0E35\u0E48\u0E22\u0E19"
     verb: Verb
-    category: A1
+    category: NONE
     audio: {fileID: 8300000, guid: f5d4c80599271ca489427b223825f253, type: 3}
   - english: DIE
     thai: "\u0E15\u0E32\u0E22"
     verb: Verb
-    category: A1
+    category: NONE
     audio: {fileID: 8300000, guid: daadc085f87c19c489d9949ede9f2c32, type: 3}
   - english: ENCOURAGE
     thai: "\u0E43\u0E2B\u0E49\u0E01\u0E33\u0E25\u0E31\u0E07\u0E43\u0E08"
     verb: Verb
-    category: B1
+    category: NONE
     audio: {fileID: 8300000, guid: ce9ca27cc724b324b8b5cd4870982de7, type: 3}
   - english: PREDICT
     thai: "\u0E04\u0E32\u0E14\u0E01\u0E32\u0E23\u0E13\u0E4C"
     verb: Verb
-    category: B1
+    category: NONE
     audio: {fileID: 8300000, guid: d566d9279c154a8429a2b3472ef2a2b7, type: 3}
   - english: EFFORT
     thai: "\u0E04\u0E27\u0E32\u0E21\u0E1E\u0E22\u0E32\u0E22\u0E32\u0E21"
     verb: Noun
-    category: B1
+    category: NONE
     audio: {fileID: 8300000, guid: 6c88fbf6ef791bb42816d85ae5b5e5e5, type: 3}
   - english: ENVIRONMENT
     thai: "\u0E2A\u0E34\u0E48\u0E07\u0E41\u0E27\u0E14\u0E25\u0E49\u0E2D\u0E21"
     verb: Noun
-    category: A2
+    category: NONE
     audio: {fileID: 8300000, guid: 809ae9ec724743645955af812ea4a48f, type: 3}
   - english: APOLOGISE
     thai: "\u0E02\u0E2D\u0E2D\u0E20\u0E31\u0E22"
     verb: Verb
-    category: B1
+    category: NONE
     audio: {fileID: 8300000, guid: 66522fe317c718f449984220102f9760, type: 3}
   - english: ABILITY
     thai: "\u0E04\u0E27\u0E32\u0E21\u0E2A\u0E32\u0E21\u0E32\u0E23\u0E16"
     verb: Noun
-    category: B1
+    category: NONE
     audio: {fileID: 8300000, guid: 4e64d7f395831bc419cd3d9d5981ae07, type: 3}
   - english: CONDITION
     thai: "\u0E40\u0E07\u0E37\u0E48\u0E2D\u0E19\u0E44\u0E02"
     verb: Noun
-    category: B1
+    category: NONE
     audio: {fileID: 8300000, guid: 9585cc9b866f967478968ce7e06b79dc, type: 3}
   - english: LACK
     thai: "\u0E02\u0E32\u0E14\u0E41\u0E04\u0E25\u0E19"
     verb: Verb
-    category: B1
+    category: NONE
     audio: {fileID: 8300000, guid: 4dec18f9fe2b5b043a5cbbd38be7f955, type: 3}
   - english: REQUIRE
     thai: "\u0E15\u0E49\u0E2D\u0E07\u0E01\u0E32\u0E23, \u0E08\u0E33\u0E40\u0E1B\u0E47\u0E19\u0E15\u0E49\u0E2D\u0E07\u0E43\u0E0A\u0E49"
     verb: Verb
-    category: TEST
+    category: NONE
     audio: {fileID: 8300000, guid: 8804d7b7e90bf8e44970f41fa9cb2f62, type: 3}
   - english: DELIVER
     thai: "\u0E2A\u0E48\u0E07\u0E02\u0E2D\u0E07"
     verb: Verb
-    category: TEST
+    category: NONE
     audio: {fileID: 8300000, guid: 204c771cecfa70e4d9c641343268d09a, type: 3}
   - english: CONNECTED
     thai: "\u0E40\u0E0A\u0E37\u0E48\u0E2D\u0E21\u0E15\u0E48\u0E2D\u0E41\u0E25\u0E49\u0E27"
     verb: Adjective
-    category: TEST
+    category: NONE
     audio: {fileID: 8300000, guid: 57fb9890bef6a1f49ba56b5a34e1c82c, type: 3}
   - english: COMFORTABLE
     thai: "\u0E2A\u0E1A\u0E32\u0E22"
     verb: Adjective
-    category: A2
+    category: NONE
     audio: {fileID: 8300000, guid: d98956a495bc6f843ba83131d1b64fc1, type: 3}
   - english: CURIOUS
     thai: "\u0E2D\u0E22\u0E32\u0E01\u0E23\u0E39\u0E49\u0E2D\u0E22\u0E32\u0E01\u0E40\u0E2B\u0E47\u0E19"
@@ -23431,12 +23431,12 @@ MonoBehaviour:
   - english: SERIOUS
     thai: "\u0E08\u0E23\u0E34\u0E07\u0E08\u0E31\u0E07"
     verb: Adjective
-    category: A2
+    category: PERSONALITY
     audio: {fileID: 8300000, guid: e6e2897a47df2484096b42950d42c3eb, type: 3}
   - english: STRANGE
     thai: "\u0E41\u0E1B\u0E25\u0E01"
     verb: Adjective
-    category: A2
+    category: NONE
     audio: {fileID: 8300000, guid: 3c56b02c011a6ac4f946a520f1ab7e53, type: 3}
   - english: CARRY
     thai: "\u0E16\u0E37\u0E2D"
@@ -23466,413 +23466,498 @@ MonoBehaviour:
   - english: STEAM
     thai: "\u0E44\u0E2D\u0E19\u0E4D\u0E49\u0E32"
     verb: Verb
-    category: A2
+    category: NONE
     audio: {fileID: 8300000, guid: 7026ab845a6071e42b03047f88377246, type: 3}
   - english: ARRIVE
     thai: "\u0E21\u0E32\u0E16\u0E36\u0E07"
     verb: Verb
-    category: A2
+    category: ACTIONS & MOVEMENT
     audio: {fileID: 8300000, guid: 31605ea2029a554459a67149777ca2d7, type: 3}
   - english: FRY
     thai: "\u0E17\u0E2D\u0E14"
     verb: Verb
-    category: cooking actions & kitchen terms
+    category: COOKING ACTIONS & KITCHEN TERMS
     audio: {fileID: 8300000, guid: d4189307a5d19024daf4eaefc87d0327, type: 3}
   - english: GRILL
     thai: "\u0E22\u0E48\u0E32\u0E07\u0E1A\u0E19\u0E15\u0E30\u0E41\u0E01\u0E23\u0E07"
     verb: Verb
-    category: cooking actions & kitchen terms
+    category: COOKING ACTIONS & KITCHEN TERMS
     audio: {fileID: 8300000, guid: 6627052a24be35441b24b07aeceab275, type: 3}
   - english: ROAST
     thai: "\u0E2D\u0E1A/\u0E22\u0E48\u0E32\u0E07\u0E40\u0E15\u0E32"
     verb: Verb
-    category: cooking actions & kitchen terms
+    category: COOKING ACTIONS & KITCHEN TERMS
     audio: {fileID: 8300000, guid: 1dc6e8d6db069f14c9fa84de5b6d2cf2, type: 3}
   - english: BAKE
     thai: "\u0E2D\u0E1A (\u0E02\u0E19\u0E21\u0E1B\u0E31\u0E07/\u0E40\u0E04\u0E49\u0E01)"
     verb: Verb
-    category: cooking actions & kitchen terms
+    category: COOKING ACTIONS & KITCHEN TERMS
     audio: {fileID: 8300000, guid: a2d204d80014fb047a2849c9b6263c02, type: 3}
   - english: BOIL
     thai: "\u0E15\u0E49\u0E21"
     verb: Verb
-    category: cooking actions & kitchen terms
+    category: COOKING ACTIONS & KITCHEN TERMS
     audio: {fileID: 8300000, guid: a0f23d3a8d54522408382f73a7d19554, type: 3}
   - english: STEAM
     thai: "\u0E19\u0E36\u0E48\u0E07"
     verb: Verb
-    category: cooking actions & kitchen terms
+    category: COOKING ACTIONS & KITCHEN TERMS
     audio: {fileID: 8300000, guid: 7026ab845a6071e42b03047f88377246, type: 3}
   - english: CHOP
     thai: "\u0E2A\u0E31\u0E1A"
     verb: Verb
-    category: cooking actions & kitchen terms
+    category: COOKING ACTIONS & KITCHEN TERMS
     audio: {fileID: 8300000, guid: 40cee33094866f64a8cad92d5ce59a09, type: 3}
   - english: SLICE
     thai: "\u0E2B\u0E31\u0E48\u0E19\u0E40\u0E1B\u0E47\u0E19\u0E41\u0E1C\u0E48\u0E19"
     verb: Verb
-    category: cooking actions & kitchen terms
+    category: COOKING ACTIONS & KITCHEN TERMS
     audio: {fileID: 8300000, guid: 953df556d7a24a7469989af3f634ff21, type: 3}
   - english: PEEL
     thai: "\u0E1B\u0E2D\u0E01\u0E40\u0E1B\u0E25\u0E37\u0E2D\u0E01"
     verb: Verb
-    category: cooking actions & kitchen terms
+    category: COOKING ACTIONS & KITCHEN TERMS
     audio: {fileID: 8300000, guid: 50474adc53e2bd14ab5485135fec5eb0, type: 3}
   - english: STIR
     thai: "\u0E04\u0E19 (Verb)"
     verb: Verb
-    category: cooking actions & kitchen terms
+    category: COOKING ACTIONS & KITCHEN TERMS
     audio: {fileID: 8300000, guid: 28e371def8fdade4eb109f8040b7dcf4, type: 3}
   - english: POUR
     thai: "\u0E40\u0E17"
     verb: Verb
-    category: cooking actions & kitchen terms
+    category: COOKING ACTIONS & KITCHEN TERMS
     audio: {fileID: 8300000, guid: 24e4cd69cc82ee142a1987355d1ba0df, type: 3}
   - english: HEAT
     thai: "\u0E17\u0E33\u0E43\u0E2B\u0E49\u0E23\u0E49\u0E2D\u0E19"
     verb: Verb
-    category: cooking actions & kitchen terms
+    category: COOKING ACTIONS & KITCHEN TERMS
     audio: {fileID: 8300000, guid: dea8d7b9fee84a440bc33f0601bf9a73, type: 3}
   - english: MELT
     thai: "\u0E25\u0E30\u0E25\u0E32\u0E22"
     verb: Verb
-    category: cooking actions & kitchen terms
+    category: COOKING ACTIONS & KITCHEN TERMS
     audio: {fileID: 8300000, guid: caf0fcf5477207c468cf95a1e68ed288, type: 3}
   - english: SPREAD
     thai: "\u0E17\u0E32/\u0E1B\u0E32\u0E14"
     verb: Verb
-    category: cooking actions & kitchen terms
+    category: COOKING ACTIONS & KITCHEN TERMS
     audio: {fileID: 8300000, guid: 7bea28427722c79448ef5e71d6fb9a83, type: 3}
   - english: WEIGH
     thai: "\u0E0A\u0E31\u0E48\u0E07\u0E19\u0E49\u0E33\u0E2B\u0E19\u0E31\u0E01"
     verb: Verb
-    category: A2
+    category: NONE
     audio: {fileID: 8300000, guid: b0bb32c04a190ed4488e11045095734f, type: 3}
   - english: MEASURE
     thai: "\u0E15\u0E27\u0E07/\u0E27\u0E31\u0E14"
     verb: Verb
-    category: cooking actions & kitchen terms
+    category: COOKING ACTIONS & KITCHEN TERMS
     audio: {fileID: 8300000, guid: 6fa63a88ca64a1b40aaa50b6953a0af0, type: 3}
   - english: ADD
     thai: "\u0E40\u0E15\u0E34\u0E21"
     verb: Verb
-    category: cooking actions & kitchen terms
+    category: COOKING ACTIONS & KITCHEN TERMS
     audio: {fileID: 8300000, guid: d537d723d565d184baa7380c21f93ac3, type: 3}
   - english: SERVE
     thai: "\u0E40\u0E2A\u0E34\u0E23\u0E4C\u0E1F"
     verb: Verb
-    category: cooking actions & kitchen terms
+    category: COOKING ACTIONS & KITCHEN TERMS
     audio: {fileID: 8300000, guid: 21d83cba753bf2549b29eacc13636f9b, type: 3}
   - english: PREPARE
     thai: "\u0E40\u0E15\u0E23\u0E35\u0E22\u0E21"
     verb: Verb
-    category: cooking actions & kitchen terms
+    category: COOKING ACTIONS & KITCHEN TERMS
     audio: {fileID: 8300000, guid: 8dc033d4a9920344a889480eb4a6f576, type: 3}
   - english: RECIPE
     thai: "\u0E2A\u0E39\u0E15\u0E23\u0E2D\u0E32\u0E2B\u0E32\u0E23"
-    verb: Nous
-    category: cooking actions & kitchen terms
+    verb: Noun
+    category: COOKING ACTIONS & KITCHEN TERMS
     audio: {fileID: 8300000, guid: 11620f1edb1dce64cbb75304c0141841, type: 3}
   - english: INGREDIENT
     thai: "\u0E2A\u0E48\u0E27\u0E19\u0E1C\u0E2A\u0E21"
-    verb: Nous
-    category: cooking actions & kitchen terms
+    verb: Noun
+    category: COOKING ACTIONS & KITCHEN TERMS
     audio: {fileID: 8300000, guid: 77641037570394c4386f8ecb741671b6, type: 3}
   - english: FLOUR
     thai: "\u0E41\u0E1B\u0E49\u0E07\u0E2A\u0E32\u0E25\u0E35"
-    verb: Nous
-    category: cooking actions & kitchen terms
+    verb: Noun
+    category: COOKING ACTIONS & KITCHEN TERMS
     audio: {fileID: 8300000, guid: 12a0a3f3fef11954ca73f42749e429f8, type: 3}
   - english: OIL
     thai: "\u0E19\u0E49\u0E33\u0E21\u0E31\u0E19"
-    verb: Nous
-    category: cooking actions & kitchen terms
+    verb: Noun
+    category: COOKING ACTIONS & KITCHEN TERMS
     audio: {fileID: 8300000, guid: 6d99aaa3660540542be57052f6983598, type: 3}
   - english: VINEGAR
     thai: "\u0E19\u0E49\u0E33\u0E2A\u0E49\u0E21\u0E2A\u0E32\u0E22\u0E0A\u0E39"
-    verb: Nous
-    category: cooking actions & kitchen terms
+    verb: Noun
+    category: COOKING ACTIONS & KITCHEN TERMS
     audio: {fileID: 8300000, guid: c90be3bc38e9f3747a858fad1ec3402e, type: 3}
   - english: SPICE
     thai: "\u0E40\u0E04\u0E23\u0E37\u0E48\u0E2D\u0E07\u0E40\u0E17\u0E28"
-    verb: Nous
-    category: cooking actions & kitchen terms
+    verb: Noun
+    category: COOKING ACTIONS & KITCHEN TERMS
     audio: {fileID: 8300000, guid: f2ad8643ef19be54e8099d82e2b24ac7, type: 3}
   - english: OVEN
     thai: "\u0E40\u0E15\u0E32\u0E2D\u0E1A"
-    verb: Nous
-    category: cooking actions & kitchen terms
+    verb: Noun
+    category: COOKING ACTIONS & KITCHEN TERMS
     audio: {fileID: 8300000, guid: 2522df272aa6c404f83cc77370fc6538, type: 3}
   - english: PAN
     thai: "\u0E01\u0E23\u0E30\u0E17\u0E30"
-    verb: Nous
-    category: cooking actions & kitchen terms
+    verb: Noun
+    category: COOKING ACTIONS & KITCHEN TERMS
     audio: {fileID: 8300000, guid: f6dd4d2b4878d714b9907033ada3efd9, type: 3}
   - english: SAUCEPAN
     thai: "\u0E2B\u0E21\u0E49\u0E2D\u0E14\u0E49\u0E32\u0E21"
-    verb: Nous
-    category: cooking actions & kitchen terms
+    verb: Noun
+    category: COOKING ACTIONS & KITCHEN TERMS
     audio: {fileID: 8300000, guid: b2a6e283751ee26448b7cf147639e4c7, type: 3}
   - english: LID
     thai: "\u0E1D\u0E32\u0E2B\u0E21\u0E49\u0E2D"
-    verb: Nous
-    category: cooking actions & kitchen terms
+    verb: Noun
+    category: COOKING ACTIONS & KITCHEN TERMS
     audio: {fileID: 8300000, guid: b09a8c645e4f32a41a7ca58bb65caa0f, type: 3}
   - english: NERVOUS
     thai: "\u0E1B\u0E23\u0E30\u0E2B\u0E21\u0E48\u0E32"
-    verb: ADJ
-    category: Feelings & Emotions
+    verb: Adjective
+    category: FEELINGS & EMOTIONS
     audio: {fileID: 8300000, guid: c3ff361c204dd0e4ca209138eccb0488, type: 3}
   - english: PROUD
     thai: "\u0E20\u0E39\u0E21\u0E34\u0E43\u0E08"
-    verb: ADJ
-    category: Feelings & Emotions
-    audio: {fileID: 0}
+    verb: Adjective
+    category: FEELINGS & EMOTIONS
+    audio: {fileID: 8300000, guid: 45a4c5775e7be7c4a89be89757cac950, type: 3}
   - english: CALM
     thai: "\u0E2A\u0E07\u0E1A"
-    verb: ADJ
-    category: Feelings & Emotions
-    audio: {fileID: 0}
+    verb: Adjective
+    category: FEELINGS & EMOTIONS
+    audio: {fileID: 8300000, guid: db11f817a5e09dd4d89e10e1a097261a, type: 3}
   - english: RELAXED
     thai: "\u0E1C\u0E48\u0E2D\u0E19\u0E04\u0E25\u0E32\u0E22"
-    verb: ADJ
-    category: Feelings & Emotions
+    verb: Adjective
+    category: FEELINGS & EMOTIONS
     audio: {fileID: 8300000, guid: 3a0cf8ce9744c654a998115d4cef96cc, type: 3}
   - english: WORRIED
     thai: "\u0E01\u0E31\u0E07\u0E27\u0E25"
-    verb: ADJ
-    category: Feelings & Emotions
-    audio: {fileID: 0}
+    verb: Adjective
+    category: FEELINGS & EMOTIONS
+    audio: {fileID: 8300000, guid: 0a7c9c66e0ee9c44895ba0f1baba9766, type: 3}
   - english: SURPRISED
     thai: "\u0E1B\u0E23\u0E30\u0E2B\u0E25\u0E32\u0E14\u0E43\u0E08"
-    verb: ADJ
-    category: Feelings & Emotions
-    audio: {fileID: 0}
+    verb: Adjective
+    category: FEELINGS & EMOTIONS
+    audio: {fileID: 8300000, guid: 669df504c505c6346a5121ca590c0724, type: 3}
   - english: EXCITED
     thai: "\u0E15\u0E37\u0E48\u0E19\u0E40\u0E15\u0E49\u0E19"
-    verb: ADJ
-    category: Feelings & Emotions
-    audio: {fileID: 0}
+    verb: Adjective
+    category: FEELINGS & EMOTIONS
+    audio: {fileID: 8300000, guid: fbf6fe24535253a4a9aebde726f32873, type: 3}
   - english: DISAPPOINTED
     thai: "\u0E1C\u0E34\u0E14\u0E2B\u0E27\u0E31\u0E07"
-    verb: ADJ
-    category: Feelings & Emotions
+    verb: Adjective
+    category: FEELINGS & EMOTIONS
     audio: {fileID: 8300000, guid: 2373540caf4558e4fa15ab872f131e0b, type: 3}
   - english: EMBARRASSED
     thai: "\u0E2D\u0E32\u0E22"
-    verb: ADJ
-    category: Feelings & Emotions
+    verb: Adjective
+    category: FEELINGS & EMOTIONS
     audio: {fileID: 8300000, guid: 240a0e4ef7785da48af4207e7b453f62, type: 3}
   - english: JEALOUS
     thai: "\u0E2B\u0E36\u0E07/\u0E2D\u0E34\u0E08\u0E09\u0E32"
-    verb: ADJ
-    category: Feelings & Emotions
+    verb: Adjective
+    category: FEELINGS & EMOTIONS
     audio: {fileID: 8300000, guid: 8fff56dd6d5fb354facb30cd8f92c879, type: 3}
   - english: LONELY
     thai: "\u0E40\u0E2B\u0E07\u0E32"
-    verb: ADJ
-    category: Feelings & Emotions
+    verb: Adjective
+    category: FEELINGS & EMOTIONS
     audio: {fileID: 8300000, guid: 09a764c1cffccc4499b84d433999d40f, type: 3}
   - english: BORED
     thai: "\u0E40\u0E1A\u0E37\u0E48\u0E2D"
-    verb: ADJ
-    category: Feelings & Emotions
+    verb: Adjective
+    category: FEELINGS & EMOTIONS
     audio: {fileID: 8300000, guid: b2e98ac999c9ee443ae0c1c6aa9ef483, type: 3}
   - english: CONFUSED
     thai: "\u0E2A\u0E31\u0E1A\u0E2A\u0E19"
-    verb: ADJ
-    category: Feelings & Emotions
+    verb: Adjective
+    category: FEELINGS & EMOTIONS
     audio: {fileID: 8300000, guid: 7796b1d2bf188434891a14dc09e83788, type: 3}
   - english: SHOCKED
     thai: "\u0E15\u0E01\u0E43\u0E08"
-    verb: ADJ
-    category: Feelings & Emotions
+    verb: Adjective
+    category: FEELINGS & EMOTIONS
     audio: {fileID: 8300000, guid: 39d765497f5cfa745943b17be6309040, type: 3}
   - english: FRIGHTENED
     thai: "\u0E01\u0E25\u0E31\u0E27"
-    verb: ADJ
-    category: Feelings & Emotions
+    verb: Adjective
+    category: FEELINGS & EMOTIONS
     audio: {fileID: 8300000, guid: 9eb446729dae7764a8841a05e6620ba5, type: 3}
   - english: ANNOYED
     thai: "\u0E2B\u0E07\u0E38\u0E14\u0E2B\u0E07\u0E34\u0E14"
-    verb: ADJ
-    category: Feelings & Emotions
+    verb: Adjective
+    category: FEELINGS & EMOTIONS
     audio: {fileID: 8300000, guid: e41b03ef4ee981549bc3d49afaad26f0, type: 3}
   - english: PLEASED
     thai: "\u0E22\u0E34\u0E19\u0E14\u0E35/\u0E1E\u0E2D\u0E43\u0E08"
-    verb: ADJ
-    category: Feelings & Emotions
+    verb: Adjective
+    category: FEELINGS & EMOTIONS
     audio: {fileID: 8300000, guid: 7ec4983f19579b34f883db2d3cb6c46e, type: 3}
   - english: SATISFIED
     thai: "\u0E1E\u0E36\u0E07\u0E1E\u0E2D\u0E43\u0E08"
-    verb: ADJ
-    category: Feelings & Emotions
-    audio: {fileID: 0}
+    verb: Adjective
+    category: FEELINGS & EMOTIONS
+    audio: {fileID: 8300000, guid: 81456634d7ab6d9459bb7c29fac50ff6, type: 3}
   - english: REGRET
     thai: "\u0E23\u0E39\u0E49\u0E2A\u0E36\u0E01\u0E40\u0E2A\u0E35\u0E22\u0E43\u0E08\u0E20\u0E32\u0E22\u0E2B\u0E25\u0E31\u0E07"
     verb: Verb
-    category: Feelings & Emotions
+    category: FEELINGS & EMOTIONS
     audio: {fileID: 8300000, guid: 875df86fbf52de74085ea6ab3441d765, type: 3}
   - english: HOPE
     thai: "\u0E04\u0E32\u0E14\u0E2B\u0E27\u0E31\u0E07"
     verb: Verb
-    category: Feelings & Emotions
+    category: FEELINGS & EMOTIONS
     audio: {fileID: 8300000, guid: 22d7ab17ab1828f429e042dad222e1c3, type: 3}
   - english: FEAR
     thai: "\u0E04\u0E27\u0E32\u0E21\u0E01\u0E25\u0E31\u0E27"
     verb: Noun
-    category: Feelings & Emotions
+    category: FEELINGS & EMOTIONS
     audio: {fileID: 8300000, guid: e6d2a8193f185024fab6bee3b9d56fd5, type: 3}
   - english: ANGER
     thai: "\u0E04\u0E27\u0E32\u0E21\u0E42\u0E01\u0E23\u0E18"
     verb: Noun
-    category: Feelings & Emotions
+    category: FEELINGS & EMOTIONS
     audio: {fileID: 8300000, guid: 5f9335f4e8f67a64d92ff66da235c293, type: 3}
   - english: STRESS
     thai: "\u0E04\u0E27\u0E32\u0E21\u0E40\u0E04\u0E23\u0E35\u0E22\u0E14"
     verb: Noun
-    category: Feelings & Emotions
+    category: FEELINGS & EMOTIONS
     audio: {fileID: 8300000, guid: 64b93efde7d77de49b55ac0ab34f2a5f, type: 3}
   - english: MOOD
     thai: "\u0E2D\u0E32\u0E23\u0E21\u0E13\u0E4C"
     verb: Noun
-    category: Feelings & Emotions
+    category: FEELINGS & EMOTIONS
     audio: {fileID: 8300000, guid: 17fc367463b047a41844ddd52808b6d2, type: 3}
   - english: FEELING
     thai: "\u0E04\u0E27\u0E32\u0E21\u0E23\u0E39\u0E49\u0E2A\u0E36\u0E01"
     verb: Noun
-    category: Feelings & Emotions
+    category: FEELINGS & EMOTIONS
     audio: {fileID: 8300000, guid: 9f35ca387dedc0a488597129c3509d8a, type: 3}
   - english: CONFIDENCE
     thai: "\u0E04\u0E27\u0E32\u0E21\u0E21\u0E31\u0E48\u0E19\u0E43\u0E08"
     verb: Noun
-    category: Feelings & Emotions
+    category: FEELINGS & EMOTIONS
     audio: {fileID: 8300000, guid: e82297a632ad49e4b9f7b080021cdd61, type: 3}
   - english: TRUST
     thai: "\u0E04\u0E27\u0E32\u0E21\u0E44\u0E27\u0E49\u0E27\u0E32\u0E07\u0E43\u0E08"
     verb: Noun
-    category: Feelings & Emotions
+    category: FEELINGS & EMOTIONS
     audio: {fileID: 8300000, guid: 28d9703f9f52bf44589315a52ebfaaf2, type: 3}
   - english: BEND
     thai: "\u0E07\u0E2D"
     verb: Verb
     category: ACTIONS & MOVEMENT
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 055c76f5b6fba6a45985fe90e54e5b0b, type: 3}
   - english: STRETCH
     thai: "\u0E22\u0E37\u0E14"
     verb: Verb
     category: ACTIONS & MOVEMENT
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 6f2df13509e720a4fb1f0524442e4089, type: 3}
   - english: LEAN
     thai: "\u0E40\u0E2D\u0E19"
     verb: Verb
     category: ACTIONS & MOVEMENT
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 07295f05c90be00468e9baea050457ab, type: 3}
   - english: CRAWL
     thai: "\u0E04\u0E25\u0E32\u0E19"
     verb: Verb
     category: ACTIONS & MOVEMENT
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: a38075866caca0d479b90771b1c752e9, type: 3}
   - english: SLIDE
     thai: "\u0E25\u0E37\u0E48\u0E19\u0E44\u0E16\u0E25"
     verb: Verb
     category: ACTIONS & MOVEMENT
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 112381dbe19a3004ab35b18cf9fdacb3, type: 3}
   - english: ROLL
     thai: "\u0E01\u0E25\u0E34\u0E49\u0E07"
     verb: Verb
     category: ACTIONS & MOVEMENT
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 6a73d4000cfd8bf46918ffb0ec042bf8, type: 3}
   - english: SHAKE
     thai: "\u0E40\u0E02\u0E22\u0E48\u0E32"
     verb: Verb
     category: ACTIONS & MOVEMENT
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 77eff6e8627056944aa0d53e53cbbfa0, type: 3}
   - english: NOD
     thai: "\u0E1E\u0E22\u0E31\u0E01\u0E2B\u0E19\u0E49\u0E32"
     verb: Verb
     category: ACTIONS & MOVEMENT
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: e9211a1214c990b47842c4c1d30234a5, type: 3}
   - english: WAVE
     thai: "\u0E42\u0E1A\u0E01\u0E21\u0E37\u0E2D"
     verb: Verb
     category: ACTIONS & MOVEMENT
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 30368dd2697e2b6418c03f260d4d592d, type: 3}
   - english: WHISPER
     thai: "\u0E01\u0E23\u0E30\u0E0B\u0E34\u0E1A"
     verb: Verb
     category: ACTIONS & MOVEMENT
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: d05826c872310ca458d9a06693f1d828, type: 3}
   - english: SHOUT
     thai: "\u0E15\u0E30\u0E42\u0E01\u0E19"
     verb: Verb
     category: ACTIONS & MOVEMENT
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 3644dd1df2ef081449ba036abc8ca2e0, type: 3}
   - english: CHASE
     thai: "\u0E44\u0E25\u0E48\u0E15\u0E32\u0E21"
     verb: Verb
     category: ACTIONS & MOVEMENT
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 494a833e25e5a3147974f10603544434, type: 3}
   - english: HIDE
     thai: "\u0E0B\u0E48\u0E2D\u0E19"
     verb: Verb
     category: ACTIONS & MOVEMENT
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: e3429291521c1184da39a068e3072953, type: 3}
   - english: GRAB
     thai: "\u0E04\u0E27\u0E49\u0E32"
     verb: Verb
     category: ACTIONS & MOVEMENT
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: c98f15c3320abec48a35662ea8a16274, type: 3}
   - english: LIFT
     thai: "\u0E22\u0E01"
     verb: Verb
     category: ACTIONS & MOVEMENT
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: e099055768ef28446886f3bb688c820a, type: 3}
   - english: STEP
     thai: "\u0E01\u0E49\u0E32\u0E27"
     verb: Verb
     category: ACTIONS & MOVEMENT
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 7d1f51787eac1434088ad267c80fba75, type: 3}
   - english: KNOCK
     thai: "\u0E40\u0E04\u0E32\u0E30"
     verb: Verb
     category: ACTIONS & MOVEMENT
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 1b19b312ca3cf2b41a4f512f48fbc55c, type: 3}
   - english: SPIN
     thai: "\u0E2B\u0E21\u0E38\u0E19"
     verb: Verb
     category: ACTIONS & MOVEMENT
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 8fdc2ee8fc3b7154ca01340d2cef915b, type: 3}
   - english: JUMP
     thai: "\u0E01\u0E23\u0E30\u0E42\u0E14\u0E14"
     verb: Verb
     category: ACTIONS & MOVEMENT
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: e0d95cd39d3ee86448880e4a6913d13b, type: 3}
   - english: KICK
     thai: "\u0E40\u0E15\u0E30"
     verb: Verb
     category: ACTIONS & MOVEMENT
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 4ed6400e7617200419a78d85fc178158, type: 3}
   - english: CLIMB
     thai: "\u0E1B\u0E35\u0E19"
     verb: Verb
     category: ACTIONS & MOVEMENT
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 2eecfb0fd930e024e9bcc092ee67842d, type: 3}
   - english: FALL
     thai: "\u0E25\u0E49\u0E21"
     verb: Verb
     category: ACTIONS & MOVEMENT
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 2d44c2f7d9371234b8a785e4dc57e7d7, type: 3}
   - english: HURRY
     thai: "\u0E23\u0E35\u0E1A"
     verb: Verb
     category: ACTIONS & MOVEMENT
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 6d1edb1ef9f6a394c86e443ce613a3ca, type: 3}
   - english: LEAVE
     thai: "\u0E2D\u0E2D\u0E01\u0E44\u0E1B"
     verb: Verb
     category: ACTIONS & MOVEMENT
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 5c4de44d223123e4e94b9f2db85f2462, type: 3}
+  - english: 'EXERCISE '
+    thai: "\u0E2D\u0E2D\u0E01\u0E01\u0E33\u0E25\u0E31\u0E07\u0E01\u0E32\u0E22"
+    verb: Verb
+    category: 'HEALTH AND SYMPTOMS '
+    audio: {fileID: 8300000, guid: 0059d421d11324f469f85cf5504cde88, type: 3}
+  - english: SELFISH
+    thai: "\u0E40\u0E2B\u0E47\u0E19\u0E41\u0E01\u0E48\u0E15\u0E31\u0E27"
+    verb: Adjective
+    category: PERSONALITY
+    audio: {fileID: 8300000, guid: 8e1ee1fd9c3bf9e4885b2d0cdd631e24, type: 3}
+  - english: CALM
+    thai: "\u0E2A\u0E38\u0E02\u0E38\u0E21"
+    verb: Adjective
+    category: PERSONALITY
+    audio: {fileID: 8300000, guid: db11f817a5e09dd4d89e10e1a097261a, type: 3}
+  - english: NERVOUS
+    thai: "\u0E1B\u0E23\u0E30\u0E2B\u0E21\u0E48\u0E32"
+    verb: Adjective
+    category: PERSONALITY
+    audio: {fileID: 8300000, guid: c3ff361c204dd0e4ca209138eccb0488, type: 3}
+  - english: STORM
+    thai: "\u0E1E\u0E32\u0E22\u0E38"
+    verb: Noun
+    category: WEATHER AND NATURE
+    audio: {fileID: 8300000, guid: f4b7461dd7912074f97fd4c50bc1b56a, type: 3}
+  - english: WAVE
+    thai: "\u0E04\u0E25\u0E37\u0E48\u0E19"
+    verb: Noun
+    category: WEATHER AND NATURE
+    audio: {fileID: 8300000, guid: 30368dd2697e2b6418c03f260d4d592d, type: 3}
+  - english: HUMID
+    thai: "\u0E0A\u0E37\u0E49\u0E19"
+    verb: Adjective
+    category: WEATHER AND NATURE
+    audio: {fileID: 8300000, guid: ca44c123f3670ef4ea32f5dbdc4a131b, type: 3}
+  - english: GENEROUS
+    thai: "\u0E43\u0E08\u0E01\u0E27\u0E49\u0E32\u0E07"
+    verb: Adjective
+    category: PERSONALITY
+    audio: {fileID: 8300000, guid: 432b2516ca0257940a73792cb33bb062, type: 3}
+  - english: WINDY
+    thai: "\u0E25\u0E21\u0E41\u0E23\u0E07"
+    verb: Adjective
+    category: WEATHER AND NATURE
+    audio: {fileID: 8300000, guid: 167859db0b5fd794a8aec73d0e43e3f0, type: 3}
+  - english: HEADACHE
+    thai: "\u0E1B\u0E27\u0E14\u0E2B\u0E31\u0E27"
+    verb: Noun
+    category: 'HEALTH AND SYMPTOMS '
+    audio: {fileID: 8300000, guid: 737fcfc7e3de6ed4eaec5224094cefeb, type: 3}
+  - english: IMPATIENT
+    thai: "\u0E43\u0E08\u0E23\u0E49\u0E2D\u0E19"
+    verb: Adjective
+    category: PERSONALITY
+    audio: {fileID: 8300000, guid: f479cef2945560641b9f81a29f3adc56, type: 3}
+  - english: POLITE
+    thai: "\u0E2A\u0E38\u0E20\u0E32\u0E1E"
+    verb: Adjective
+    category: PERSONALITY
+    audio: {fileID: 8300000, guid: 8ef0bcdd3085323469c7310c1ea6c0a9, type: 3}
+  - english: COUGH
+    thai: "\u0E44\u0E2D"
+    verb: Verb
+    category: 'HEALTH AND SYMPTOMS '
+    audio: {fileID: 8300000, guid: 2fda97cd0a670f642bd255887120efbd, type: 3}
+  - english: SUNNY
+    thai: "\u0E41\u0E14\u0E14\u0E2D\u0E2D\u0E01"
+    verb: Adjective
+    category: WEATHER AND NATURE
+    audio: {fileID: 8300000, guid: d66884fdf87753144ba2cfb6e998710f, type: 3}
+  - english: HARDWORKING
+    thai: "\u0E02\u0E22\u0E31\u0E19"
+    verb: Adjective
+    category: PERSONALITY
+    audio: {fileID: 8300000, guid: 8f058c1c97ebf674497af7e5c506b003, type: 3}
+  - english: HEALTHY
+    thai: "\u0E2A\u0E38\u0E02\u0E20\u0E32\u0E1E\u0E14\u0E35"
+    verb: Adjective
+    category: 'HEALTH AND SYMPTOMS '
+    audio: {fileID: 8300000, guid: 3860b015f8063184f9caf927244cf06e, type: 3}
+  - english: STOMACHACHE
+    thai: "\u0E1B\u0E27\u0E14\u0E17\u0E49\u0E2D\u0E07"
+    verb: Noun
+    category: 'HEALTH AND SYMPTOMS '
+    audio: {fileID: 8300000, guid: b4746777582bac24b9e0a37618c4fcce, type: 3}
   NextWord: {fileID: 1001430011}
   Training: {fileID: 448626946}
   Exit: {fileID: 672636814}
@@ -28072,12 +28157,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 118
+  m_fontSize: 123.5
   m_fontSizeBase: 120
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 0
-  m_fontSizeMax: 140
+  m_fontSizeMax: 123.5
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -28111,7 +28196,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -0.6303711, y: -0.4794922, z: -0.7373047, w: -1.9594727}
+  m_margin: {x: -0.6303711, y: -0.4794922, z: -0.7373047, w: 1.5417175}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -28139,10 +28224,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 572268890}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -177.48523}
-  m_SizeDelta: {x: 561, y: 151}
+  m_AnchoredPosition: {x: 0, y: 186.37103}
+  m_SizeDelta: {x: 793, y: -449.71002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &886016624
 GameObject:
@@ -35606,10 +35691,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 572268890}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -378.77475}
-  m_SizeDelta: {x: -246, y: 176}
+  m_AnchoredPosition: {x: 0, y: -81.77054}
+  m_SizeDelta: {x: -218, y: -410}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1142818110
 MonoBehaviour:
@@ -35631,9 +35716,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0E40\u0E01\u0E21\u0E19\u0E35\u0E49\u0E40\u0E1B\u0E47\u0E19\u0E2A\u0E48\u0E27\u0E19\u0E2B\u0E19\u0E36\u0E48\u0E07\u0E02\u0E2D\u0E07\u0E42\u0E04\u0E23\u0E07\u0E07\u0E32\u0E19\u0E43\u0E19\u0E42\u0E23\u0E07\u0E40\u0E23\u0E35\u0E22\u0E19
-    \u0E2D\u0E32\u0E08\u0E1E\u0E1A\u0E02\u0E49\u0E2D\u0E1C\u0E34\u0E14\u0E1E\u0E25\u0E32\u0E14\u0E2B\u0E23\u0E37\u0E2D\u0E1A\u0E31\u0E4A\u0E01\u0E23\u0E30\u0E2B\u0E27\u0E48\u0E32\u0E07\u0E40\u0E25\u0E48\u0E19\u0E44\u0E14\u0E49\n\u0E41\u0E25\u0E30
-    \u0E02\u0E2D\u0E02\u0E2D\u0E1A\u0E04\u0E38\u0E13\u0E17\u0E35\u0E48\u0E17\u0E14\u0E25\u0E2D\u0E07\u0E40\u0E25\u0E48\u0E19
+  m_text: "\u0E40\u0E01\u0E21\u0E19\u0E35\u0E49 \u0E08\u0E33\u0E40\u0E1B\u0E47\u0E19\u0E15\u0E49\u0E2D\u0E07\u0E40\u0E1B\u0E34\u0E14
+    Caps Lock \u0E41\u0E25\u0E30 \u0E1B\u0E23\u0E31\u0E1A\u0E20\u0E32\u0E29\u0E32\u0E40\u0E1B\u0E47\u0E19\u0E20\u0E32\u0E29\u0E32\u0E2D\u0E31\u0E07\u0E01\u0E24\u0E29\n\u0E41\u0E25\u0E30\u0E43\u0E19\u0E15\u0E31\u0E27\u0E40\u0E01\u0E21\u0E2D\u0E32\u0E08\u0E1E\u0E1A\u0E40\u0E08\u0E2D\u0E02\u0E49\u0E2D\u0E1C\u0E34\u0E14\u0E1E\u0E25\u0E32\u0E14\u0E2B\u0E23\u0E37\u0E2D\u0E1A\u0E31\u0E4A\u0E01\u0E23\u0E30\u0E2B\u0E27\u0E48\u0E32\u0E07\u0E40\u0E25\u0E48\u0E19\u0E44\u0E14\u0E49\n\u0E42\u0E1B\u0E23\u0E14\u0E41\u0E08\u0E49\u0E07
+    \u0E2B\u0E32\u0E01\u0E04\u0E38\u0E13\u0E1B\u0E23\u0E30\u0E2A\u0E1A\u0E1E\u0E1A\u0E40\u0E08\u0E2D\u0E02\u0E49\u0E2D\u0E1C\u0E34\u0E14\u0E1E\u0E25\u0E32\u0E14\u0E43\u0E19\u0E40\u0E01\u0E21\n\n\u0E02\u0E2D\u0E02\u0E2D\u0E1A\u0E04\u0E38\u0E13\u0E17\u0E35\u0E48\u0E17\u0E14\u0E25\u0E2D\u0E07\u0E40\u0E25\u0E48\u0E19
     \u0E04\u0E48\u0E30/\u0E04\u0E23\u0E31\u0E1A\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a8da5e38a1354c0419e08393186a715c, type: 2}
@@ -35661,12 +35746,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 64
+  m_fontSize: 61.55
   m_fontSizeBase: 64
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 0
-  m_fontSizeMax: 100
+  m_fontSizeMax: 70
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -39760,7 +39845,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1960458457}
   m_HandleRect: {fileID: 1960458456}
   m_Direction: 0
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:

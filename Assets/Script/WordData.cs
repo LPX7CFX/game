@@ -5,6 +5,7 @@ using System;
 
 
 [System.Serializable]
+
 public class WordData
 {
     public string english;

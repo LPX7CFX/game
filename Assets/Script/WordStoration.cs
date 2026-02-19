@@ -9,6 +9,15 @@ using System.Diagnostics.Contracts;
 public class WordStore : MonoBehaviour
 {
     [SerializeField] public List<WordData> allWords;
+    public WordData FindByEnglish(string english)
+    {
+        return allWords.Find(w => w.english.ToLower() == english.ToLower());
+    }
+
+    public WordData FindByThai(string thai)
+    {
+        return allWords.Find(w => w.thai == thai);
+    }
 
     public Button NextWord;
     public Button Training;
